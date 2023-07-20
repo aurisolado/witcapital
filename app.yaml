@@ -1,0 +1,51 @@
+runtime: nodejs14
+
+# Opcional: especifica el nombre de la región donde deseas desplegar tu aplicación.
+# Si no se proporciona, Google App Engine seleccionará una región por defecto.
+# En este ejemplo, se utiliza "us-central" como región de despliegue.
+# Consulta la lista de regiones disponibles en GCP y selecciona la que mejor se adapte a tus necesidades.
+# https://cloud.google.com/appengine/docs/locations
+# Por ejemplo, puedes cambiar "us-central" por "europe-west1" para desplegar en Europa.
+# default_expiration: "7d"
+# location: us-central
+
+# Variables de entorno (ajusta según tus necesidades)
+# Puedes definir aquí las variables de entorno que tu aplicación necesita para funcionar correctamente.
+# Por ejemplo, si tu aplicación necesita claves API, tokens de acceso, etc.
+# env_variables:
+#   API_KEY: "your-api-key"
+#   OTHER_VARIABLE: "other-value"
+
+# Configuración adicional
+# Aquí puedes agregar cualquier otra configuración adicional que necesites para tu aplicación.
+# Por ejemplo, puedes especificar las URL que quieres que App Engine redireccione a HTTPS automáticamente.
+
+handlers:
+  # Ruta para los archivos estáticos generados por Next.js
+  - url: /_next
+    static_dir: .next
+
+  # Ruta para los archivos de servicio y manifiesto de la aplicación web progresiva (PWA)
+  - url: /(.*\.(js|css|ico|png|jpg|jpeg|gif|svg|json|webmanifest|webp|woff|woff2))$
+    static_files: \1
+    upload: (.*\.(js|css|ico|png|jpg|jpeg|gif|svg|json|webmanifest|webp|woff|woff2))$
+
+  # Ruta para el archivo robots.txt (opcional)
+  - url: /robots.txt
+    static_files: robots.txt
+    upload: robots.txt
+
+  # Ruta para el archivo sitemap.xml (opcional)
+  - url: /sitemap.xml
+    static_files: sitemap.xml
+    upload: sitemap.xml
+
+  # Ruta para el archivo favicon.ico (opcional)
+  - url: /favicon.ico
+    static_files: favicon.ico
+    upload: favicon.ico
+
+  # Ruta predeterminada para servir el archivo index.html generado por Next.js
+  - url: /.*
+    static_files: .next/server/pages/index.html
+    upload: .next/server/pages/index.html
