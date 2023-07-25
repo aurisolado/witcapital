@@ -33,7 +33,80 @@ export default function Header01() {
     id: 1,
     name: "Inicio",
     path: "/home/home_7",
-    
+    pages: [
+      {
+        id: uuidv4(),
+        name: "Home 1",
+        path: "/",
+      },
+      {
+        id: uuidv4(),
+        name: "Home 2",
+        path: "/home/home_2",
+      },
+      {
+        id: uuidv4(),
+        name: "Home 3",
+        path: "/home/home_3",
+      },
+      {
+        id: uuidv4(),
+        name: "Home 4",
+        path: "/home/home_4",
+      },
+      {
+        id: uuidv4(),
+        name: "Home 5",
+        path: "/home/home_5",
+      },
+      {
+        id: uuidv4(),
+        name: "Home 6",
+        path: "/home/home_6",
+      },
+      {
+        id: uuidv4(),
+        name: "Crypto Consultant",
+        condition: true,
+        path: "/home/home_7",
+      },
+      {
+        id: uuidv4(),
+        name: "NFT Game",
+        condition: true,
+        path: "/home/home_8",
+      },
+      {
+        id: uuidv4(),
+        name: "Dao Platform",
+        condition: true,
+        path: "/home/home_9",
+      },
+      {
+        id: uuidv4(),
+        name: "Crypto App",
+        condition: true,
+        path: "/home/home_10",
+      },
+      {
+        id: uuidv4(),
+        name: "Crypto Trading",
+        condition: true,
+        path: "/home/home_11",
+      },
+      {
+        id: uuidv4(),
+        name: "ICO Landing",
+        condition: true,
+        path: "/home/home_12",
+      },
+      {
+        id: uuidv4(),
+        name: "NFT Aggregator",
+        condition: true,
+        path: "/home/home_13",
+      },
+    ],
   };
 
   const exchange = {
@@ -494,9 +567,22 @@ export default function Header01() {
         {/* mobile menu top header content */}
 
         <form action="search" className="relative mt-24 mb-8 w-full lg:hidden">
-          
+          <input
+            type="search"
+            className="text-jacarta-700 placeholder-jacarta-500 focus:ring-accent border-jacarta-100 w-full rounded-2xl border py-3 px-4 pl-10 dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
+            placeholder="Search"
+          />
           <span className="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
-            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width={24}
+              height={24}
+              className="fill-jacarta-500 h-4 w-4 dark:fill-white"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" />
+            </svg>
           </span>
         </form>
         {/* End search form mobile menu  */}
@@ -717,13 +803,31 @@ export default function Header01() {
                 ))}
               </ul>
             </li>
-            
+            <li className="group" onClick={() => setToggle(false)}>
+              <Link href="/create">
+                <a>
+                  <button className="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5">
+                    <span
+                      className={
+                        isChildrenPageActive("/create", route.asPath)
+                          ? "text-accent dark:text-accent"
+                          : ""
+                      }
+                    >
+                      Create
+                    </span>
+                  </button>
+                </a>
+              </Link>
+            </li>
           </ul>
         </nav>
         {/* End navbar mobile menu  */}
 
         <div className="mt-10 w-full lg:hidden">
-         
+          <div className="js-wallet bg-accent shadow-accent-volume hover:bg-accent-dark block w-full rounded-full py-3 px-8 text-center font-semibold text-white transition-all">
+            MetaMask not available :
+          </div>
           <hr className="dark:bg-jacarta-600 bg-jacarta-100 my-5 h-px border-0" />
           <div className="flex items-center justify-center space-x-5">
             <a className="group">

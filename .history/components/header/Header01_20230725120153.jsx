@@ -493,13 +493,7 @@ export default function Header01() {
         </div>
         {/* mobile menu top header content */}
 
-        <form action="search" className="relative mt-24 mb-8 w-full lg:hidden">
-          
-          <span className="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
-            
-          </span>
-        </form>
-        {/* End search form mobile menu  */}
+       
 
         <nav className="navbar w-full">
           <ul className="flex flex-col lg:flex-row">
