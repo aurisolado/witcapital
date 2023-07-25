@@ -78,13 +78,11 @@ export default function Header01() {
     
   };
 
-  const mobileCollapse = (id, toggle) => {
+  const mobileCollapse = (id) => {
     if (isCollapse === id) {
       return setCollapse(null);
     }
     setCollapse(id);
-    if( !toggle )
-      setToggle(false);
   };
 
   return (
@@ -599,7 +597,7 @@ export default function Header01() {
               </button>
 
             </li>
-            <li className="js-nav-dropdown nav-item dropdown group relative">
+            <li className="group relative">
               <button
                 onClick={() => mobileCollapse(page.id)}
                 className="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5 w-full"
@@ -625,7 +623,7 @@ export default function Header01() {
 
             <li className="js-nav-dropdown group relative">
               <button
-                onClick={() => mobileCollapse(exchange.id, true)}
+                onClick={() => mobileCollapse(page.id)}
                 className="dropdown-toggle text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5 w-full"
               >
                 <span
@@ -652,7 +650,7 @@ export default function Header01() {
               </button>
               <ul
                 className={`dropdown-menu left-0 top-[85%] z-10 grid-flow-row grid-cols-[repeat(2,_1fr)] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:visible group-hover:opacity-100 dark:bg-jacarta-800 lg:invisible lg:absolute lg:!grid lg:translate-y-4 lg:py-8 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2 relative ${
-                  isCollapse === exchange.id ? "block" : "hidden"
+                  isCollapse === page.id ? "block" : "hidden"
                 }`}
               >
                 {exchange?.pages?.map((page) => (
@@ -695,7 +693,18 @@ export default function Header01() {
                     {explore.name}
                   </span>
                 </Link>
-                
+                <i className="lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    height={24}
+                    className="h-4 w-4 dark:fill-white"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
+                  </svg>
+                </i>
               </button>
               <ul
                 className={`dropdown-menu left-0 top-[85%] z-10 grid-flow-row grid-cols-[repeat(2,_1fr)] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:visible group-hover:opacity-100 dark:bg-jacarta-800 lg:invisible lg:absolute lg:!grid lg:translate-y-4 lg:py-8 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2 relative ${
@@ -735,6 +744,18 @@ export default function Header01() {
                     {resource.name}
                   </span>
                 </Link>
+                <i className="lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    height={24}
+                    className="h-4 w-4 dark:fill-white"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
+                  </svg>
+                </i>
               </button>
               <ul
                 className={`dropdown-menu left-0 top-[85%] z-10 grid-flow-row grid-cols-[repeat(2,_1fr)] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:visible group-hover:opacity-100 dark:bg-jacarta-800 lg:invisible lg:absolute lg:!grid lg:translate-y-4 lg:py-8 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2 relative ${

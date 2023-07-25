@@ -78,13 +78,11 @@ export default function Header01() {
     
   };
 
-  const mobileCollapse = (id, toggle) => {
+  const mobileCollapse = (id) => {
     if (isCollapse === id) {
       return setCollapse(null);
     }
     setCollapse(id);
-    if( !toggle )
-      setToggle(false);
   };
 
   return (
@@ -625,7 +623,7 @@ export default function Header01() {
 
             <li className="js-nav-dropdown group relative">
               <button
-                onClick={() => mobileCollapse(exchange.id, true)}
+                onClick={() => mobileCollapse(exchange.id)}
                 className="dropdown-toggle text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5 w-full"
               >
                 <span

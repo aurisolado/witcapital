@@ -78,13 +78,12 @@ export default function Header01() {
     
   };
 
-  const mobileCollapse = (id, toggle) => {
+  const mobileCollapse = (id) => {
     if (isCollapse === id) {
       return setCollapse(null);
     }
     setCollapse(id);
-    if( !toggle )
-      setToggle(false);
+    setToggle(false);
   };
 
   return (
