@@ -17,10 +17,10 @@ const Cta = () => {
 						<div className="items-center justify-between md:flex">
 							<div className="mb-6 md:w-1/2">
 								<h2 className="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-3xl">
-									¿Quieres ayuda para empezar?
+									Permítenos ser tus asesores de confianza.
 								</h2>
 								<p className="mb-8 text-lg dark:text-jacarta-300">
-									Nuestros héroes de soporte lo pondrán en funcionamiento en menos de 10 minutos.
+									Proveemos servicios integrales de vanguardia, con visión interdisciplinaria centrada en brindar soluciones que tienen como centro el apoyar los objetivos de nuestros clientes. 
 								</p>
 								<Link href="/contact">
 									<a className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">

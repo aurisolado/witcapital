@@ -98,7 +98,7 @@ const ValueProposal = () => {
                 </div>
               ))}
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <Link href="/contact">
                   <a
                     className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
@@ -106,7 +106,7 @@ const ValueProposal = () => {
                     Comienza ahora
                   </a>
                 </Link>
-              </div>
+              </div> */}
               {/* End btn text */}
             </div>
           </div>

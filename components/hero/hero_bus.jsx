@@ -20,10 +20,10 @@ const Hero_bus = () => {
 				<div className="container relative z-10">
 					<div className="mx-auto max-w-xl text-center">
 						<h1 className="mb-6 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                			Business  
+							Áreas de Práctica  
 						</h1>
 						<p className="text-lg leading-normal dark:text-jacarta-200">
-							Contamos con las mejores herramientas para que tu negocio crezca de manera exponencial.
+							Hemos integrado nuestra firma con un grupo multidisciplinario de abogados que posee experiencia diversa y profundo conocimiento de sus áreas de práctica, lo que nos permite superar las expectativas de nuestros clientes, mediante la implementación de soluciones legales y de negocios integrales, innovadoras y efectivas.
 						</p>
 					</div>
 				</div>

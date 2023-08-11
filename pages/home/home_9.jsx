@@ -13,8 +13,10 @@ import Promo from "../../components/promo/promo";
 import LaboralAssistance from "../../components/promo/laboralAssistance";
 import BancaAndFinan from "../../components/promo/bancarioAndFinancial";
 import Fiscal from "../../components/dao/fiscal";
+import Fiscal2 from "../../components/dao/fiscal2";
 import CallToActionsGeneral from "../../components/ico-landing/CallToActionsGeneral";
 import Cta from "../../components/cta/cta";
+import International from "../../components/dao/international";
 
 const Home_9 = () => {
   useEffect(() => {
@@ -29,6 +31,8 @@ const Home_9 = () => {
       <LaboralAssistance />
       <BancaAndFinan />
       <Fiscal />
+      <Fiscal2 />
+      <International />
       {/* <Partners /> */}
       {/* <Intro />
       <Benifits />

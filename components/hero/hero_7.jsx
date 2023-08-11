@@ -27,12 +27,12 @@ const Hero_6 = () => {
                 Asesoría de vanguardia, con visión de negocios.
               </h1>
               <p className="mb-8 max-w-md text-center text-lg dark:text-jacarta-200 lg:text-left">
-                Wit Capital es una empresa responsable, segura, eficaz y solvente; la cual se dedica al servicio de compra y venta de las más importantes divisas y criptomonedas del mundo, cumpliendo con los más altos estándares de ética profesional, transparencia y normativas vigentes.
+              Gracias a nuestro sofisticado y experimentado grupo multidisciplinario y a nuestro muy particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a nuestros clientes, abordando cada transacción con soluciones hechas “a la medida” y con extraordinarios resultados, ya que asumimos sus asuntos como propios, buscando siempre soluciones legales prácticas, efectivas, innovadoras, creativas y exitosas.
               </p>
               <div className="flex space-x-4">
-                <Link href="/contact">
+                <Link href="/home/home_9">
                   <a className="rounded-lg bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
-                    Contacto
+                    Áreas de Práctica
                   </a>
                 </Link>
                 {/* <Link href="/collection/explore_collection">

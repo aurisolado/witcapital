@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TradeVolume from "./TradeVolume";
 
-const Fiscal = () => {
+const International = () => {
   return (
     // <!-- Intro -->
     <section className="bg-gradient-to-r from-[transparent_33%] to-[#F5F8FA_33%] py-36 dark:to-[#101436_33%]">
@@ -21,17 +21,25 @@ const Fiscal = () => {
           {/* <!-- Info --> */}
           <div className="py-10 lg:w-[55%] lg:pl-24">
             <h2 className="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">
-              Comercio exterior y aduanas
+              Consultoría Internacional
             </h2>
             <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
-              Asesoramos a nuestros clientes para expandirse más allá de las fronteras en un marco de certeza jurídica
+              Planifique sus compañías offshore y su operativa bancaria internacional
             </p>
             <p className="dark:text-jacarta-300">
-            Nuestro equipo profesional tiene experiencia desempeñándose tanto en el sector público, como en la práctica privada, y adicionalmente experiencia profesional en la legislación doméstica en materia de comercio exterior y las fuentes de derecho internacional aplicables en la materia, incluyendo los tratados de libre comercio (TLC) y los acuerdos de la OMC suscritos por México. Esto nos permite tener una visión exhaustiva y panorámica para asistir con una mayor calidad a nuestros clientes.
+            Las sociedades offshore se acogen a regulaciones legales y fiscales muy favorables. Conozca la jurisdicción que mejor se adapte a sus necesidades y déjese recomendar por nuestro grupo multidisciplinario de abogados.
             </p>
 
             <p className="dark:text-jacarta-300">
-            Lo que hace único a nuestro equipo profesional es el dominio de esta práctica desde la perspectiva doméstica, regional e internacional. 
+            Una cuenta offshore es una cuenta bancaria ubicada en una de las muchas entidades bancarias situadas fuera del país de residencia del titular de la cuenta.
+
+            </p>
+
+            <p className="dark:text-jacarta-300 py-10">
+            “Entendemos a las empresas de e-commerce.” <br />
+“Diseña el futuro, actúa en el presente”
+
+
             </p>
           </div>
         </div>
@@ -41,4 +49,4 @@ const Fiscal = () => {
   );
 };
 
-export default Fiscal;
+export default International;

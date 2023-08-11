@@ -47,7 +47,7 @@ const LaboralAssistance = () => {
                                 Asesoría Laboral
                             </h2>
                             <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
-                            Nuestro equipo laboral ofrece asesoría en temas laborales y de seguridad social, incluyendo contratación, prestaciones, políticas laborales y cumplimiento legal.
+                                Nuestro equipo de la práctica laboral provee asesoría en asuntos laborales y de seguridad social, incluyendo estrategias de contratación, en el establecimiento y modificación de prestaciones, así como en planes, políticas y condiciones de trabajo y en el cumplimiento de disposiciones en materia laboral. También contamos con experiencia en negociaciones colectivas de trabajo y cuestiones relativas a sindicatos.
                             </p>
                             <div className="mb-8 flex space-x-4">
                                 <svg
@@ -65,7 +65,7 @@ const LaboralAssistance = () => {
                                         Cumplimiento legal
                                     </span>
                                     <span className="dark:text-jacarta-300">
-                                    La asesoría laboral guía a empresas y empleados sobre leyes laborales, contratos, horarios, salarios, seguridad y derechos laborales.
+                                    Somos expertos en navegar el cambio regulatorio junto con nuestros clientes, asesorándoles en cada etapa de sus estrategias de capital humano e intelectual, incluyendo las nuevas disposiciones derivadas de la reforma en materia de subcontratación en México.
                                     </span>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ const LaboralAssistance = () => {
                                         Resolución de conflictos
                                     </span>
                                     <span className="dark:text-jacarta-300">
-                                    Los asesores laborales resuelven disputas y conflictos entre empleados y empleadores, incluyendo despidos, acoso, reclamaciones salariales y otros problemas laborales.
+                                        Nuestra visión multidisciplinaria evalúa todas las aristas de los asuntos de nuestros clientes y les ayuda a desarrollarse mitigando riesgos.
                                     </span>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 
-const BancaAndFinan = () => {
+const Fiscal2 = () => {
     const [videoModal, setvideoModal] = useState(false);
     const [url, setUrl] = useState(null);
     return (
@@ -18,11 +18,18 @@ const BancaAndFinan = () => {
                 <div className="container">
                     <div className="mx-auto mb-12 max-w-xl text-center">
 						<h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">
-                            Bancario y Financiero
+              Consultoría Fiscal 
 						</h2>
 						<p className="text-lg dark:text-jacarta-300">
-                            Wit Capital maximiza la generación de valor a través de una combinación estratégica de experiencia y un profundo entendimiento de los negocios de nuestros clientes.
+            Nuestro equipo de Consultoría Fiscal presta servicios en transacciones sofisticadas y complejas, con una visión clara de los aspectos financieros y legales que puedan impactar a  los negocios de nuestros clientes.
 						</p>
+
+            <p className="dark:text-jacarta-300 py-10">
+              Nuestra visión es completamente integral y evalúa los aspectos financieros y legales de todos los asuntos que afectan al cliente. Esto se traduce directamente en un manejo multidisciplinario de cada caso que nos es encomendado, para prestar un servicio “a la medida” y proporcionar un valor agregado tangible a nuestros clientes. Asimismo, nuestro equipo fiscal se destaca por su integración total en las áreas de consultoría y de litigio, donde sus miembros prestan servicios legales integrales.
+
+  Nuestra práctica fiscal es reconocida por sus altos conocimientos técnicos e innovadora visión de negocios.
+
+            </p>
 					</div>
                     <div className="lg:flex lg:justify-between">
                         
@@ -36,6 +43,16 @@ const BancaAndFinan = () => {
 
                             
                         </div>
+
+                        <div className="py-10 lg:w-[50%] lg:pr-28">
+                        
+                        <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
+                        Los servicios que ofrecemos están enfocados en planeación y consultoría fiscal, tanto en transacciones domésticas como transfronterizas para una amplia gama de industrias, así como en apoyar a nuestros clientes a interactuar con las autoridades tributarias y brindarles estrategias de litigio sólidas.
+                        </p>
+
+                        
+                    </div>
+                    
 
                         {/* <!-- Image --> */}
                         <div className="relative lg:w-[50%] ">
@@ -123,4 +140,4 @@ const BancaAndFinan = () => {
     );
 };
 
-export default BancaAndFinan;
+export default Fiscal2;
