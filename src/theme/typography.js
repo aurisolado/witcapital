@@ -1,0 +1,136 @@
+import { Barlow, Inter } from 'next/font/google';
+
+// ----------------------------------------------------------------------
+
+export function remToPx(value) {
+  return Math.round(parseFloat(value) * 16);
+}
+
+export function pxToRem(value) {
+  return `${value / 16}rem`;
+}
+
+export function responsiveFontSizes({ sm, md, lg }) {
+  return {
+    '@media (min-width:600px)': {
+      fontSize: pxToRem(sm),
+      lineHeight: pxToRem(sm),
+    },
+    '@media (min-width:900px)': {
+      fontSize: pxToRem(md),
+      lineHeight: pxToRem(md),
+    },
+    '@media (min-width:1200px)': {
+      fontSize: pxToRem(lg),
+      lineHeight: pxToRem(lg),
+    },
+  };
+}
+
+export const primaryFont = Inter({
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
+
+export const secondaryFont = Barlow({
+  weight: ['900'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
+
+// ----------------------------------------------------------------------
+
+// LEARN MORE
+// https://nextjs.org/docs/basic-features/font-optimization#google-fonts
+
+export const typography = {
+  fontFamily: primaryFont.style.fontFamily,
+  fontWeightRegular: 400,
+  fontWeightMedium: 500,
+  fontWeightSemiBold: 600,
+  fontWeightBold: 700,
+  h1i: {
+    fontWeight: 600,
+    fontSize: pxToRem(42),
+    ...responsiveFontSizes({ sm: 52, md: 68, lg: 78 }),
+  },
+
+  h1: {
+    fontFamily: 'ws, Helvetica, Arial, sans-serif',
+    fontWeight: 800,
+    fontSize: pxToRem(42),
+    ...responsiveFontSizes({ sm: 52, md: 96, lg: 100 }),
+  },
+  h2: {
+    fontWeight: 600,
+    fontFamily: 'ws, Helvetica, Arial, sans-serif',
+    lineHeight: 64 / 48,
+    fontSize: pxToRem(40),
+    ...responsiveFontSizes({ sm: 45, md: 54, lg: 65 }),
+  },
+  h3: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(24),
+    ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
+  },
+  h4: {
+    fontWeight: 600,
+    lineHeight: 1.5,
+    fontSize: pxToRem(20),
+    ...responsiveFontSizes({ sm: 24, md: 30, lg: 30 }),
+  },
+  h5: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(18),
+    ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
+  },
+  h6: {
+    fontWeight: 700,
+    lineHeight: 28 / 18,
+    fontSize: pxToRem(17),
+    ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
+  },
+  subtitle1: {
+    fontWeight: 600,
+    lineHeight: 1.5,
+    fontSize: pxToRem(16),
+  },
+  subtitle2: {
+    fontWeight: 600,
+    lineHeight: 22 / 14,
+    fontSize: pxToRem(14),
+  },
+  body1: {
+    fontFamily: 'inter, Helvetica, Arial, sans-serif',
+    lineHeight: 1,
+    fontWeight: 200,
+    color: '#212B36',
+    fontSize: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
+    lineHeight: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
+  },
+  body2: {
+    lineHeight: 22 / 14,
+    fontSize: pxToRem(14),
+  },
+  caption: {
+    lineHeight: 1.5,
+    fontSize: pxToRem(12),
+  },
+  overline: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(12),
+    textTransform: 'uppercase',
+  },
+  button: {
+    fontWeight: 700,
+    lineHeight: 24 / 14,
+    fontSize: pxToRem(14),
+    textTransform: 'unset',
+  },
+};
