@@ -1,35 +1,12 @@
 import { m } from 'framer-motion';
 // @mui
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 // components
-import { MotionViewport, varFade } from 'src/components/animate';
 import { Button } from '@mui/material';
-
-// ----------------------------------------------------------------------
-
-const CARDS = [
-  {
-    icon: ' /assets/icons/home/ic_make_brand.svg',
-    title: 'Branding',
-    description: 'Consistent design makes it easy to brand your own.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_design.svg',
-    title: 'UI & UX Design',
-    description:
-      'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_development.svg',
-    title: 'Development',
-    description: 'Easy to customize and extend, saving you time and money.',
-  },
-];
+import { MotionViewport, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 

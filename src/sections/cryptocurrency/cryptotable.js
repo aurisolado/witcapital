@@ -5,7 +5,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 // hooks
-import { useResponsive } from 'src/hooks/use-responsive';
 // routes
 // components
 import {
@@ -18,52 +17,11 @@ import {
   TableContainer,
   TableRow,
 } from '@mui/material';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Scrollbar from 'src/components/scrollbar';
 import { TableHeadCustom } from 'src/components/table';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-
-// ----------------------------------------------------------------------
-
-const SUMMARY = [
-  {
-    index: 1,
-    title: 'Asesoría de vanguardia',
-    description: 'Asesoría especializada en el mercado de cryptomonedas.',
-    icon: 'solar:verified-check-bold',
-  },
-  {
-    index: 2,
-    title: 'Entendemos lo que necesitas',
-    description: 'Servicio personalizado para soporte de la operación.',
-    icon: 'solar:clock-circle-bold',
-  },
-  {
-    index: 3,
-    title: 'Enfoque integral',
-    description: 'Operaciones el mismo día y en horario extendido.',
-    icon: 'solar:shield-check-bold',
-  },
-  {
-    index: 4,
-    title: 'Enfoque integral',
-    description: 'Sencillez, rapidez y seguridad.',
-    icon: 'solar:shield-check-bold',
-  },
-];
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const TABLE_DATA = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
 
 /**
  * 
@@ -355,8 +313,6 @@ const TABLE_DATA = [
  */
 
 export default function CryptoTable() {
-  const mdUp = useResponsive('up', 'md');
-
   const [moedas, setMoedas] = useState([]);
 
   useEffect(() => {
@@ -401,7 +357,6 @@ export default function CryptoTable() {
       <TableContainer
         sx={{
           mt: 3,
-          overflow: 'unset',
           boxShadow: '20px 0 30px rgba(0,0,0,.08)',
           borderRadius: '20px',
           border: '1px solid #f3f3f3',

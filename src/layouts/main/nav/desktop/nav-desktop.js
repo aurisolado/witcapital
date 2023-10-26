@@ -17,6 +17,7 @@ export default function NavDesktop({ offsetTop, data, sx }) {
 }
 
 NavDesktop.propTypes = {
-  data: PropTypes.array,
-  offsetTop: PropTypes.bool,
+  offsetTop: PropTypes.object,
+  data: PropTypes.object,
+  sx: PropTypes.object,
 };

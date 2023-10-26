@@ -1,19 +1,14 @@
-'use client';
-
 import PropTypes from 'prop-types';
+
 import { useEffect } from 'react';
 // @mui
-import Fade from '@mui/material/Fade';
-import Stack from '@mui/material/Stack';
-import Portal from '@mui/material/Portal';
 // hooks
 import { useBoolean } from 'src/hooks/use-boolean';
 // routes
 import { usePathname } from 'src/routes/hooks';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 //
-import { NavItem, NavItemDashboard } from './nav-item';
-import { StyledSubheader, StyledMenu } from './styles';
+import { NavItem } from './nav-item';
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +17,7 @@ export default function NavList({ item, offsetTop, sx }) {
 
   const nav = useBoolean();
 
-  const { path, children } = item;
+  const { path } = item;
 
   const active = useActiveLink(path, false);
 
@@ -35,12 +30,6 @@ export default function NavList({ item, offsetTop, sx }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  const handleOpenMenu = () => {
-    if (children) {
-      nav.onTrue();
-    }
-  };
-
   return (
     <>
       <NavItem
@@ -49,8 +38,6 @@ export default function NavList({ item, offsetTop, sx }) {
         active={active}
         open={nav.value}
         externalLink={externalLink}
-        //onClick={handleOpenMenu}
-        //onMouseLeave={nav.onFalse}
         sx={sx}
       />
     </>
@@ -59,49 +46,6 @@ export default function NavList({ item, offsetTop, sx }) {
 
 NavList.propTypes = {
   item: PropTypes.object,
-  offsetTop: PropTypes.bool,
-};
-
-// ----------------------------------------------------------------------
-
-function NavSubList({ items, isDashboard, subheader, onClose }) {
-  const pathname = usePathname();
-
-  return (
-    <Stack
-      spacing={2}
-      flexGrow={1}
-      alignItems="flex-start"
-      sx={{
-        pb: 2,
-        ...(isDashboard && {
-          pb: 0,
-          maxWidth: { md: 1 / 3, lg: 540 },
-        }),
-      }}
-    >
-      <StyledSubheader disableSticky>{subheader}</StyledSubheader>
-
-      {items.map((item) =>
-        isDashboard ? (
-          <NavItemDashboard key={item.title} item={item} onClick={onClose} />
-        ) : (
-          <NavItem
-            subItem
-            key={item.title}
-            item={item}
-            active={pathname === `${item.path}/`}
-            onClick={onClose}
-          />
-        )
-      )}
-    </Stack>
-  );
-}
-
-NavSubList.propTypes = {
-  isDashboard: PropTypes.bool,
-  items: PropTypes.array,
-  onClose: PropTypes.func,
-  subheader: PropTypes.string,
+  offsetTop: PropTypes.object,
+  sx: PropTypes.object,
 };

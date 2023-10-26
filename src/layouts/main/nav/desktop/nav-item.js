@@ -3,16 +3,16 @@ import { m } from 'framer-motion';
 import { forwardRef, useState } from 'react';
 // @mui
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import CardActionArea from '@mui/material/CardActionArea';
+import Link from '@mui/material/Link';
 // routes
 import { RouterLink } from 'src/routes/components';
 // components
 import Iconify from 'src/components/iconify';
 //
-import { ListItem, StyledSubheader } from './styles';
-import { Menu, MenuItem, Stack } from '@mui/material';
+import { Menu, Stack } from '@mui/material';
 import { usePathname } from 'next/navigation';
+import { ListItem } from './styles';
 
 // ----------------------------------------------------------------------
 
@@ -87,7 +87,6 @@ export const NavItem = forwardRef(
                 subheader={list.subheader}
                 items={list.items}
                 isDashboard={list.subheader === 'Dashboard'}
-                //onClose={nav.onFalse}
               />
             ))}
           </Menu>
@@ -125,16 +124,6 @@ export const NavItem = forwardRef(
     );
   }
 );
-
-NavItem.propTypes = {
-  active: PropTypes.bool,
-  externalLink: PropTypes.bool,
-  item: PropTypes.object,
-  offsetTop: PropTypes.bool,
-  open: PropTypes.bool,
-  subItem: PropTypes.bool,
-};
-
 // ----------------------------------------------------------------------
 
 export function NavItemDashboard({ item, sx, ...other }) {
@@ -170,7 +159,25 @@ export function NavItemDashboard({ item, sx, ...other }) {
   );
 }
 
+NavSubList.propTypes = {
+  items: PropTypes.object,
+  isDashboard: PropTypes.object,
+  subheader: PropTypes.object,
+  onClose: PropTypes.object,
+};
+
 NavItemDashboard.propTypes = {
   item: PropTypes.object,
   sx: PropTypes.object,
+  other: PropTypes.object,
+};
+
+NavItem.propTypes = {
+  item: PropTypes.object,
+  open: PropTypes.object,
+  offsetTop: PropTypes.object,
+  active: PropTypes.object,
+  subItem: PropTypes.object,
+  externalLink: PropTypes.object,
+  other: PropTypes.object,
 };

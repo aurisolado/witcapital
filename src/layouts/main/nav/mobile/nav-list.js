@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
 import Collapse from '@mui/material/Collapse';
-import { listClasses } from '@mui/material/List';
-import { listItemTextClasses } from '@mui/material/ListItemText';
-import { listItemButtonClasses } from '@mui/material/ListItemButton';
 // hooks
 import { useBoolean } from 'src/hooks/use-boolean';
 // components

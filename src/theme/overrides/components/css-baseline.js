@@ -1,7 +1,4 @@
 // ----------------------------------------------------------------------
-
-//define font faces
-
 const WSansRegular = {
   fontFamily: 'WSans',
   src: "url(/fonts/WSans-Heavy.woff2) format('woff2')",

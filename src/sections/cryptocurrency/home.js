@@ -10,27 +10,6 @@ import Image from 'src/components/image';
 
 // ----------------------------------------------------------------------
 
-const CARDS = [
-  {
-    icon: ' /assets/icons/home/ic_make_brand.svg',
-    title: 'Branding',
-    description: 'Consistent design makes it easy to brand your own.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_design.svg',
-    title: 'UI & UX Design',
-    description:
-      'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_development.svg',
-    title: 'Development',
-    description: 'Easy to customize and extend, saving you time and money.',
-  },
-];
-
-// ----------------------------------------------------------------------
-
 export default function Home() {
   return (
     <Container
@@ -43,7 +22,7 @@ export default function Home() {
         <Grid xs={9} md={9} sm={12}>
           <Stack>
             <m.div variants={varFade().inDown}>
-              <Typography variant="h1" color={'#9fe870'}>
+              <Typography variant="h1" color="#9fe870">
                 Soluciones especializadas en el mercado de cryptomonedas
               </Typography>
             </m.div>

@@ -107,7 +107,6 @@ export const typography = {
   },
   body1: {
     fontFamily: 'inter, Helvetica, Arial, sans-serif',
-    lineHeight: 1,
     fontWeight: 200,
     color: '#212B36',
     fontSize: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
