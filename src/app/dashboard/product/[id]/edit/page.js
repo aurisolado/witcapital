@@ -16,13 +16,13 @@ export default function ProductEditPage({ params }) {
   return <ProductEditView id={id} />;
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   const res = await axios.get(endpoints.product.list);
 
   return res.data.products.map((product) => ({
     id: product.id,
   }));
-}
+} */
 
 ProductEditPage.propTypes = {
   params: PropTypes.shape({

@@ -16,11 +16,11 @@ export default function TourDetailsPage({ params }) {
   return <TourDetailsView id={id} />;
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   return _tours.map((tour) => ({
     id: tour.id,
   }));
-}
+} */
 
 TourDetailsPage.propTypes = {
   params: PropTypes.shape({

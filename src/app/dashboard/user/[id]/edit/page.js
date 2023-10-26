@@ -16,11 +16,11 @@ export default function UserEditPage({ params }) {
   return <UserEditView id={id} />;
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   return _userList.map((user) => ({
     id: user.id,
   }));
-}
+} */
 
 UserEditPage.propTypes = {
   params: PropTypes.shape({
