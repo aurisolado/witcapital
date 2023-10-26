@@ -47,9 +47,9 @@ export const paths = {
   },
   post: {
     root: `/post`,
-    details: (title) => `/post/${paramCase(title)}`,
+    details: (title) => `/post/`,
     demo: {
-      details: `/post/${paramCase(MOCK_TITLE)}`,
+      details: `/post/`,
     },
   },
   // AUTH
@@ -144,11 +144,11 @@ export const paths = {
     post: {
       root: `${ROOTS.DASHBOARD}/post`,
       new: `${ROOTS.DASHBOARD}/post/new`,
-      details: (title) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}`,
-      edit: (title) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}/edit`,
+      details: (title) => `${ROOTS.DASHBOARD}/post/`,
+      edit: (title) => `${ROOTS.DASHBOARD}/post/`,
       demo: {
-        details: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}`,
-        edit: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}/edit`,
+        details: `${ROOTS.DASHBOARD}/post/`,
+        edit: `${ROOTS.DASHBOARD}/post/`,
       },
     },
     order: {
