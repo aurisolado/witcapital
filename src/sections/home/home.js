@@ -44,7 +44,7 @@ export default function Home() {
             color="primary"
             size="large"
             variant="contained"
-            href="mailto:support@minimals.cc?subject=[Feedback] from Customer"
+            href="mailto:mail@mail.mx?subject=[Feedback] from Customer"
           >
             Áreas de práctica
           </Button>
