@@ -9,7 +9,6 @@ import { usePathname } from 'src/routes/hooks';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 //
 import { NavItem } from './nav-item';
-
 // ----------------------------------------------------------------------
 
 export default function NavList({ item, offsetTop, sx }) {
@@ -31,16 +30,14 @@ export default function NavList({ item, offsetTop, sx }) {
   }, [pathname]);
 
   return (
-    <>
-      <NavItem
-        item={item}
-        offsetTop={offsetTop}
-        active={active}
-        open={nav.value}
-        externalLink={externalLink}
-        sx={sx}
-      />
-    </>
+    <NavItem
+      item={item}
+      offsetTop={offsetTop}
+      active={active}
+      open={nav.value}
+      externalLink={externalLink}
+      sx={sx}
+    />
   );
 }
 
