@@ -142,13 +142,13 @@ export const paths = {
       },
     },
     post: {
-      root: `${ROOTS.DASHBOARD}/post`,
-      new: `${ROOTS.DASHBOARD}/post/new`,
-      details: (title) => `${ROOTS.DASHBOARD}/post/`,
-      edit: (title) => `${ROOTS.DASHBOARD}/post/`,
+      root: `/post`,
+      new: `/post/new`,
+      details: `/post/`,
+      edit: `/post/`,
       demo: {
-        details: `${ROOTS.DASHBOARD}/post/`,
-        edit: `${ROOTS.DASHBOARD}/post/`,
+        details: `/post/`,
+        edit: `/post/`,
       },
     },
     order: {

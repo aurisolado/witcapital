@@ -16,11 +16,11 @@ export default function InvoiceEditPage({ params }) {
   return <InvoiceEditView id={id} />;
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   return _invoices.map((invoice) => ({
     id: invoice.id,
   }));
-}
+} */
 
 InvoiceEditPage.propTypes = {
   params: PropTypes.shape({

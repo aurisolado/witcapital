@@ -16,11 +16,11 @@ export default function JobDetailsPage({ params }) {
   return <JobDetailsView id={id} />;
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   return _jobs.map((job) => ({
     id: job.id,
   }));
-}
+} */
 
 JobDetailsPage.propTypes = {
   params: PropTypes.shape({
