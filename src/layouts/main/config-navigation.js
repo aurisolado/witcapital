@@ -51,11 +51,11 @@ export const navConfig = [
       {
         subheader: 'Business',
         items: [
-          { title: 'Asesoria Laboral', path: paths.cryptocurrency },
-          { title: 'Bancario / Financiero', path: paths.cryptocurrency },
-          { title: 'Comercio exterior y aduanas', path: paths.cryptocurrency },
-          { title: 'Consultoría Fiscal', path: paths.cryptocurrency },
-          { title: 'Consultoría Internacional', path: paths.cryptocurrency },
+          { title: 'Asesoria Laboral', path: paths.business },
+          { title: 'Bancario / Financiero', path: paths.business },
+          { title: 'Comercio exterior y aduanas', path: paths.business },
+          { title: 'Consultoría Fiscal', path: paths.business },
+          { title: 'Consultoría Internacional', path: paths.business },
         ],
       },
     ],

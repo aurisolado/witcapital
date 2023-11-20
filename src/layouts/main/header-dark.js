@@ -19,6 +19,7 @@ import NavDesktop from './nav/desktop';
 import NavMobile from './nav/mobile';
 //
 import { HeaderShadow } from '../_common';
+import LogoDark from 'src/components/logo/logo-dark';
 
 // ----------------------------------------------------------------------
 
@@ -47,7 +48,7 @@ export default function HeaderDark() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo />
+          <LogoDark />
 
           <Box sx={{ flexGrow: 1 }} />
 

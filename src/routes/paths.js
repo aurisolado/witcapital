@@ -18,6 +18,7 @@ const ROOTS = {
 
 export const paths = {
   cryptocurrency: '/cryptocurrency',
+  business: '/business',
 
   comingSoon: '/coming-soon',
   maintenance: '/maintenance',

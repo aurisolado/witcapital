@@ -75,7 +75,7 @@ export const typography = {
     fontWeight: 700,
     lineHeight: 1.5,
     fontSize: pxToRem(24),
-    ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
+    ...responsiveFontSizes({ sm: 33, md: 45, lg: 53 }),
   },
   h4: {
     fontWeight: 600,
@@ -107,10 +107,10 @@ export const typography = {
   },
   body1: {
     fontFamily: 'inter, Helvetica, Arial, sans-serif',
-    fontWeight: 200,
+    fontWeight: 400,
     color: '#212B36',
     fontSize: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
-    lineHeight: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
+    lineHeight: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.55rem)',
   },
   body2: {
     lineHeight: 22 / 14,
