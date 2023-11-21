@@ -14,15 +14,15 @@ export function responsiveFontSizes({ sm, md, lg }) {
   return {
     '@media (min-width:600px)': {
       fontSize: pxToRem(sm),
-      lineHeight: pxToRem(sm),
+      lineHeight: pxToRem(sm + 8),
     },
     '@media (min-width:900px)': {
       fontSize: pxToRem(md),
-      lineHeight: pxToRem(md),
+      lineHeight: pxToRem(md + 8),
     },
     '@media (min-width:1200px)': {
       fontSize: pxToRem(lg),
-      lineHeight: pxToRem(lg),
+      lineHeight: pxToRem(lg + 8),
     },
   };
 }

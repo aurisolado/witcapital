@@ -35,10 +35,10 @@ export const navConfig = [
       {
         subheader: 'Personal',
         items: [
-          { title: 'Cash Paspost', path: paths.cryptocurrency },
-          { title: 'Fx Trading desk (pendiente)', path: paths.cryptocurrency },
-          { title: 'Inversión patrimonial', path: paths.cryptocurrency },
-          { title: 'Private trust', path: paths.cryptocurrency },
+          { title: 'Cash Paspost', path: paths.personal },
+          { title: 'Fx Trading desk (pendiente)', path: paths.personal },
+          { title: 'Inversión patrimonial', path: paths.personal },
+          { title: 'Private trust', path: paths.personal },
         ],
       },
     ],
