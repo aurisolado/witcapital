@@ -84,7 +84,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -145,7 +145,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -183,7 +183,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -243,7 +243,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -280,7 +280,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -335,7 +335,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
@@ -375,7 +375,7 @@ export default function PrivateTrust() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
