@@ -90,8 +90,8 @@ export default function EquityInvestment() {
                       color: '#163300',
                     }}
                   >
-                    Diseñamos estrategias de inversión personales para alcanzar tus objetivos
-                    patrimoniales.
+                    En Wit Biz diseñamos estrategias de inversión personales para alcanzar tus
+                    objetivos patrimoniales.
                   </span>
                 </Typography>
               </m.div>
@@ -104,8 +104,8 @@ export default function EquityInvestment() {
                     mb: { md: 5 },
                   }}
                 >
-                  La inversión patrimonial es una estrategia de inversión a largo plazo que consiste
-                  en adquirir bienes raíces en mercados internacionales para incrementar tu
+                  La inversión patrimonial es una estrategia de inversión a mediano plazo que
+                  consiste en adquirir bienes raíces en mercados internacionales para incrementar tu
                   patrimonio, generando ingresos a través de la renta y la valorización de la
                   propiedad. Esta estrategia requiere una gestión cuidadosa del análisis de las
                   mejores opciones de inversión y una comprensión profunda del mercado inmobiliario
@@ -153,7 +153,7 @@ export default function EquityInvestment() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Generación de ingresos por renta
+                  Generación de ingresos por renta.
                 </Typography>
               </m.div>
             </Stack>
@@ -169,7 +169,7 @@ export default function EquityInvestment() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Diversificación de la cartera de inversión
+                  Potencial de aumento del valor de la propiedad a largo plazo.
                 </Typography>
               </m.div>
             </Stack>
@@ -185,7 +185,7 @@ export default function EquityInvestment() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Inversión en activos tangibles
+                  Diversificación de la cartera de inversión.
                 </Typography>
               </m.div>
             </Stack>
@@ -201,7 +201,7 @@ export default function EquityInvestment() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Protección contra la inflación
+                  Inversión en activos tangibles.
                 </Typography>
               </m.div>
             </Stack>
@@ -217,7 +217,7 @@ export default function EquityInvestment() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Potencial de aumento del valor de la propiedad a largo plazo
+                  Protección contra la inflación.
                 </Typography>
               </m.div>
             </Stack>

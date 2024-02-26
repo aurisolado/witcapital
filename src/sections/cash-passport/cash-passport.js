@@ -84,10 +84,10 @@ export default function CashPassport() {
                     mb: { md: 5 },
                   }}
                 >
-                  Es una tarjeta multidivisas que te permitirá realizar compras y retiros de
-                  efectivo durante tus viajes alrededor del mundo llevando hasta 5 divisas
-                  diferentes: Dólar Americano, Dólar Canadiense, Libra Esterlina, Euro y Yen
-                  Japonés, de una manera segura con el respaldo de Mastercard.
+                  Nuestra tarjeta te permitirá realizar compras y retiros de efectivo durante tus
+                  viajes alrededor del mundo, llevando hasta 5 divisas diferentes: Dólar Americano,
+                  Dólar Canadiense, Libra Esterlina, Euro y Yen Japonés, de una manera segura con el
+                  respaldo de Mastercard.
                 </Typography>
               </m.div>
             </Stack>
@@ -125,7 +125,7 @@ export default function CashPassport() {
                     mb: { md: 5 },
                   }}
                 >
-                  Ventajas
+                  Nuestros diferenciadores
                 </Typography>
               </m.div>
             </Stack>
@@ -142,38 +142,6 @@ export default function CashPassport() {
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Aceptación Internacional.
-                </Typography>
-              </m.div>
-            </Stack>
-          </Grid>
-
-          <Grid xs={12} md={6}>
-            <Stack
-              sx={{
-                textAlign: 'center',
-                backgroundColor: '#edefeb',
-                borderRadius: '10px',
-              }}
-            >
-              <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Call Center gratuito en diferentes idiomas, 24/7/365.
-                </Typography>
-              </m.div>
-            </Stack>
-          </Grid>
-
-          <Grid xs={12} md={6}>
-            <Stack
-              sx={{
-                textAlign: 'center',
-                backgroundColor: '#edefeb',
-                borderRadius: '10px',
-              }}
-            >
-              <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Compras seguras en línea gracias al Protocolo de Seguridad 3D Secure.
                 </Typography>
               </m.div>
             </Stack>
@@ -221,7 +189,7 @@ export default function CashPassport() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Realiza recargas a través de los diferentes canales.
+                  Protocolo de Seguridad 3D Secure, Compras seguras en línea.
                 </Typography>
               </m.div>
             </Stack>
@@ -237,8 +205,7 @@ export default function CashPassport() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Tarjeta inteligente que selecciona la divisa dependiendo la moneda local del país
-                  donde te encuentres.
+                  Seguridad y privacidad por tu dinero.
                 </Typography>
               </m.div>
             </Stack>
@@ -254,7 +221,40 @@ export default function CashPassport() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  Tecnología Contactless. Realiza pagos únicamente acercando tu tarjeta a un
+                  Tarjeta inteligente multidivisa, selecciona la divisa dependiendo la moneda local
+                  del país donde te encuentres.
+                </Typography>
+              </m.div>
+            </Stack>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <Stack
+              sx={{
+                textAlign: 'center',
+                backgroundColor: '#edefeb',
+                borderRadius: '10px',
+              }}
+            >
+              <m.div variants={varFade().inDown}>
+                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                  Tarjeta prepagada, realiza recargas a través de los diferentes canales.
+                </Typography>
+              </m.div>
+            </Stack>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <Stack
+              sx={{
+                textAlign: 'center',
+                backgroundColor: '#edefeb',
+                borderRadius: '10px',
+              }}
+            >
+              <m.div variants={varFade().inDown}>
+                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                  TTecnología Contactless, realiza pagos únicamente acercando tu tarjeta a un
                   dispositivo compatible con este método de pago.
                 </Typography>
               </m.div>

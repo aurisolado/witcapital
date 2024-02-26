@@ -29,7 +29,6 @@ export default function InversionPatrimonialView() {
           bgcolor: '#9fe870',
         }}
       >
-        <Home />
         <EquityInvestment />
 
         <Contact />

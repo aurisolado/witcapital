@@ -37,17 +37,10 @@ export default function PrivateTrust() {
             </Typography>
 
             <Typography variant="body1">
-              El Trust es un contrato privado de origen anglosajón, por el cual una persona
-              (Fundador o Settlor) transfiere determinados bienes o derechos a otra persona de su
-              confianza (Fiduciario), con el fin de que los controle y administre en beneficio de
-              terceras personas (Beneficiarios).
-            </Typography>
-
-            <Typography variant="body1">
-              El Trust es un instrumento mediante el cual el settlor transfiere la propiedad legal
-              de los activos al trustee mientras que el disfrute de los activos del trust se
-              conserva para el beneficio de los beneficiarios en las condiciones definidas por el
-              settlor en la constitución del trust.
+              Un Trust es un contrato privado, por el cual una persona (Fundador o Settlor)
+              transfiere determinados bienes o derechos a otra persona de su confianza (Fiduciario),
+              con el fin de que los controle y administre en beneficio de terceras personas
+              (Beneficiarios).
             </Typography>
 
             <Typography variant="body1">
@@ -80,7 +73,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -92,7 +85,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -141,7 +134,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -153,7 +146,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -179,7 +172,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -191,7 +184,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -239,7 +232,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -251,7 +244,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -276,7 +269,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -288,7 +281,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -331,7 +324,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -343,17 +336,47 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
-                  Se puede utilizar también para los siguientes fines : Para realizar inversiones
-                  conjuntas, agrupar pequeños accionistas Para operaciones fuera del balance
-                  Acuerdos entre acreedores, para garantizar pagos y transacciones Esquemas de
-                  securitización de activos Opciones sobre acciones e incentivos al personal
-                  Acuerdos de inversión de capital privado, para garantizar el correcto cumplimiento
-                  de una transacción (escrow)
+                  Se puede utilizar también para los siguientes fines :
                 </Typography>
+
+                <Grid xs={12} md={12}>
+                  <Stack
+                    sx={{
+                      textAlign: 'center',
+                      backgroundColor: '#edefeb',
+                      borderRadius: '10px',
+                    }}
+                  >
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Para realizar inversiones conjuntas, agrupar pequeños accionistas
+                    </Typography>
+
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Para operaciones fuera del balance
+                    </Typography>
+
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Acuerdos entre acreedores, para garantizar pagos y transacciones
+                    </Typography>
+
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Esquemas de securitización de activos
+                    </Typography>
+
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Opciones sobre acciones e incentivos al personal
+                    </Typography>
+
+                    <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, p: 1 }}>
+                      Acuerdos de inversión de capital privado, para garantizar el correcto
+                      cumplimiento de una transacción (escrow)
+                    </Typography>
+                  </Stack>
+                </Grid>
               </m.div>
             </Stack>
           </Grid>
@@ -371,7 +394,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="h3"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >
@@ -383,7 +406,7 @@ export default function PrivateTrust() {
                 <Typography
                   variant="body1"
                   sx={{
-                    mt: 3,
+                    mt: 5,
                     mb: { md: 5 },
                   }}
                 >

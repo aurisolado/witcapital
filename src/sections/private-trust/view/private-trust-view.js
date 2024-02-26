@@ -29,7 +29,6 @@ export default function PrivateTrustView() {
           bgcolor: '#9fe870',
         }}
       >
-        <Home />
         <PrivateTrust />
 
         <Contact />

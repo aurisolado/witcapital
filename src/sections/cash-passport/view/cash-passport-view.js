@@ -29,7 +29,6 @@ export default function CashPassportView() {
           bgcolor: '#9fe870',
         }}
       >
-        <Home />
         <CashPassport />
         <Contact />
       </Box>
