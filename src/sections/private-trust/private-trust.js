@@ -24,34 +24,31 @@ export default function PrivateTrust() {
           py: { xs: 10, md: 10 },
         }}
       >
-        <m.div variants={varFade().inDown}>
-          <Stack
-            spacing={3}
-            sx={{
-              textAlign: 'center',
-              mb: { xs: 5, md: 10 },
-            }}
-          >
-            <Typography variant="h2" color="#163300">
-              Private Trust
-            </Typography>
+        <Stack
+          spacing={3}
+          sx={{
+            textAlign: 'center',
+            mb: { xs: 5, md: 10 },
+          }}
+        >
+          <Typography variant="h2" color="#163300">
+            Private Trust
+          </Typography>
 
-            <Typography variant="body1">
-              Un Trust es un contrato privado, por el cual una persona (Fundador o Settlor)
-              transfiere determinados bienes o derechos a otra persona de su confianza (Fiduciario),
-              con el fin de que los controle y administre en beneficio de terceras personas
-              (Beneficiarios).
-            </Typography>
+          <Typography variant="body1">
+            Un Trust es un contrato privado, por el cual una persona (Fundador o Settlor) transfiere
+            determinados bienes o derechos a otra persona de su confianza (Fiduciario), con el fin
+            de que los controle y administre en beneficio de terceras personas (Beneficiarios).
+          </Typography>
 
-            <Typography variant="body1">
-              El motivo para el uso de los trust es amplio y esta en constante evolución, pero la
-              flexibilidad y confidencialidad son las principales ventajas que un trust tiene sobre
-              otras formas jurídicas para mantener, preservas y transferir la riqueza. El concepto
-              del trust ha demostrado ser sumamente flexible y es ampliamente utilizado en la
-              planificación financiera entre ellas:
-            </Typography>
-          </Stack>
-        </m.div>
+          <Typography variant="body1">
+            El motivo para el uso de los trust es amplio y esta en constante evolución, pero la
+            flexibilidad y confidencialidad son las principales ventajas que un trust tiene sobre
+            otras formas jurídicas para mantener, preservas y transferir la riqueza. El concepto del
+            trust ha demostrado ser sumamente flexible y es ampliamente utilizado en la
+            planificación financiera entre ellas:
+          </Typography>
+        </Stack>
 
         <Grid
           container
