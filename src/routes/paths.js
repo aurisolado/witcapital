@@ -21,6 +21,11 @@ export const paths = {
   business: '/business',
   personal: '/personal',
 
+  cashPassport: '/cash-passport',
+  fxTrading: '/fx-trading',
+  inversionPatrimonial: '/inversion',
+  privateTrust: '/private-trust',
+
   comingSoon: '/coming-soon',
   maintenance: '/maintenance',
   pricing: '/pricing',

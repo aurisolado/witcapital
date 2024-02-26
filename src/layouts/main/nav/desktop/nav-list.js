@@ -11,7 +11,7 @@ import { useActiveLink } from 'src/routes/hooks/use-active-link';
 import { NavItem } from './nav-item';
 // ----------------------------------------------------------------------
 
-export default function NavList({ item, offsetTop, sx }) {
+export default function NavList({ item, offsetTop, sx, color }) {
   const pathname = usePathname();
 
   const nav = useBoolean();
@@ -37,6 +37,7 @@ export default function NavList({ item, offsetTop, sx }) {
       open={nav.value}
       externalLink={externalLink}
       sx={sx}
+      color={color}
     />
   );
 }

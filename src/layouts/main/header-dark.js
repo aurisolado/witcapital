@@ -52,15 +52,7 @@ export default function HeaderDark() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {mdUp && (
-            <NavDesktop
-              offsetTop={offsetTop}
-              data={navConfig}
-              sx={{
-                color: '#9fe870',
-              }}
-            />
-          )}
+          {mdUp && <NavDesktop offsetTop={offsetTop} data={navConfig} color="dark" />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
             <div className="js-nav-dropdown group relative" style={{ width: '50px' }}>

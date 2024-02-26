@@ -12,21 +12,7 @@ export const navConfig = [
     icon: <Iconify icon="solar:home-2-bold-duotone" />,
     path: '/',
   },
-  {
-    title: 'Exchange',
-    path: '/exchange',
-    icon: <Iconify icon="solar:file-bold-duotone" />,
-    children: [
-      {
-        subheader: 'Exchange',
-        items: [
-          { title: 'Cryptocurrency', path: paths.cryptocurrency },
-          { title: 'Divisas', path: paths.cryptocurrency },
-          { title: 'Transmisor de dinero (pendiente)', path: paths.cryptocurrency },
-        ],
-      },
-    ],
-  },
+
   {
     title: 'Personal',
     path: '/personal',
@@ -35,27 +21,45 @@ export const navConfig = [
       {
         subheader: 'Personal',
         items: [
-          { title: 'Cash Paspost', path: paths.personal },
-          { title: 'Fx Trading desk (pendiente)', path: paths.personal },
-          { title: 'Inversión patrimonial', path: paths.personal },
-          { title: 'Private trust', path: paths.personal },
+          { title: 'Tarjeta Multidivisas', path: paths.cashPassport },
+          { title: 'Fx Trading desk (pendiente)', path: paths.fxTrading },
+          { title: 'Inversión patrimonial', path: paths.inversionPatrimonial },
+          { title: 'Private Trust', path: paths.privateTrust },
         ],
       },
     ],
   },
+
   {
-    title: 'Business',
+    title: 'Empresas',
+    path: '/exchange',
+    icon: <Iconify icon="solar:file-bold-duotone" />,
+    children: [
+      {
+        subheader: 'Exchange',
+        items: [
+          { title: 'Compraventa de Cripto-Activos', path: paths.cryptocurrency },
+          { title: 'Compraventa de Divisas', path: paths.cryptocurrency },
+          { title: 'Nearshoring & Offshore (pendiente)', path: paths.cryptocurrency },
+          { title: 'Pagos Nacionales e Internacionales (pendiente)', path: paths.cryptocurrency },
+        ],
+      },
+    ],
+  },
+
+  {
+    title: 'Áreas de Práctica',
     path: '/business',
     icon: <Iconify icon="solar:file-bold-duotone" />,
     children: [
       {
         subheader: 'Business',
         items: [
-          { title: 'Asesoria Laboral', path: paths.business },
-          { title: 'Bancario / Financiero', path: paths.business },
-          { title: 'Comercio exterior y aduanas', path: paths.business },
+          //{ title: 'Asesoria Laboral', path: paths.business },
           { title: 'Consultoría Fiscal', path: paths.business },
-          { title: 'Consultoría Internacional', path: paths.business },
+          { title: 'Bancario y Financiero', path: paths.business },
+          { title: 'Comercio Exterior y Aduanas', path: paths.business },
+          { title: 'Asesoría Internacional', path: paths.business },
         ],
       },
     ],

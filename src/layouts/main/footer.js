@@ -21,30 +21,32 @@ import Logo from 'src/components/logo';
 
 const LINKS = [
   {
-    headline: 'Exchange',
-    children: [
-      { name: 'Cryptocurrency', href: '#' },
-      { name: 'Divisas', href: '#' },
-      { name: 'Transmisor de dinero', href: '#' },
-    ],
-  },
-  {
     headline: 'Personal',
     children: [
-      { name: 'Cash passport', href: '#' },
+      { name: 'Tarjeta Multidivisas', href: '#' },
       { name: 'FX Trading desk', href: '#' },
       { name: 'Inversión patrimonial', href: '#' },
       { name: 'Private Trust', href: '#' },
     ],
   },
   {
-    headline: 'Business',
+    headline: 'Empresas',
     children: [
-      { name: 'Asesoría laboral', href: '#' },
-      { name: 'Bancario / Financiero', href: '#' },
-      { name: 'Comercio exterior y aduanas', href: '#' },
-      { name: 'Consultoría fiscal', href: '#' },
-      { name: 'Consultoría internacional', href: '#' },
+      { name: 'Compraventa de Cripto-Activos', href: '#' },
+      { name: 'Compraventa de Divisas', href: '#' },
+      { name: 'Nearshoring & Offshore (pendiente)', href: '#' },
+      { name: 'Pagos Nacionales e Internacionales (pendiente)', href: '#' },
+    ],
+  },
+
+  {
+    headline: 'Áreas de Práctica',
+    children: [
+      //{ title: 'Asesoria Laboral', path: paths.business },
+      { name: 'Consultoría Fiscal', href: '#' },
+      { name: 'Bancario y Financiero', href: '#' },
+      { name: 'Comercio Exterior y Aduanas', href: '#' },
+      { name: 'Asesoría Internacional', href: '#' },
     ],
   },
 ];
@@ -70,9 +72,7 @@ export default function Footer() {
         <Logo sx={{ mb: 1, mx: 'auto' }} />
 
         <Typography variant="caption" component="div">
-          © All rights reserved
-          <br /> made by
-          <Link href="https://minimals.cc/"> minimals.cc </Link>
+          © 2024. Wit Biz All rights reserved
         </Typography>
       </Container>
     </Box>
@@ -90,7 +90,7 @@ export default function Footer() {
 
       <Container
         sx={{
-          pt: 10,
+          pt: 5,
           pb: 5,
           textAlign: { xs: 'center', md: 'unset' },
         }}
@@ -138,7 +138,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={8}>
             <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
               {LINKS.map((list) => (
                 <Stack
@@ -169,7 +169,7 @@ export default function Footer() {
         </Grid>
 
         <Typography variant="body2" sx={{ mt: 10 }}>
-          © 2023. WIT_CAPITAL All rights reserved
+          © 2024. Wit Biz All rights reserved
         </Typography>
       </Container>
     </Box>

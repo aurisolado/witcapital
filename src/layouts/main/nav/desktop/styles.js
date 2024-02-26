@@ -13,29 +13,93 @@ import { HEADER } from '../../../config-layout';
 export const ListItem = styled(ListItemButton, {
   shouldForwardProp: (prop) =>
     prop !== 'active' && prop !== 'open' && prop !== 'offsetTop' && prop !== 'subItem',
-})(({ active, open, offsetTop, subItem, theme }) => {
-  const dotActive = {
-    content: '""',
-    borderRadius: '50%',
-    position: 'absolute',
-    width: 6,
-    height: 6,
-    left: -14,
-    opacity: 0.48,
-    backgroundColor: 'currentColor',
-  };
-
+})(({ active, open, color, offsetTop, subItem, theme, ...prop }) => {
   return {
     ...theme.typography.subtitle2,
-    padding: 0,
-    height: '100%',
+    padding: '5px 10px 6px 10px',
+    //add transition all 0.3s
+    fontSize: '15px',
+    borderRadius: '25px',
     color: theme.palette.text.primary,
-    transition: theme.transitions.create(['opacity'], {
-      duration: theme.transitions.duration.shorter,
-    }),
+    transition: 'all 0.2s',
     '&:hover': {
+      background: '#9fe870',
+      color: '#163300',
+    },
+
+    //if color is green, hover color is white
+    ...(color === 'green' && {
+      '&:hover': {
+        background: '#ebebeb',
+      },
+    }),
+    ...(color === 'dark' && {
+      '&:hover': {
+        background: '#9fe870',
+        color: '#163300',
+      },
+    }),
+    // Sub item
+    ...(subItem && {
+      ...theme.typography.body2,
+      color: theme.palette.text.secondary,
+    }),
+    // offsetTop
+    ...(offsetTop && {
+      color: theme.palette.text.primary,
+    }),
+    // Active
+    ...(active && {
+      background: '#9fe870',
+      color: '#163300 !important',
+      '&:hover': {
+        background: '#88df50',
+      },
+    }),
+
+    //active green color
+    ...(active &&
+      color === 'green' && {
+        background: '#ebebeb',
+      }),
+    ...(active &&
+      color === 'dark' && {
+        background: '#9fe870',
+        color: '#163300',
+      }),
+    //no active dark color
+    ...(active === false &&
+      color === 'dark' && {
+        color: '#9fe870',
+      }),
+    // Active sub item
+    ...(active &&
+      subItem && {
+        ...theme.typography.subtitle2,
+        color: theme.palette.text.primary,
+      }),
+    // Open
+    ...(open && {
       opacity: 0.48,
-      backgroundColor: 'transparent',
+    }),
+  };
+});
+
+export const ListSubItem = styled(ListItemButton, {
+  shouldForwardProp: (prop) =>
+    prop !== 'active' && prop !== 'open' && prop !== 'offsetTop' && prop !== 'subItem',
+})(({ active, open, offsetTop, subItem, theme }) => {
+  return {
+    ...theme.typography.subtitle2,
+    padding: '5px 10px 6px 10px',
+    //add transition all 0.3s
+    fontSize: '15px',
+    borderRadius: '25px',
+    color: theme.palette.text.primary,
+    transition: 'all 0.2s',
+    '&:hover': {
+      background: 'transparent',
+      color: '#000',
     },
     // Sub item
     ...(subItem && {
@@ -48,18 +112,14 @@ export const ListItem = styled(ListItemButton, {
     }),
     // Active
     ...(active && {
-      color: theme.palette.primary.main,
-      '&::before': dotActive,
+      background: 'transparent',
+      color: '#000',
     }),
     // Active sub item
     ...(active &&
       subItem && {
         ...theme.typography.subtitle2,
         color: theme.palette.text.primary,
-        '&::before': {
-          ...dotActive,
-          color: theme.palette.primary.main,
-        },
       }),
     // Open
     ...(open && {

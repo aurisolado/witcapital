@@ -6,11 +6,11 @@ import NavList from './nav-list';
 
 // ----------------------------------------------------------------------
 
-export default function NavDesktop({ offsetTop, data, sx }) {
+export default function NavDesktop({ offsetTop, data, sx, color }) {
   return (
-    <Stack component="nav" direction="row" spacing={5} sx={{ mr: 2.5, height: 1, color: '#fff' }}>
+    <Stack component="nav" direction="row" spacing={1} sx={{ mr: 2.5, height: 1, color: '#fff' }}>
       {data.map((link) => (
-        <NavList key={link.title} item={link} offsetTop={offsetTop} sx={sx} />
+        <NavList key={link.title} item={link} offsetTop={offsetTop} sx={sx} color={color} />
       ))}
     </Stack>
   );

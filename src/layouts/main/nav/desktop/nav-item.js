@@ -12,7 +12,7 @@ import Iconify from 'src/components/iconify';
 //
 import { Menu, Stack } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import { ListItem } from './styles';
+import { ListItem, ListSubItem } from './styles';
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ function NavSubList({ items, isDashboard, subheader, onClose }) {
         isDashboard ? (
           <NavItemDashboard key={item.title} item={item} onClick={onClose} />
         ) : (
-          <NavItem
+          <NavSubItem
             subItem
             key={item.title}
             item={item}
@@ -49,7 +49,7 @@ function NavSubList({ items, isDashboard, subheader, onClose }) {
   );
 }
 
-export const NavItem = forwardRef(
+export const NavSubItem = forwardRef(
   ({ item, open, offsetTop, active, subItem, externalLink, ...other }, ref) => {
     const { title, path, children } = item;
 
@@ -63,13 +63,102 @@ export const NavItem = forwardRef(
     };
 
     const renderContent = (
-      <div>
+      <div
+        style={{
+          verticalAlign: 'middle',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <ListSubItem
+          ref={ref}
+          disableRipple
+          offsetTop={offsetTop}
+          subItem={subItem}
+          active={active}
+          open={open}
+          {...other}
+          onClick={handleClick}
+        >
+          {title}
+
+          {!!children && <Iconify width={16} icon="eva:arrow-ios-downward-fill" sx={{ ml: 1 }} />}
+        </ListSubItem>
+
+        {children && (
+          <Menu id="simple-menu" anchorEl={anchorEl} open={openmen} onClose={handleClose}>
+            {children.map((list) => (
+              <NavSubList
+                key={list.subheader}
+                subheader={list.subheader}
+                items={list.items}
+                isDashboard={list.subheader === 'Dashboard'}
+              />
+            ))}
+          </Menu>
+        )}
+      </div>
+    );
+
+    // External link
+    if (externalLink) {
+      return (
+        <Link href={path} target="_blank" rel="noopener" underline="none">
+          {renderContent}
+        </Link>
+      );
+    }
+
+    // Has child
+    if (children) {
+      return renderContent;
+    }
+
+    // Default
+    return (
+      <div
+        style={{
+          verticalAlign: 'middle',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <Link component={RouterLink} href={path} underline="none">
+          {renderContent}
+        </Link>
+      </div>
+    );
+  }
+);
+
+export const NavItem = forwardRef(
+  ({ item, open, offsetTop, active, subItem, externalLink, color, ...other }, ref) => {
+    const { title, path, children } = item;
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const openmen = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+    const renderContent = (
+      <div
+        style={{
+          verticalAlign: 'middle',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
         <ListItem
           ref={ref}
           disableRipple
           offsetTop={offsetTop}
           subItem={subItem}
           active={active}
+          color={color}
           open={open}
           {...other}
           onClick={handleClick}
