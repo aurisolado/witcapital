@@ -4,7 +4,7 @@ import { HomeView } from 'src/sections/home/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Minimal: The starting point for your next project',
+  title: 'WIT BIZ - Asesoría de vanguardia, con visión de negocios',
 };
 
 export default function HomePage() {
