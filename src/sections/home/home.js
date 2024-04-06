@@ -26,11 +26,21 @@ export default function Home() {
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h1">Asesoría de vanguardia, con visión de negocios.</Typography>
+          <Typography variant="h1">Impulsamos la creación de valor en nuestro entorno</Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
           <Typography variant="body1">
+            Somos una entidad financiera mexicana supervisada y regulada por la CNBV, que provee
+            servicios de vanguardia para atender las necesidades de empresas y empresarios líderes
+            en sus operaciones a nivel nacional e internacional.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 2,
+            }}
+          >
             Gracias a nuestro sofisticado y experimentado grupo multidisciplinario y a nuestro muy
             particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a nuestros
             clientes, abordando cada transacción con soluciones hechas “a la medida” y con
@@ -40,12 +50,7 @@ export default function Home() {
         </m.div>
 
         <m.div variants={varFade().inDown}>
-          <Button
-            color="primary"
-            size="large"
-            variant="contained"
-            href="mailto:mail@mail.mx?subject=[Feedback] from Customer"
-          >
+          <Button color="primary" size="large" variant="contained" href="/business">
             Áreas de práctica
           </Button>
         </m.div>

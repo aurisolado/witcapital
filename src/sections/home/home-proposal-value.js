@@ -16,23 +16,23 @@ import { MotionViewport, varFade } from 'src/components/animate';
 const SUMMARY = [
   {
     index: 1,
-    title: 'Asesoría de vanguardia',
+    title: 'Objetivos claros',
     description:
-      'Brindamos asesoría de vanguardia y visión de negocios a empresas líderes, a través de un equipo multidisciplinario experimentado. Nuestro enfoque se basa en establecer objetivos claros y cumplirlos de manera eficiente, anticipándonos a las necesidades de nuestros clientes y proporcionando soluciones legales y de negocios integrales, innovadoras y efectivas para mitigar riesgos y agregar valor a sus negocios.',
+      'Establecemos objetivos claros y los cumplimos a través de una metodología de trabajo que es eficiente desde la perspectiva de honorarios. Somos sensibles a las necesidades de nuestros clientes y nos anticipamos a las necesidades de sus negocios mitigando los riesgos presentes y futuros.',
     icon: 'solar:verified-check-bold',
   },
   {
     index: 2,
-    title: 'Entendemos lo que necesitas',
+    title: 'Servicios de vanguardia',
     description:
-      'Somos sensibles a las necesidades de nuestros clientes y nos anticipamos a las necesidades de sus negocios mitigando los riesgos presentes y futuros.',
+      'Proporcionamos servicios de alta calidad, consistencia y rentabilidad, contando con un equipo de trabajo experimentado, en un ambiente de honestidad, colaboración y tecnología de vanguardia, que pueda garantizar seguridad para nuestros clientes y el crecimiento continuo de nuestra cartera.',
     icon: 'solar:clock-circle-bold',
   },
   {
     index: 3,
-    title: 'Enfoque integral',
+    title: 'Estamos regulados y capacitados',
     description:
-      'Al entender las razones de negocios detrás de cada asunto, somos capaces de aplicar un enfoque integral y proveer valor agregado a los mismos.',
+      'Como una entidad regulada por la CNBV, estamos bajo su supervisión y en conformidad con la Ley del Mercado de Valores y las Disposiciones de Carácter General emitidas por la misma comisión.',
     icon: 'solar:shield-check-bold',
   },
 ];
@@ -95,7 +95,7 @@ export default function HomeProposalValue() {
             color: '#1c3108',
           }}
         >
-          Conoce nuestra propuesta de valor
+          Nuestra oferta de valor
         </Typography>
       </m.div>
 
