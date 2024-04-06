@@ -38,16 +38,6 @@ export default function BankingFinance() {
           justifyContent="space-between"
           spacing={{ xs: 5, md: 0 }}
         >
-          <Grid xs={12} md={6} align="center">
-            <m.div variants={varFade().inUp}>
-              <Image
-                disabledEffect
-                alt="rocket"
-                src="https://wise.com/web-art/assets/illustrations/gear-medium@1x.webp"
-              />
-            </m.div>
-          </Grid>
-
           <Grid xs={12} md={6}>
             <Stack
               sx={{
@@ -59,10 +49,10 @@ export default function BankingFinance() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
                   Bancario y Financiero
@@ -74,12 +64,11 @@ export default function BankingFinance() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Wit Capital maximiza la generación de valor a través de una combinación
-                  estratégica de experiencia y un profundo entendimiento de los negocios de nuestros
-                  clientes.
+                  Wit Biz maximiza la generación de valor a través de una combinación estratégica de
+                  experiencia y un profundo entendimiento de los negocios de nuestros clientes.
                 </Typography>
               </m.div>
 
@@ -88,10 +77,26 @@ export default function BankingFinance() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Los socios de esta Práctica proporcionan asesoría regulatoria y transaccional a
+                  La firma participa activamente con sus clientes en la conformación y levantamiento
+                  de fondos de capital privado y otros activos alternativos, así como en la asesoría
+                  continua a los mismos, incluyendo apoyo en sus obligaciones de reporteo, llamadas
+                  de capital, inversiones y desinversiones, reestructuración, negociación de
+                  acuerdos entre socios y cumplimiento normativo.
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inDown}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    mt: 3,
+                    mb: { md: 3 },
+                  }}
+                >
+                  Los socios de esta práctica proporcionan asesoría regulatoria y transaccional a
                   bancos, Instituciones de Tecnología Financiera (Fintech), sociedades financieras
                   de objeto múltiple (SOFOMS), fideicomisos de inversión en bienes raíces (FIBRAs),
                   fideicomisos públicos (CKDs), compañías aseguradoras, empresas de corretaje
@@ -99,7 +104,30 @@ export default function BankingFinance() {
                   otras.
                 </Typography>
               </m.div>
+
+              <m.div variants={varFade().inDown}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    mt: 3,
+                    mb: { md: 3 },
+                  }}
+                >
+                  Negociamos cada transacción procurando soluciones prácticas e innovadoras desde
+                  una perspectiva que integra la asesoría legal con el negocio del cliente.
+                </Typography>
+              </m.div>
             </Stack>
+          </Grid>
+
+          <Grid xs={12} md={6} align="center">
+            <m.div variants={varFade().inUp}>
+              <Image
+                disabledEffect
+                alt="rocket"
+                src="https://wise.com/web-art/assets/illustrations/gear-medium@1x.webp"
+              />
+            </m.div>
           </Grid>
         </Grid>
       </Container>

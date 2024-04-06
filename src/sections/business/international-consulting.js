@@ -23,7 +23,7 @@ export default function InternationalConsulting() {
   return (
     <Box
       sx={{
-        bgcolor: '#ffffff',
+        bgcolor: '#edefeb',
       }}
     >
       <Container
@@ -50,13 +50,13 @@ export default function InternationalConsulting() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   sx={{
                     mt: 3,
                     mb: { md: 5 },
                   }}
                 >
-                  Consultoría Internacional
+                  Asesoria Internacional
                 </Typography>
               </m.div>
 
@@ -65,10 +65,15 @@ export default function InternationalConsulting() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Planifique sus compañías offshore y su operativa bancaria internacional
+                  Gracias a nuestro sofisticado y experimentado grupo de abogados y a nuestro muy
+                  particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a
+                  nuestros clientes, abordando cada transacción con soluciones hechas “a la medida”
+                  y con extraordinarios resultados, ya que asumimos sus asuntos como propios,
+                  buscando siempre soluciones legales prácticas, efectivas, innovadoras, creativas,
+                  exitosas y sin riesgos.
                 </Typography>
               </m.div>
 
@@ -77,48 +82,25 @@ export default function InternationalConsulting() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Las sociedades offshore se acogen a regulaciones legales y fiscales muy
-                  favorables. Conozca la jurisdicción que mejor se adapte a sus necesidades y déjese
-                  recomendar por nuestro grupo multidisciplinario de abogados.
+                  La colaboración entre las áreas fiscales, bancarias y corporativas del despacho
+                  nos permite identificar y recomendar estructuras transfronterizas eficientes para
+                  las operaciones y mitigar riesgos potenciales.
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="body1"
+                  variant="h5"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Una cuenta offshore es una cuenta bancaria ubicada en una de las muchas entidades
-                  bancarias situadas fuera del país de residencia del titular de la cuenta.
-                </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inDown}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    textAlign: 'center',
-                    mb: { md: 2 },
-                  }}
-                >
-                  “Entendemos a las empresas de e-commerce.”
-                </Typography>
-              </m.div>
-              <m.div variants={varFade().inDown}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    textAlign: 'center',
-                    mb: { md: 5 },
-                  }}
-                >
-                  “Diseña el futuro, actúa en el presente”
+                  Asesoramos a nuestros clientes para expandirse más allá de las fronteras en un
+                  marco de certeza jurídica.
                 </Typography>
               </m.div>
             </Stack>

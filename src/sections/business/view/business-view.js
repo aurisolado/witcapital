@@ -35,11 +35,13 @@ export default function BusinessView() {
         }}
       >
         <Home />
-        <LaborAdvice />
+
+        <TaxConsulting />
         <BankingFinance />
         <ForeignTrade />
-        <TaxConsulting />
         <InternationalConsulting />
+
+        {/* <LaborAdvice /> */}
 
         <Contact />
       </Box>

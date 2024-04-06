@@ -51,17 +51,5 @@ export const navConfig = [
     title: 'Áreas de Práctica',
     path: '/business',
     icon: <Iconify icon="solar:file-bold-duotone" />,
-    children: [
-      {
-        subheader: 'Business',
-        items: [
-          //{ title: 'Asesoria Laboral', path: paths.business },
-          { title: 'Consultoría Fiscal', path: paths.business },
-          { title: 'Bancario y Financiero', path: paths.business },
-          { title: 'Comercio Exterior y Aduanas', path: paths.business },
-          { title: 'Asesoría Internacional', path: paths.business },
-        ],
-      },
-    ],
   },
 ];

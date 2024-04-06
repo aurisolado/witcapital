@@ -39,6 +39,16 @@ export default function ForeignTrade() {
           spacing={{ xs: 5, md: 0 }}
           sx={{ marginBottom: 20 }}
         >
+          <Grid xs={12} md={6} align="center">
+            <m.div variants={varFade().inUp}>
+              <Image
+                disabledEffect
+                alt="rocket"
+                src="https://wise.com/web-art/assets/illustrations/key-medium@1x.webp"
+              />
+            </m.div>
+          </Grid>
+
           <Grid xs={12} md={6}>
             <Stack
               sx={{
@@ -50,13 +60,13 @@ export default function ForeignTrade() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Comercio exterior y aduanas
+                  Comercio Exterior y Aduanas
                 </Typography>
               </m.div>
 
@@ -65,11 +75,14 @@ export default function ForeignTrade() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Asesoramos a nuestros clientes para expandirse más allá de las fronteras en un
-                  marco de certeza jurídica.
+                  Nuestro equipo multidisciplinario tiene experiencia desempeñándose tanto en el
+                  sector público, como en la práctica privada, y adicionalmente experiencia
+                  profesional en la sede de la Organización Mundial de Comercio (OMC) en Ginebra,
+                  brindando asesoría jurídica en los paneles que resuelven controversias en materia
+                  de comercio exterior. 
                 </Typography>
               </m.div>
 
@@ -78,16 +91,14 @@ export default function ForeignTrade() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Nuestro equipo profesional tiene experiencia desempeñándose tanto en el sector
-                  público, como en la práctica privada, y adicionalmente experiencia profesional en
-                  la legislación doméstica en materia de comercio exterior y las fuentes de derecho
-                  internacional aplicables en la materia, incluyendo los tratados de libre comercio
-                  (TLC) y los acuerdos de la OMC suscritos por México. Esto nos permite tener una
-                  visión exhaustiva y panorámica para asistir con una mayor calidad a nuestros
-                  clientes.
+                  Derivado de lo anterior, nuestro equipo conoce la legislación doméstica en materia
+                  de comercio exterior y las fuentes de derecho internacional aplicables en la
+                  materia, incluyendo los tratados de libre comercio (TLC) y los acuerdos de la OMC
+                  suscritos por México. Esto nos permite tener una visión exhaustiva y panorámica
+                  para asistir con una mayor calidad a nuestros clientes.
                 </Typography>
               </m.div>
 
@@ -96,24 +107,31 @@ export default function ForeignTrade() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
+                  }}
+                >
+                  Apoyados en las otras áreas de práctica del despacho, proporcionamos a nuestros
+                  clientes internacionales asesoría para establecerse exitosamente en el mercado
+                  mexicano, ya que México se encuentra en una posición única en el contexto de la
+                  tendencia global reciente de nearshoring, debido a su ubicación geográfica y red
+                  de tratados comerciales, por lo que se ha consolidado como un destino de inversión
+                  en creciente expansión.
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inDown}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    mt: 3,
+                    mb: { md: 3 },
                   }}
                 >
                   Lo que hace único a nuestro equipo profesional es el dominio de esta práctica
-                  desde la perspectiva doméstica, regional e internacional. 
+                  desde la perspectiva doméstica, regional e internacional.
                 </Typography>
               </m.div>
             </Stack>
-          </Grid>
-
-          <Grid xs={12} md={6} align="center">
-            <m.div variants={varFade().inUp}>
-              <Image
-                disabledEffect
-                alt="rocket"
-                src="https://wise.com/web-art/assets/illustrations/key-medium@1x.webp"
-              />
-            </m.div>
           </Grid>
         </Grid>
       </Container>

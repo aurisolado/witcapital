@@ -7,11 +7,7 @@ import Box from '@mui/material/Box';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
-import CashPassport from '../cs';
 import Contact from '../contact';
-import Home from '../home';
-import EquityInvestment from '../equity-investment';
-import PrivateTrust from '../private-trust';
 import ComicSon from '../cs';
 
 // ----------------------------------------------------------------------

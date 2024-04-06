@@ -8,7 +8,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { useResponsive } from 'src/hooks/use-responsive';
 // routes
 // components
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Image from 'src/components/image';
 
@@ -26,7 +26,7 @@ export default function EquityInvestment() {
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
+          py: { xs: 10, md: 5 },
         }}
       >
         <Grid
@@ -34,7 +34,10 @@ export default function EquityInvestment() {
           alignItems="center"
           justifyContent="space-between"
           spacing={{ xs: 5, md: 0 }}
-          sx={{ marginBottom: 20 }}
+          sx={{
+            mt: 5,
+            marginBottom: 10,
+          }}
         >
           <Grid xs={12} md={6} align="center">
             <m.div variants={varFade().inUp}>
@@ -60,29 +63,28 @@ export default function EquityInvestment() {
                   variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
                   ¿Quieres invertir en Bienes Raíces Internacionales?
                 </Typography>
+                <m.div variants={varFade().inDown}>
+                  <Button
+                    size="large"
+                    variant="contained"
+                    href="mailto:mail@mail.mx?subject=[Feedback] from Customer"
+                  >
+                    Programación de citas
+                  </Button>
+                </m.div>
               </m.div>
 
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h3"
-                  sx={{
-                    mt: 3,
-                    mb: { md: 5 },
-                  }}
-                >
-                  Inversión patrimonial
-                </Typography>
-
-                <Typography
                   variant="h4"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
                   <span
@@ -101,7 +103,6 @@ export default function EquityInvestment() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
                   }}
                 >
                   La inversión patrimonial es una estrategia de inversión a mediano plazo que
@@ -121,7 +122,7 @@ export default function EquityInvestment() {
           alignItems="center"
           justifyContent="space-between"
           spacing={2}
-          sx={{ marginBottom: 20 }}
+          sx={{ marginBottom: 10 }}
         >
           <Grid xs={12}>
             <Stack
@@ -152,7 +153,7 @@ export default function EquityInvestment() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Generación de ingresos por renta.
                 </Typography>
               </m.div>
@@ -168,7 +169,7 @@ export default function EquityInvestment() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Potencial de aumento del valor de la propiedad a largo plazo.
                 </Typography>
               </m.div>
@@ -184,7 +185,7 @@ export default function EquityInvestment() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Diversificación de la cartera de inversión.
                 </Typography>
               </m.div>
@@ -200,7 +201,7 @@ export default function EquityInvestment() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Inversión en activos tangibles.
                 </Typography>
               </m.div>
@@ -216,7 +217,7 @@ export default function EquityInvestment() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, p: 1 }}>
                   Protección contra la inflación.
                 </Typography>
               </m.div>

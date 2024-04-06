@@ -23,7 +23,7 @@ export default function TaxConsulting() {
   return (
     <Box
       sx={{
-        bgcolor: '#edefeb',
+        bgcolor: '#ffffff',
       }}
     >
       <Container
@@ -32,13 +32,7 @@ export default function TaxConsulting() {
           py: { xs: 10, md: 15 },
         }}
       >
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="space-between"
-          spacing={{ xs: 5, md: 0 }}
-          sx={{ marginBottom: 20 }}
-        >
+        <Grid container alignItems="center" justifyContent="space-between">
           <Grid xs={12} md={6} align="center">
             <m.div variants={varFade().inUp}>
               <Image
@@ -59,10 +53,10 @@ export default function TaxConsulting() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
                   Consultoría Fiscal
@@ -74,12 +68,16 @@ export default function TaxConsulting() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  Nuestro equipo de Consultoría Fiscal presta servicios en transacciones
+                  Nuestro equipo de Consultoría y Litigio Fiscal presta servicios en transacciones
                   sofisticadas y complejas, con una visión clara de los aspectos financieros y
-                  legales que puedan impactar a  los negocios de nuestros clientes.
+                  legales que puedan impactar a  los negocios de nuestros clientes. Los servicios
+                  que ofrecemos están enfocados en planeación y consultoría fiscal, tanto en
+                  transacciones domésticas como transfronterizas para una amplia gama de industrias,
+                  así como en apoyar a nuestros clientes a interactuar con las autoridades
+                  tributarias y brindarles estrategias de litigio sólidas.
                 </Typography>
               </m.div>
 
@@ -88,22 +86,7 @@ export default function TaxConsulting() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
-                  }}
-                >
-                  Los servicios que ofrecemos están enfocados en planeación y consultoría fiscal,
-                  tanto en transacciones domésticas como transfronterizas para una amplia gama de
-                  industrias, así como en apoyar a nuestros clientes a interactuar con las
-                  autoridades tributarias y brindarles estrategias de litigio sólidas.
-                </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inDown}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
                   Nuestra visión es completamente integral y evalúa los aspectos financieros y
@@ -118,10 +101,9 @@ export default function TaxConsulting() {
 
               <m.div variants={varFade().inDown}>
                 <Typography
-                  variant="body1"
+                  variant="h5"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
                   }}
                 >
                   Nuestra práctica fiscal es reconocida por sus altos conocimientos técnicos e
