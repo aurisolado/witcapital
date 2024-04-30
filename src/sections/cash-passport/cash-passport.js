@@ -26,7 +26,7 @@ export default function CashPassport() {
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
+          py: { xs: 5, md: 5 },
         }}
       >
         <Grid
@@ -50,7 +50,7 @@ export default function CashPassport() {
                   variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 2 },
                   }}
                 >
                   Tu dinero, donde y cuando quieras.
@@ -62,7 +62,7 @@ export default function CashPassport() {
                   variant="h3"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 2 },
                   }}
                 >
                   Cash Passport -{' '}
@@ -104,13 +104,7 @@ export default function CashPassport() {
           </Grid>
         </Grid>
 
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="space-between"
-          spacing={2}
-          sx={{ marginBottom: 20 }}
-        >
+        <Grid container alignItems="center" justifyContent="space-between" spacing={2}>
           <Grid xs={12}>
             <Stack
               sx={{

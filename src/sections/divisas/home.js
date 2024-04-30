@@ -19,11 +19,11 @@ export default function Home() {
       }}
     >
       <Grid container alignItems="center" justifyContent="space-between">
-        <Grid xs={9} md={9} sm={12}>
+        <Grid xs={8} md={8} sm={12}>
           <Stack>
             <m.div variants={varFade().inDown}>
-              <Typography variant="h2" color="#9fe870">
-                Soluciones especializadas en el mercado de cryptomonedas
+              <Typography variant="h2" color="#163300">
+                Soluciones especializadas en el mercado de divisas
               </Typography>
 
               <Typography
@@ -32,22 +32,23 @@ export default function Home() {
                   mt: 3,
                   mb: { md: 5 },
                 }}
-                color="#9fe870"
+                color="#163300"
               >
-                En Wit Biz asesoramos a nuestros clientes en la compra, venta y monetización de
-                cryptomonedas, a través de nuestra relación con los principales over-the-counter
-                (OTC) desk y cryptocurrency exchange nacionales e internaciónales.
+                En Wit Biz asesoramos a nuestros clientes en la compra, venta y pagos en divisas,
+                buscando una solucion a sus necesidades, a través de nuestras relaciones de
+                corresponsalía con las principales instituciones financieras nacionales e
+                internaciónales.
               </Typography>
             </m.div>
           </Stack>
         </Grid>
 
-        <Grid xs={3} md={3} sm={12}>
+        <Grid xs={4} md={4} sm={12}>
           <m.div variants={varFade().inUp}>
             <Image
               disabledEffect
               alt="rocket"
-              src="https://wise.com/web-art/assets/illustrations/receive-medium@1x.webp"
+              src="https://cdn.plus500.com/Media/ArticlesMain/Gold_Bricks_Chart@0,75x.png"
             />
           </m.div>
         </Grid>

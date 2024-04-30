@@ -34,8 +34,8 @@ const LINKS = [
     children: [
       { name: 'Compraventa de Cripto-Activos', href: '#' },
       { name: 'Compraventa de Divisas', href: '#' },
-      { name: 'Nearshoring & Offshore (pendiente)', href: '#' },
-      { name: 'Pagos Nacionales e Internacionales (pendiente)', href: '#' },
+      { name: 'Nearshoring & Offshore', href: '#' },
+      { name: 'Pagos Nacionales e Internacionales', href: '#' },
     ],
   },
 

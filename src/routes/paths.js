@@ -18,6 +18,11 @@ const ROOTS = {
 
 export const paths = {
   cryptocurrency: '/cryptocurrency',
+
+  divisas: '/divisas',
+  nearshoringandoffshore: '/nearshoringandoffshore',
+  payments: '/payments',
+
   business: '/business',
   personal: '/personal',
 

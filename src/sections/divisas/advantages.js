@@ -15,8 +15,8 @@ import { MotionViewport, varFade } from 'src/components/animate';
 const SUMMARY = [
   {
     index: 1,
-    title: 'Asesoría especializada en el mercado de cryptomonedas.',
-    description: 'Asesoría especializada en el mercado de cryptomonedas.',
+    title: 'Asesoría especializada en el mercado de divisas de contado y a futuro.',
+    description: 'Asesoría especializada en el mercado de divisas de contado y a futuro.',
     icon: 'solar:verified-check-bold',
   },
   {
@@ -95,7 +95,7 @@ export default function Advantages() {
             color: '#0e0f0c',
           }}
         >
-          Asesoramos a nuestros clientes en la compra, venta y monetización de cryptomonedas.
+          Asesoramos a nuestros clientes en la compra, venta y monetización de divisas.
         </Typography>
       </m.div>
 

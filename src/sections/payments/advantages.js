@@ -15,25 +15,25 @@ import { MotionViewport, varFade } from 'src/components/animate';
 const SUMMARY = [
   {
     index: 1,
-    title: 'Asesoría especializada en el mercado de cryptomonedas.',
+    title: 'Asesoría de vanguardia',
     description: 'Asesoría especializada en el mercado de cryptomonedas.',
     icon: 'solar:verified-check-bold',
   },
   {
     index: 2,
-    title: 'Servicio personalizado para soporte de la operación.',
+    title: 'Entendemos lo que necesitas',
     description: 'Servicio personalizado para soporte de la operación.',
     icon: 'solar:clock-circle-bold',
   },
   {
     index: 3,
-    title: 'Operaciones el mismo día y en horario extendido.',
+    title: 'Enfoque integral',
     description: 'Operaciones el mismo día y en horario extendido.',
     icon: 'solar:shield-check-bold',
   },
   {
     index: 4,
-    title: 'Sencillez, rapidez y seguridad.',
+    title: 'Enfoque integral',
     description: 'Sencillez, rapidez y seguridad.',
     icon: 'solar:shield-check-bold',
   },

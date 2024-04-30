@@ -25,20 +25,14 @@ export default function Contact() {
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h2" color="#163300">
-            Permítenos ser tu fiduciario profesional de confianza
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inDown}>
-          <Typography variant="body1" color="#163300">
-            Un Trust presenta oportunidades ilimitadas para las familias de todo el mundo, ya que
-            les permite planificar su futuro y proteger su patrimonio.
+          <Typography variant="h2" color="#9fe870">
+            Conoce las soluciones a la medida.
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
           <Button
+            color="primary"
             size="large"
             variant="contained"
             target="_blank"

@@ -22,7 +22,6 @@ import { useEffect, useState } from 'react';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Scrollbar from 'src/components/scrollbar';
 import { TableHeadCustom } from 'src/components/table';
-import Iconify from 'src/components/iconify';
 
 /**
  * 
@@ -316,37 +315,18 @@ import Iconify from 'src/components/iconify';
 export default function CryptoTable() {
   const [moedas, setMoedas] = useState([]);
 
-  const gettData = async () => {
-    const result = await axios.get(
-      'https://api.investing.com/api/financialdata/homepage/major-cryptocurrencies?limit=10'
-    );
-    setMoedas(result.data.data);
-  };
-
   useEffect(() => {
-    gettData();
-    const interval = setInterval(() => {
-      gettData();
-    }, 3000);
-    return () => clearInterval(interval);
+    console.log('useEffect llamar a modedas');
+    axios
+      .get(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false'
+      )
+      .then((res) => {
+        setMoedas(res.data);
+        console.log(res.data);
+      })
+      .catch((error) => console.log(error));
   }, []);
-
-  const formatVolume = (volume) => {
-    if (volume > 1000000000) {
-      return `${(volume / 1000000000).toFixed(2)}B`;
-    } else if (volume > 1000000) {
-      return `${(volume / 1000000).toFixed(2)}M`;
-    } else if (volume > 1000) {
-      return `${(volume / 1000).toFixed(2)}K`;
-    } else {
-      return volume;
-    }
-  };
-
-  const formatTime = (time) => {
-    const date = new Date(time * 1000);
-    return date.toLocaleTimeString();
-  };
 
   const renderDescription = (
     <Stack
@@ -387,68 +367,54 @@ export default function CryptoTable() {
           <Table sx={{ minWidth: 800 }}>
             <TableHeadCustom
               headLabel={[
-                { id: 'Nombre', label: 'Nombre', align: 'left' },
-                { id: 'Compra', label: 'Cierre', align: 'left' },
-                { id: 'Var', label: 'Var.', align: 'right' },
-                { id: 'Var2', label: '% Var.', align: 'right' },
-                { id: 'Var', label: 'Vol.', align: 'right' },
-                { id: 'Var', label: 'Hora.', align: 'right' },
+                { id: 'mon', label: 'Moneda', align: 'left' },
+                { id: 'r', label: 'Rango', align: 'left' },
+                { id: 'fat', label: 'Precio', align: 'right' },
+                { id: 'carbs', label: 'Volumen (24h)', align: 'right' },
+                { id: 'protein', label: 'Cambio (24h)', align: 'right' },
               ]}
             />
 
             <TableBody>
               {moedas.map((row) => (
-                <TableRow key={row.PairName}>
+                <TableRow key={row.name}>
                   <TableCell>
                     <Grid container alignItems="start" justifyContent="start" spacing={2}>
                       <Grid>
-                        <TableCell align="right">
-                          {row.ChgPct < 0 ? (
-                            //arrow red down
-                            <Iconify icon={`bi:arrow-down`} width={20} sx={{ color: '#ff0000' }} />
-                          ) : (
-                            //arrow green up
-                            <Iconify icon={`bi:arrow-up`} width={20} sx={{ color: '#00ff00' }} />
-                          )}
-                        </TableCell>
+                        <Avatar alt={row.name} src={row.image} />
+                      </Grid>
+
+                      <Grid>
+                        <Chip
+                          label={<Typography variant="body1">{row.symbol}</Typography>}
+                          style={{ backgroundColor: '#9fe870', color: '#0e0f0c' }}
+                        />
                       </Grid>
                       <Grid>
-                        <Typography variant="body1">{row.PairName}</Typography>
+                        <Typography variant="body1">{row.name}</Typography>
                       </Grid>
                     </Grid>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body1">{row.Last}</Typography>
+                    <Typography variant="body1">{row.market_cap_rank}</Typography>
                   </TableCell>
                   <TableCell align="right">
-                    {row.Chg < 0 ? (
+                    <Typography variant="body1">{row.current_price}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body1">{row.market_cap}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    {row.price_change_percentage_24h < 0 ? (
                       <Typography variant="body1" sx={{ color: '#ff0000' }}>
-                        {row.Chg.toFixed(2)}
+                        {row.price_change_percentage_24h.toFixed(2)}%
                       </Typography>
                     ) : (
                       <Typography variant="body1" sx={{ color: '#00ff00' }}>
                         {' '}
-                        {row.Chg.toFixed(2)}
+                        {row.price_change_percentage_24h.toFixed(2)}%
                       </Typography>
                     )}
-                  </TableCell>
-                  <TableCell align="right">
-                    {row.ChgPct < 0 ? (
-                      <Typography variant="body1" sx={{ color: '#ff0000' }}>
-                        {row.ChgPct.toFixed(2)}%
-                      </Typography>
-                    ) : (
-                      <Typography variant="body1" sx={{ color: '#00ff00' }}>
-                        {' '}
-                        {row.ChgPct.toFixed(2)}%
-                      </Typography>
-                    )}
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="body1">{formatVolume(row.Volume)}</Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="body1">{formatTime(row.Time)}</Typography>
                   </TableCell>
                 </TableRow>
               ))}

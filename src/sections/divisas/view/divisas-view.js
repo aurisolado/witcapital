@@ -7,13 +7,14 @@ import Box from '@mui/material/Box';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
-import Contact from '../contact';
+import Advantages from '../advantages';
+import CryptoTable from '../cryptotable';
 import Home from '../home';
-import Body from '../body';
+import Legal from '../legal';
 
 // ----------------------------------------------------------------------
 
-export default function FxTradingView() {
+export default function DivisasView() {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -28,9 +29,8 @@ export default function FxTradingView() {
         }}
       >
         <Home />
-        <Body />
-
-        <Contact />
+        <CryptoTable />
+        <Advantages />
       </Box>
     </>
   );

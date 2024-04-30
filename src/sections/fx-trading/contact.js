@@ -22,19 +22,11 @@ export default function Contact() {
         spacing={3}
         sx={{
           textAlign: 'center',
-          mb: { xs: 5, md: 10 },
         }}
       >
         <m.div variants={varFade().inDown}>
           <Typography variant="h2" color="#163300">
-            Permítenos ser tu fiduciario profesional de confianza
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inDown}>
-          <Typography variant="body1" color="#163300">
-            Un Trust presenta oportunidades ilimitadas para las familias de todo el mundo, ya que
-            les permite planificar su futuro y proteger su patrimonio.
+            Permítenos ser tu asesor financiero
           </Typography>
         </m.div>
 
@@ -42,9 +34,10 @@ export default function Contact() {
           <Button
             size="large"
             variant="contained"
-            href="mailto:mail@mail.mx?subject=[Feedback] from Customer"
+            target="_blank"
+            href="https://www.revolut.com/gettheapp/?af_channel=website_direct&af_force_deeplink=true&af_sub1=%7B%22conversion_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22cookie_consent%22%3A%5B%22ads%22%2C%22analytics%22%5D%2C%22landing_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22qr_code%22%3Afalse%7D&pid=website"
           >
-            Programación de citas
+            Únete a la lista de espera
           </Button>
         </m.div>
       </Stack>

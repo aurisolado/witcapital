@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
+import Iconify from 'src/components/iconify';
 // hooks
 // routes
 // components
@@ -22,7 +23,7 @@ import { useEffect, useState } from 'react';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Scrollbar from 'src/components/scrollbar';
 import { TableHeadCustom } from 'src/components/table';
-import Iconify from 'src/components/iconify';
+import { formatDate } from '@fullcalendar/core';
 
 /**
  * 
@@ -316,9 +317,10 @@ import Iconify from 'src/components/iconify';
 export default function CryptoTable() {
   const [moedas, setMoedas] = useState([]);
 
+  //function to get the data from the api each 1 seconds
   const gettData = async () => {
     const result = await axios.get(
-      'https://api.investing.com/api/financialdata/homepage/major-cryptocurrencies?limit=10'
+      'https://api.investing.com/api/financialdata/homepage/major-currencies?limit=10'
     );
     setMoedas(result.data.data);
   };
@@ -330,23 +332,6 @@ export default function CryptoTable() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
-  const formatVolume = (volume) => {
-    if (volume > 1000000000) {
-      return `${(volume / 1000000000).toFixed(2)}B`;
-    } else if (volume > 1000000) {
-      return `${(volume / 1000000).toFixed(2)}M`;
-    } else if (volume > 1000) {
-      return `${(volume / 1000).toFixed(2)}K`;
-    } else {
-      return volume;
-    }
-  };
-
-  const formatTime = (time) => {
-    const date = new Date(time * 1000);
-    return date.toLocaleTimeString();
-  };
 
   const renderDescription = (
     <Stack
@@ -366,97 +351,10 @@ export default function CryptoTable() {
             color: '#0e0f0c',
           }}
         >
-          Ve el cambio de las cryptomonedas
+          Ve el cambio de las divisas
         </Typography>
       </m.div>
     </Stack>
-  );
-
-  const table = (
-    <m.div variants={varFade().inDown}>
-      <TableContainer
-        sx={{
-          mt: 3,
-          boxShadow: '20px 0 30px rgba(0,0,0,.08)',
-          borderRadius: '20px',
-          border: '1px solid #f3f3f3',
-          overflow: 'hidden',
-        }}
-      >
-        <Scrollbar>
-          <Table sx={{ minWidth: 800 }}>
-            <TableHeadCustom
-              headLabel={[
-                { id: 'Nombre', label: 'Nombre', align: 'left' },
-                { id: 'Compra', label: 'Cierre', align: 'left' },
-                { id: 'Var', label: 'Var.', align: 'right' },
-                { id: 'Var2', label: '% Var.', align: 'right' },
-                { id: 'Var', label: 'Vol.', align: 'right' },
-                { id: 'Var', label: 'Hora.', align: 'right' },
-              ]}
-            />
-
-            <TableBody>
-              {moedas.map((row) => (
-                <TableRow key={row.PairName}>
-                  <TableCell>
-                    <Grid container alignItems="start" justifyContent="start" spacing={2}>
-                      <Grid>
-                        <TableCell align="right">
-                          {row.ChgPct < 0 ? (
-                            //arrow red down
-                            <Iconify icon={`bi:arrow-down`} width={20} sx={{ color: '#ff0000' }} />
-                          ) : (
-                            //arrow green up
-                            <Iconify icon={`bi:arrow-up`} width={20} sx={{ color: '#00ff00' }} />
-                          )}
-                        </TableCell>
-                      </Grid>
-                      <Grid>
-                        <Typography variant="body1">{row.PairName}</Typography>
-                      </Grid>
-                    </Grid>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="body1">{row.Last}</Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    {row.Chg < 0 ? (
-                      <Typography variant="body1" sx={{ color: '#ff0000' }}>
-                        {row.Chg.toFixed(2)}
-                      </Typography>
-                    ) : (
-                      <Typography variant="body1" sx={{ color: '#00ff00' }}>
-                        {' '}
-                        {row.Chg.toFixed(2)}
-                      </Typography>
-                    )}
-                  </TableCell>
-                  <TableCell align="right">
-                    {row.ChgPct < 0 ? (
-                      <Typography variant="body1" sx={{ color: '#ff0000' }}>
-                        {row.ChgPct.toFixed(2)}%
-                      </Typography>
-                    ) : (
-                      <Typography variant="body1" sx={{ color: '#00ff00' }}>
-                        {' '}
-                        {row.ChgPct.toFixed(2)}%
-                      </Typography>
-                    )}
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="body1">{formatVolume(row.Volume)}</Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="body1">{formatTime(row.Time)}</Typography>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </Scrollbar>
-      </TableContainer>
-    </m.div>
   );
 
   return (
@@ -482,7 +380,102 @@ export default function CryptoTable() {
           </Grid>
 
           <Grid xs={12} sx={{ textAlign: 'center' }}>
-            {table}
+            <m.div variants={varFade().inDown}>
+              <TableContainer
+                sx={{
+                  mt: 3,
+                  boxShadow: '20px 0 30px rgba(0,0,0,.08)',
+                  borderRadius: '20px',
+                  border: '1px solid #f3f3f3',
+                  overflow: 'hidden',
+                }}
+              >
+                <Scrollbar>
+                  <Table sx={{ minWidth: 800 }}>
+                    <TableHeadCustom
+                      headLabel={[
+                        { id: 'Nombre', label: 'Nombre', align: 'left' },
+                        { id: 'Compra', label: 'Compra', align: 'left' },
+                        { id: 'Venta', label: 'Venta', align: 'right' },
+                        { id: 'Máximo', label: 'Máximo', align: 'right' },
+                        { id: 'Mínimo', label: 'Mínimo', align: 'right' },
+                        { id: 'Var', label: 'Var.', align: 'right' },
+                        { id: 'Var2', label: '% Var.', align: 'right' },
+                      ]}
+                    />
+
+                    <TableBody>
+                      {moedas.map((row) => (
+                        <TableRow key={row.PairName}>
+                          <TableCell>
+                            <Grid container alignItems="start" justifyContent="start" spacing={2}>
+                              <Grid>
+                                <TableCell align="right">
+                                  {row.ChgPct < 0 ? (
+                                    //arrow red down
+                                    <Iconify
+                                      icon={`bi:arrow-down`}
+                                      width={20}
+                                      sx={{ color: '#ff0000' }}
+                                    />
+                                  ) : (
+                                    //arrow green up
+                                    <Iconify
+                                      icon={`bi:arrow-up`}
+                                      width={20}
+                                      sx={{ color: '#00ff00' }}
+                                    />
+                                  )}
+                                </TableCell>
+                              </Grid>
+                              <Grid>
+                                <Typography variant="body1">{row.PairName}</Typography>
+                              </Grid>
+                            </Grid>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="body1">{row.Ask}</Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="body1">{row.Bid}</Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="body1">{row.High}</Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="body1">{row.Low}</Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            {row.Chg < 0 ? (
+                              <Typography variant="body1" sx={{ color: '#ff0000' }}>
+                                {row.Chg.toFixed(2)}
+                              </Typography>
+                            ) : (
+                              <Typography variant="body1" sx={{ color: '#00ff00' }}>
+                                {' '}
+                                {row.Chg.toFixed(2)}
+                              </Typography>
+                            )}
+                          </TableCell>
+                          <TableCell align="right">
+                            {row.ChgPct < 0 ? (
+                              <Typography variant="body1" sx={{ color: '#ff0000' }}>
+                                {row.ChgPct.toFixed(2)}%
+                              </Typography>
+                            ) : (
+                              <Typography variant="body1" sx={{ color: '#00ff00' }}>
+                                {' '}
+                                {row.ChgPct.toFixed(2)}%
+                              </Typography>
+                            )}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </Scrollbar>
+              </TableContainer>
+            </m.div>
           </Grid>
         </Grid>
       </Container>

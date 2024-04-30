@@ -42,7 +42,8 @@ export default function Contact() {
           <Button
             size="large"
             variant="contained"
-            href="mailto:mail@mail.mx?subject=[Feedback] from Customer"
+            target="_blank"
+            href="https://calendly.com/witbiz"
           >
             Programación de citas
           </Button>

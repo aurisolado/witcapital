@@ -7,13 +7,21 @@ import Box from '@mui/material/Box';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
-import Contact from '../contact';
+import Advantages from '../advantages';
+import CryptoTable from '../cryptotable';
+import LaborAdvice from '../labor-advice';
 import Home from '../home';
+import Legal from '../legal';
+import BankingFinance from '../banking-finance';
+import ForeignTrade from '../foreign-trade';
+import TaxConsulting from '../tax-consulting';
+import InternationalConsulting from '../international-consulting';
+import Contact from '../contact';
 import Body from '../body';
 
 // ----------------------------------------------------------------------
 
-export default function FxTradingView() {
+export default function NearshoringAndOffshoreView() {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -24,10 +32,11 @@ export default function FxTradingView() {
         sx={{
           overflow: 'hidden',
           position: 'relative',
-          bgcolor: '#9fe870',
+          bgcolor: 'background.dark',
         }}
       >
         <Home />
+
         <Body />
 
         <Contact />

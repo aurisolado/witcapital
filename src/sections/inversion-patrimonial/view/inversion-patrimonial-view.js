@@ -30,8 +30,6 @@ export default function InversionPatrimonialView() {
         }}
       >
         <EquityInvestment />
-
-        <Contact />
       </Box>
     </>
   );

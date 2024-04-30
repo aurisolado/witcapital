@@ -1,29 +1,35 @@
 import { m } from 'framer-motion';
 // @mui
-import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 // hooks
 import { useResponsive } from 'src/hooks/use-responsive';
 // routes
+import { paths } from 'src/routes/paths';
 // components
-import { Box, Button } from '@mui/material';
-import { MotionViewport, varFade } from 'src/components/animate';
 import Image from 'src/components/image';
+import Iconify from 'src/components/iconify';
+import { MotionViewport, varFade } from 'src/components/animate';
+import { Box } from '@mui/material';
+
 // ----------------------------------------------------------------------
 
-export default function Home() {
+export default function InternationalConsulting() {
+  const mdUp = useResponsive('up', 'md');
+
   return (
     <Box
       sx={{
-        bgcolor: '#ffffff',
+        bgcolor: '#edefeb',
       }}
     >
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 5, md: 10 },
+          py: { xs: 10, md: 15 },
         }}
       >
         <Grid
@@ -50,26 +56,7 @@ export default function Home() {
                     mb: { md: 5 },
                   }}
                 >
-                  SOMOS UN ASESOR EN INVERSIONES INDEPENDIENTE
-                </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inDown}>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    mt: 3,
-                    mb: { md: 5 },
-                  }}
-                >
-                  FX -{' '}
-                  <span
-                    style={{
-                      color: '#9fe870',
-                    }}
-                  >
-                    Trading
-                  </span>
+                  Asesoria Internacional
                 </Typography>
               </m.div>
 
@@ -78,22 +65,43 @@ export default function Home() {
                   variant="body1"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { md: 3 },
                   }}
                 >
-                  GUIAMOS TUS INVERSIONES PARA QUE CUMPLAS TODOS TUS SUEÑOS
+                  Gracias a nuestro sofisticado y experimentado grupo de abogados y a nuestro muy
+                  particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a
+                  nuestros clientes, abordando cada transacción con soluciones hechas “a la medida”
+                  y con extraordinarios resultados, ya que asumimos sus asuntos como propios,
+                  buscando siempre soluciones legales prácticas, efectivas, innovadoras, creativas,
+                  exitosas y sin riesgos.
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inDown}>
-                <Button
-                  size="large"
-                  variant="contained"
-                  target="_blank"
-                  href="https://www.revolut.com/gettheapp/?af_channel=website_direct&af_force_deeplink=true&af_sub1=%7B%22conversion_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22cookie_consent%22%3A%5B%22ads%22%2C%22analytics%22%5D%2C%22landing_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22qr_code%22%3Afalse%7D&pid=website"
+                <Typography
+                  variant="body1"
+                  sx={{
+                    mt: 3,
+                    mb: { md: 3 },
+                  }}
                 >
-                  Únete a la lista de espera
-                </Button>
+                  La colaboración entre las áreas fiscales, bancarias y corporativas del despacho
+                  nos permite identificar y recomendar estructuras transfronterizas eficientes para
+                  las operaciones y mitigar riesgos potenciales.
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inDown}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    mt: 3,
+                    mb: { md: 3 },
+                  }}
+                >
+                  Asesoramos a nuestros clientes para expandirse más allá de las fronteras en un
+                  marco de certeza jurídica.
+                </Typography>
               </m.div>
             </Stack>
           </Grid>
@@ -103,7 +111,7 @@ export default function Home() {
               <Image
                 disabledEffect
                 alt="rocket"
-                src="https://img.freepik.com/fotos-premium/candlestick-trading-grafico-simbolo-inversion-mercado-valores-3d-rendering-ilustracion_276199-177.jpg"
+                src="https://wise.com/swift-codes-assets/img/magnifying-glass.webp"
               />
             </m.div>
           </Grid>
