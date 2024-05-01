@@ -48,7 +48,10 @@ export default function Advantages() {
         xs: 'repeat(1, 1fr)',
         md: 'repeat(3, 1fr)',
       }}
-      sx={{ my: 10 }}
+      sx={{
+        my: 10,
+        mb: { xs: 0, md: 10 },
+      }}
     >
       {SUMMARY.map((item) => (
         <Box

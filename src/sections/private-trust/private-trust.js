@@ -466,7 +466,6 @@ export default function PrivateTrust() {
           alignItems="center"
           justifyContent="space-between"
           spacing={{ xs: 5, md: 5 }}
-          sx={{ marginBottom: 20 }}
         >
           <Grid xs={12} md={6} align="center">
             <m.div variants={varFade().inUp}>

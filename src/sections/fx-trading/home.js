@@ -30,8 +30,7 @@ export default function Home() {
           container
           alignItems="center"
           justifyContent="space-between"
-          spacing={{ xs: 5, md: 0 }}
-          sx={{ marginBottom: 20 }}
+          spacing={{ xs: 5, md: 10 }}
         >
           <Grid xs={12} md={6}>
             <Stack
@@ -81,7 +80,7 @@ export default function Home() {
                     mb: { md: 5 },
                   }}
                 >
-                  GUIAMOS TUS INVERSIONES PARA QUE CUMPLAS TODOS TUS SUEÑOS
+                  Guiamos tus inversiones para que cumplas todos tus sueños.
                 </Typography>
               </m.div>
 
@@ -91,6 +90,9 @@ export default function Home() {
                   variant="contained"
                   target="_blank"
                   href="https://www.revolut.com/gettheapp/?af_channel=website_direct&af_force_deeplink=true&af_sub1=%7B%22conversion_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22cookie_consent%22%3A%5B%22ads%22%2C%22analytics%22%5D%2C%22landing_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22qr_code%22%3Afalse%7D&pid=website"
+                  sx={{
+                    mt: { xs: 5, md: 1 },
+                  }}
                 >
                   Únete a la lista de espera
                 </Button>

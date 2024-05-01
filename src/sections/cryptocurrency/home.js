@@ -18,9 +18,16 @@ export default function Home() {
         py: { xs: 10, md: 15 },
       }}
     >
-      <Grid container alignItems="center" justifyContent="space-between">
-        <Grid xs={9} md={9} sm={12}>
-          <Stack>
+      <Grid container alignItems="center" justifyContent="space-between" spacing={{ xs: 0, md: 0 }}>
+        <Grid xs={12} md={9}>
+          <Stack
+            sx={{
+              textAlign: {
+                xs: 'center',
+                md: 'left',
+              },
+            }}
+          >
             <m.div variants={varFade().inDown}>
               <Typography variant="h2" color="#9fe870">
                 Soluciones especializadas en el mercado de cryptomonedas
@@ -42,12 +49,15 @@ export default function Home() {
           </Stack>
         </Grid>
 
-        <Grid xs={3} md={3} sm={12}>
+        <Grid xs={12} md={3} align="center">
           <m.div variants={varFade().inUp}>
             <Image
               disabledEffect
               alt="rocket"
               src="https://wise.com/web-art/assets/illustrations/receive-medium@1x.webp"
+              sx={{
+                mt: { xs: 3 },
+              }}
             />
           </m.div>
         </Grid>

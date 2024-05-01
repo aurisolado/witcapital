@@ -34,7 +34,7 @@ export default function CashPassport() {
           alignItems="center"
           justifyContent="space-between"
           spacing={{ xs: 5, md: 0 }}
-          sx={{ marginBottom: 20 }}
+          sx={{ marginBottom: { xs: 5, md: 10 } }}
         >
           <Grid xs={12} md={6}>
             <Stack
@@ -112,13 +112,7 @@ export default function CashPassport() {
               }}
             >
               <m.div variants={varFade().inDown}>
-                <Typography
-                  variant="h2"
-                  sx={{
-                    mt: 3,
-                    mb: { md: 5 },
-                  }}
-                >
+                <Typography variant="h2" sx={{}}>
                   Nuestros diferenciadores
                 </Typography>
               </m.div>

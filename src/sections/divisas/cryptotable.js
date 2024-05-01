@@ -346,8 +346,6 @@ export default function CryptoTable() {
         <Typography
           variant="h2"
           sx={{
-            mt: 3,
-            mb: { md: 5 },
             color: '#0e0f0c',
           }}
         >
@@ -366,7 +364,7 @@ export default function CryptoTable() {
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
+          py: { xs: 5, md: 10 },
         }}
       >
         <Grid
@@ -395,7 +393,7 @@ export default function CryptoTable() {
                     <TableHeadCustom
                       headLabel={[
                         { id: 'Nombre', label: 'Nombre', align: 'left' },
-                        { id: 'Compra', label: 'Compra', align: 'left' },
+                        { id: 'Compra', label: 'Compra', align: 'right' },
                         { id: 'Venta', label: 'Venta', align: 'right' },
                         { id: 'Máximo', label: 'Máximo', align: 'right' },
                         { id: 'Mínimo', label: 'Mínimo', align: 'right' },
@@ -410,7 +408,12 @@ export default function CryptoTable() {
                           <TableCell>
                             <Grid container alignItems="start" justifyContent="start" spacing={2}>
                               <Grid>
-                                <TableCell align="right">
+                                <TableCell
+                                  align="right"
+                                  sx={{
+                                    p: 0,
+                                  }}
+                                >
                                   {row.ChgPct < 0 ? (
                                     //arrow red down
                                     <Iconify
@@ -429,29 +432,29 @@ export default function CryptoTable() {
                                 </TableCell>
                               </Grid>
                               <Grid>
-                                <Typography variant="body1">{row.PairName}</Typography>
+                                <Typography variant="body2">{row.PairName}</Typography>
                               </Grid>
                             </Grid>
                           </TableCell>
                           <TableCell align="right">
-                            <Typography variant="body1">{row.Ask}</Typography>
+                            <Typography variant="body2">{row.Ask}</Typography>
                           </TableCell>
                           <TableCell align="right">
-                            <Typography variant="body1">{row.Bid}</Typography>
+                            <Typography variant="body2">{row.Bid}</Typography>
                           </TableCell>
                           <TableCell align="right">
-                            <Typography variant="body1">{row.High}</Typography>
+                            <Typography variant="body2">{row.High}</Typography>
                           </TableCell>
                           <TableCell align="right">
-                            <Typography variant="body1">{row.Low}</Typography>
+                            <Typography variant="body2">{row.Low}</Typography>
                           </TableCell>
                           <TableCell align="right">
                             {row.Chg < 0 ? (
-                              <Typography variant="body1" sx={{ color: '#ff0000' }}>
+                              <Typography variant="body2" sx={{ color: '#ff0000' }}>
                                 {row.Chg.toFixed(2)}
                               </Typography>
                             ) : (
-                              <Typography variant="body1" sx={{ color: '#00ff00' }}>
+                              <Typography variant="body2" sx={{ color: '#00ff00' }}>
                                 {' '}
                                 {row.Chg.toFixed(2)}
                               </Typography>
@@ -459,11 +462,11 @@ export default function CryptoTable() {
                           </TableCell>
                           <TableCell align="right">
                             {row.ChgPct < 0 ? (
-                              <Typography variant="body1" sx={{ color: '#ff0000' }}>
+                              <Typography variant="body2" sx={{ color: '#ff0000' }}>
                                 {row.ChgPct.toFixed(2)}%
                               </Typography>
                             ) : (
-                              <Typography variant="body1" sx={{ color: '#00ff00' }}>
+                              <Typography variant="body2" sx={{ color: '#00ff00' }}>
                                 {' '}
                                 {row.ChgPct.toFixed(2)}%
                               </Typography>

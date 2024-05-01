@@ -113,14 +113,14 @@ export default function Home() {
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
+          py: { xs: 5, md: 10 },
         }}
       >
         <Grid
           container
           alignItems="center"
           justifyContent="space-between"
-          spacing={{ xs: 5, md: 0 }}
+          spacing={{ xs: 0, md: 0 }}
         >
           <Grid xs={12} md={12}>
             {renderDescription}

@@ -26,7 +26,7 @@ export default function EquityInvestment() {
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 5 },
+          py: { xs: 5, md: 5 },
         }}
       >
         <Grid
@@ -62,7 +62,7 @@ export default function EquityInvestment() {
                 <Typography
                   variant="h2"
                   sx={{
-                    mt: 3,
+                    mt: { xs: 1, md: 3 },
                     mb: { md: 3 },
                   }}
                 >
@@ -74,6 +74,9 @@ export default function EquityInvestment() {
                     variant="contained"
                     target="_blank"
                     href="https://calendly.com/witbiz"
+                    sx={{
+                      my: { xs: 3, md: 3 },
+                    }}
                   >
                     Programación de citas
                   </Button>
@@ -136,7 +139,7 @@ export default function EquityInvestment() {
                   variant="h2"
                   sx={{
                     mt: 3,
-                    mb: { md: 5 },
+                    mb: { xs: 5, md: 5 },
                   }}
                 >
                   Ventajas de la Inversión Patrimonial
@@ -231,7 +234,6 @@ export default function EquityInvestment() {
           alignItems="center"
           justifyContent="space-between"
           spacing={{ xs: 5, md: 0 }}
-          sx={{ marginBottom: 20 }}
         >
           <Grid xs={12} md={6}>
             <Stack

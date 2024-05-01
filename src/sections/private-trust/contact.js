@@ -12,17 +12,12 @@ import { MotionViewport, varFade } from 'src/components/animate';
 
 export default function Contact() {
   return (
-    <Container
-      component={MotionViewport}
-      sx={{
-        py: { xs: 10, md: 15 },
-      }}
-    >
+    <Container component={MotionViewport}>
       <Stack
         spacing={3}
         sx={{
           textAlign: 'center',
-          mb: { xs: 5, md: 10 },
+          my: { xs: 15, md: 10 },
         }}
       >
         <m.div variants={varFade().inDown}>

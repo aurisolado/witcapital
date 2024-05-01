@@ -15,7 +15,7 @@ export default function Contact() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 5, md: 10 },
       }}
     >
       <Stack

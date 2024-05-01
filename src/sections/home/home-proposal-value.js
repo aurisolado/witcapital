@@ -48,7 +48,9 @@ export default function HomeProposalValue() {
         xs: 'repeat(1, 1fr)',
         md: 'repeat(3, 1fr)',
       }}
-      sx={{ my: 10 }}
+      sx={{
+        mt: { xs: 5, md: 10 },
+      }}
     >
       {SUMMARY.map((item) => (
         <Box
@@ -90,8 +92,6 @@ export default function HomeProposalValue() {
         <Typography
           variant="h2"
           sx={{
-            mt: 3,
-            mb: { md: 5 },
             color: '#1c3108',
           }}
         >
