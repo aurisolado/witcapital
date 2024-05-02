@@ -4,9 +4,8 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 // components
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 import { MotionViewport, varFade } from 'src/components/animate';
-import Image from 'src/components/image';
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <Box
       sx={{
-        bgcolor: '#edefeb',
+        bgcolor: '#ffffff',
       }}
     >
       <Container
@@ -27,7 +26,6 @@ export default function Home() {
           spacing={3}
           sx={{
             textAlign: 'center',
-            mb: { xs: 5, md: 10 },
           }}
         >
           <m.div variants={varFade().inDown}>

@@ -19,7 +19,7 @@ export default function Home() {
       }}
     >
       <Grid container alignItems="center" justifyContent="space-between" spacing={{ xs: 0, md: 0 }}>
-        <Grid xs={12} md={9}>
+        <Grid xs={12} md={6}>
           <Stack
             sx={{
               textAlign: {
@@ -49,15 +49,12 @@ export default function Home() {
           </Stack>
         </Grid>
 
-        <Grid xs={12} md={3} align="center">
+        <Grid xs={12} md={6} align="center">
           <m.div variants={varFade().inUp}>
             <Image
               disabledEffect
               alt="rocket"
               src="https://wise.com/web-art/assets/illustrations/receive-medium@1x.webp"
-              sx={{
-                mt: { xs: 3 },
-              }}
             />
           </m.div>
         </Grid>

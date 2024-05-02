@@ -4,7 +4,7 @@ import { PaymentsView } from 'src/sections/payments/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Business',
+  title: 'WIT BIZ - Transmisor de dinero',
 };
 
 export default function PaymentsPage() {

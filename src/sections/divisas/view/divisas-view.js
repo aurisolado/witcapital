@@ -25,7 +25,7 @@ export default function DivisasView() {
         sx={{
           overflow: 'hidden',
           position: 'relative',
-          bgcolor: '#edefeb',
+          bgcolor: '#ffffff',
         }}
       >
         <Home />

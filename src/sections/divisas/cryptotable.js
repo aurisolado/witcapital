@@ -358,7 +358,7 @@ export default function CryptoTable() {
   return (
     <Box
       sx={{
-        bgcolor: '#fff',
+        bgcolor: '#edefeb',
       }}
     >
       <Container
@@ -386,6 +386,7 @@ export default function CryptoTable() {
                   borderRadius: '20px',
                   border: '1px solid #f3f3f3',
                   overflow: 'hidden',
+                  background: '#ffffff',
                 }}
               >
                 <Scrollbar>

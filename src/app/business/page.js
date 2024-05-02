@@ -4,7 +4,7 @@ import { BusinessView } from 'src/sections/business/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Business',
+  title: 'WIT BIZ - Áreas de Práctica',
 };
 
 export default function BusinessPage() {

@@ -49,7 +49,7 @@ import { AuthProvider, AuthConsumer } from 'src/auth/context/jwt';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'WIZ BIZ',
+  title: 'WIZ BIZ - Entidad Financiera',
   description:
     'Gracias a nuestro sofisticado y experimentado grupo multidisciplinario y a nuestro muy particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a nuestros clientes, abordando cada transacción con soluciones hechas “a la medida” y con extraordinarios resultados, ya que asumimos sus asuntos como propios, buscando siempre soluciones legales prácticas, efectivas, innovadoras, creativas y exitosas.',
   keywords: 'react,material,kit,application,dashboard,admin,template',

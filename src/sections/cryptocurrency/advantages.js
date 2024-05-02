@@ -58,7 +58,7 @@ export default function Advantages() {
           key={item.title}
           sx={{
             borderRadius: '16px',
-            background: '#fff',
+            background: '#9fe870',
             padding: '40px',
             display: 'flex',
             flexDirection: 'column',
@@ -72,7 +72,7 @@ export default function Advantages() {
             {item.title}
           </Typography>
 
-          <Typography variant="body1" sx={{ color: '#fff', marginTop: 'auto' }}>
+          <Typography variant="body1" sx={{ color: '#0e0f0c', marginTop: 'auto' }}>
             {item.description}
           </Typography>
         </Box>
@@ -122,13 +122,13 @@ export default function Advantages() {
   return (
     <Box
       sx={{
-        bgcolor: '#edefeb',
+        bgcolor: '#ffffff',
       }}
     >
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
+          py: { xs: 5, md: 10 },
         }}
       >
         <Grid

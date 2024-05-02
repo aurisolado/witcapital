@@ -4,7 +4,7 @@ import { CashPassportView } from 'src/sections/cash-passport/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Cash Passport',
+  title: 'WIT BIZ - Tarjeta multidivisas',
 };
 
 export default function BusinessPage() {

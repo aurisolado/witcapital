@@ -4,7 +4,7 @@ import { FxTradingView } from 'src/sections/fx-trading/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Personal',
+  title: 'WIT BIZ - FX - Trading desk',
 };
 
 export default function FxTradingPage() {

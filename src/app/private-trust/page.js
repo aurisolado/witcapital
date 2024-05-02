@@ -4,7 +4,7 @@ import { PrivateTrustView } from 'src/sections/private-trust/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Personal',
+  title: 'WIT BIZ - Private Trust',
 };
 
 export default function PrivateTrustPage() {

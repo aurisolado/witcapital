@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Box
       sx={{
-        bgcolor: '#edefeb',
+        bgcolor: '#ffffff',
       }}
     >
       <Container

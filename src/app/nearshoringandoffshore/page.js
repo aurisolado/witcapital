@@ -4,7 +4,7 @@ import { NearshoringAndOffshoreView } from 'src/sections/nearshoringandoffshore/
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Business',
+  title: 'WIT BIZ - Nearshoring & Offshoring',
 };
 
 export default function NearshoringAndOffshorePage() {

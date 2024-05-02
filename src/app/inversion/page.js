@@ -4,7 +4,7 @@ import { InversionPatrimonialView } from 'src/sections/inversion-patrimonial/vie
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Personal',
+  title: 'WIT BIZ - Inversión patrimonial',
 };
 
 export default function InversionPatrimonialPage() {
