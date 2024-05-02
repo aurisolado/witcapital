@@ -118,32 +118,32 @@ export const _mapContact = [
 
 export const _socials = [
   {
-    value: 'facebook',
-    name: 'FaceBook',
-    icon: 'eva:facebook-fill',
-    color: '#1877F2',
-    path: 'https://www.facebook.com/WIT_CAPITAL',
-  },
-  {
     value: 'instagram',
     name: 'Instagram',
     icon: 'ant-design:instagram-filled',
     color: '#E02D69',
-    path: 'https://www.instagram.com/WIT_CAPITAL',
+    path: 'https://www.instagram.com/witbiz',
   },
   {
-    value: 'linkedin',
-    name: 'Linkedin',
-    icon: 'eva:linkedin-fill',
-    color: '#007EBB',
-    path: 'https://www.linkedin.com/WIT_CAPITAL',
+    value: 'youtube',
+    name: 'Youtube',
+    icon: 'uil:youtube',
+    color: '#FF0000',
+    path: 'https://www.youtube.com/witbiz',
+  },
+  {
+    value: 'calendly',
+    name: 'Calendly',
+    icon: 'simple-icons:calendly',
+    color: '#006bff',
+    path: 'https://calendly.com/witbiz',
   },
   {
     value: 'twitter',
     name: 'Twitter',
-    icon: 'eva:twitter-fill',
-    color: '#00AAEC',
-    path: 'https://www.twitter.com/WIT_CAPITAL',
+    icon: 'akar-icons:whatsapp-fill',
+    color: '#3ec14f',
+    path: 'https://api.whatsapp.com/send/?phone=442080404081&text&type=phone_number&app_absent=0',
   },
 ];
 

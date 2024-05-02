@@ -3,11 +3,12 @@
 import PropTypes from 'prop-types';
 // components
 import DarkLayout from 'src/layouts/main/layout-dark';
+import GreenLayout from 'src/layouts/main/layout-green';
 
 // ----------------------------------------------------------------------
 
 export default function Layout({ children }) {
-  return <DarkLayout>{children}</DarkLayout>;
+  return <GreenLayout>{children}</GreenLayout>;
 }
 
 Layout.propTypes = {

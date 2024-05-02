@@ -65,7 +65,6 @@ export default function CashPassport() {
                     mb: { md: 2 },
                   }}
                 >
-                  Cash Passport -{' '}
                   <span
                     style={{
                       color: '#9fe870',
@@ -242,7 +241,7 @@ export default function CashPassport() {
             >
               <m.div variants={varFade().inDown}>
                 <Typography variant="subtitle1" sx={{ mt: 3, mb: 3, p: 1 }}>
-                  TTecnología Contactless, realiza pagos únicamente acercando tu tarjeta a un
+                  Tecnología Contactless, realiza pagos únicamente acercando tu tarjeta a un
                   dispositivo compatible con este método de pago.
                 </Typography>
               </m.div>

@@ -112,7 +112,7 @@ export default function Footer() {
                 mx: { xs: 'auto', md: 'unset' },
               }}
             >
-              Asesoría de vanguardia, con visión de negocios.
+              Impulsamos la creación de valor en nuestro entorno.
             </Typography>
 
             <Stack
@@ -131,6 +131,7 @@ export default function Footer() {
                       bgcolor: alpha(social.color, 0.08),
                     },
                   }}
+                  onClick={() => window.open(social.path, '_blank')}
                 >
                   <Iconify color={social.color} icon={social.icon} />
                 </IconButton>

@@ -22,17 +22,16 @@ export default function Contact() {
         spacing={3}
         sx={{
           textAlign: 'center',
-          mb: { xs: 5, md: 10 },
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h2" color="#9fe870">
+          <Typography variant="h2" color="#163300">
             Permítenos ser tus asesores de confianza
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
-          <Typography variant="body1" color="#ffffff">
+          <Typography variant="body1" color="#163300">
             Proveemos servicios integrales de vanguardia, con visión interdisciplinaria centrada en
             brindar soluciones que tienen como centro el apoyar los objetivos de nuestros clientes.
           </Typography>
@@ -40,7 +39,6 @@ export default function Contact() {
 
         <m.div variants={varFade().inDown}>
           <Button
-            color="primary"
             size="large"
             variant="contained"
             target="_blank"

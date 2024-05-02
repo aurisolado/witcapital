@@ -32,7 +32,7 @@ export default function PaymentsView() {
         sx={{
           overflow: 'hidden',
           position: 'relative',
-          bgcolor: 'background.dark',
+          bgcolor: '#9fe870',
         }}
       >
         <Home />

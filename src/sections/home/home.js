@@ -42,7 +42,7 @@ export default function Home() {
             }}
           >
             Gracias a nuestro sofisticado y experimentado grupo multidisciplinario y a nuestro muy
-            particular acercamiento estratégico de negocios, hemos sido capaces de ayudar a nuestros
+            particular acercamiento estratégico de negocios, hemos sido capaces de apoyar a nuestros
             clientes, abordando cada transacción con soluciones hechas “a la medida” y con
             extraordinarios resultados, ya que asumimos sus asuntos como propios, buscando siempre
             soluciones legales prácticas, efectivas, innovadoras, creativas y exitosas.
@@ -50,8 +50,16 @@ export default function Home() {
         </m.div>
 
         <m.div variants={varFade().inDown}>
-          <Button color="primary" size="large" variant="contained" href="/business">
-            Áreas de práctica
+          <Button
+            color="primary"
+            size="large"
+            variant="contained"
+            href="/business"
+            sx={{
+              mt: { xs: 1, md: 3 },
+            }}
+          >
+            Programación de citas
           </Button>
         </m.div>
       </Stack>

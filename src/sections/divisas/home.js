@@ -29,7 +29,7 @@ export default function Home() {
             }}
           >
             <m.div variants={varFade().inDown}>
-              <Typography variant="h2" color="#163300">
+              <Typography variant="h2" color="#212B36">
                 Soluciones especializadas en el mercado de divisas
               </Typography>
 
@@ -39,7 +39,7 @@ export default function Home() {
                   mt: 3,
                   mb: { md: 5 },
                 }}
-                color="#163300"
+                color="#212B36"
               >
                 En Wit Biz asesoramos a nuestros clientes en la compra, venta y pagos en divisas,
                 buscando una solucion a sus necesidades, a través de nuestras relaciones de

@@ -25,14 +25,13 @@ export default function Contact() {
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h2" color="#9fe870">
+          <Typography variant="h2" color="#163300">
             Transmisor de dinero
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
           <Button
-            color="primary"
             size="large"
             variant="contained"
             target="_blank"

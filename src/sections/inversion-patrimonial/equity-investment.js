@@ -68,19 +68,6 @@ export default function EquityInvestment() {
                 >
                   ¿Quieres invertir en Bienes Raíces Internacionales?
                 </Typography>
-                <m.div variants={varFade().inDown}>
-                  <Button
-                    size="large"
-                    variant="contained"
-                    target="_blank"
-                    href="https://calendly.com/witbiz"
-                    sx={{
-                      my: { xs: 3, md: 3 },
-                    }}
-                  >
-                    Programación de citas
-                  </Button>
-                </m.div>
               </m.div>
 
               <m.div variants={varFade().inDown}>

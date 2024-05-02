@@ -29,7 +29,7 @@ export default function Home() {
             }}
           >
             <m.div variants={varFade().inDown}>
-              <Typography variant="h2" color="#9fe870">
+              <Typography variant="h2" color="#212B36">
                 Soluciones especializadas en el mercado de cryptomonedas
               </Typography>
 
@@ -39,7 +39,7 @@ export default function Home() {
                   mt: 3,
                   mb: { md: 5 },
                 }}
-                color="#9fe870"
+                color="#212B36"
               >
                 En Wit Biz asesoramos a nuestros clientes en la compra, venta y monetización de
                 cryptomonedas, a través de nuestra relación con los principales over-the-counter

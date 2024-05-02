@@ -61,14 +61,20 @@ export default function Home() {
                     mb: { md: 5 },
                   }}
                 >
-                  FX -{' '}
                   <span
                     style={{
                       color: '#9fe870',
                     }}
                   >
-                    Trading
+                    FX - Trading
                   </span>
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inDown}>
+                <Typography variant="body1" sx={{}}>
+                  El mercado de divisas, comúnmente conocido como Forex o FX, es el mercado global
+                  para el comercio de la moneda de una nación por otra.
                 </Typography>
               </m.div>
 
@@ -80,7 +86,8 @@ export default function Home() {
                     mb: { md: 5 },
                   }}
                 >
-                  Guiamos tus inversiones para que cumplas todos tus sueños.
+                  Los operadores de Forex transactúan en uno de los tres mercados distintos: el
+                  spot, el forward o el mercado de futuros.{' '}
                 </Typography>
               </m.div>
 
