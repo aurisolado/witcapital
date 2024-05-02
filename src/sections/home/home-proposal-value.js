@@ -64,14 +64,11 @@ export default function HomeProposalValue() {
             textAlign: 'start',
           }}
         >
-          <Typography variant="h4" sx={{ mb: 3, mt: 1, color: '#9fe870' }}>
+          <Typography variant="h4" sx={{ mb: 3, mt: 1, color: '#9fe870', minHeight: '100px' }}>
             {item.title}
           </Typography>
 
-          <Typography
-            variant="body1"
-            sx={{ color: '#fff', marginTop: 'auto', textAlign: 'justify' }}
-          >
+          <Typography variant="body1" sx={{ color: '#fff', textAlign: 'justify' }}>
             {item.description}
           </Typography>
         </Box>
