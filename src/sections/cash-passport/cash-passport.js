@@ -97,7 +97,8 @@ export default function CashPassport() {
               <Image
                 disabledEffect
                 alt="rocket"
-                src="https://wise.com/imaginary-v2/images/6dad8c4d2ad3295a21fcd6ab9893f6f2-Marble%20card@2x.png"
+                sx={{ m: { xs: 3, md: 6 } }}
+                src={`/assets/images/sections/cash-passport/02_COLOR/02_COLOR.png`}
               />
             </m.div>
           </Grid>
@@ -284,7 +285,7 @@ export default function CashPassport() {
             <Stack
               sx={{
                 textAlign: 'center',
-                backgroundColor: '#9fe870',
+                backgroundColor: '#edefeb',
                 borderRadius: '10px',
               }}
             >

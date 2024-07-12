@@ -99,6 +99,11 @@ export default function Home() {
                   href="https://www.revolut.com/gettheapp/?af_channel=website_direct&af_force_deeplink=true&af_sub1=%7B%22conversion_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22cookie_consent%22%3A%5B%22ads%22%2C%22analytics%22%5D%2C%22landing_page_url%22%3A%22https%3A%2F%2Fwww.revolut.com%2Fes-MX%2F%22%2C%22qr_code%22%3Afalse%7D&pid=website"
                   sx={{
                     mt: { xs: 5, md: 1 },
+                    color: '#212B36',
+                    backgroundColor: '#9fe870',
+                    '&:hover': {
+                      backgroundColor: '#7abc50',
+                    },
                   }}
                 >
                   Únete a la lista de espera
@@ -112,7 +117,8 @@ export default function Home() {
               <Image
                 disabledEffect
                 alt="rocket"
-                src="https://img.freepik.com/fotos-premium/candlestick-trading-grafico-simbolo-inversion-mercado-valores-3d-rendering-ilustracion_276199-177.jpg"
+                sx={{ m: { xs: 3, md: 3 } }}
+                src={`/assets/images/sections/fx-trading/01_COLOR.png`}
               />
             </m.div>
           </Grid>

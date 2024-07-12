@@ -34,7 +34,8 @@ export default function Body() {
                 <Image
                   disabledEffect
                   alt="rocket"
-                  src="https://wise.com/web-art/assets/illustrations/magnifying-glass-large@1x.webp"
+                  sx={{ m: { xs: 3, md: 3 }, mr: { xs: 0, md: 5 } }}
+                  src={`/assets/images/sections/fx-trading/03_COLOR.png`}
                 />
               </m.div>
             </Grid>
@@ -156,7 +157,8 @@ export default function Body() {
                 <Image
                   disabledEffect
                   alt="rocket"
-                  src="https://cdn-dclhp.nitrocdn.com/kkXVxRzAKeEYTOQeSdNNpWpEeOyjSkSd/assets/images/optimized/rev-5186570/gbm.com/academy/wp-content/uploads/sites/5/2021/04/los-gaps-en-el-trading-1-768x505.png"
+                  sx={{ m: { xs: 3, md: 3 }, ml: { xs: 0, md: 5 } }}
+                  src={`/assets/images/sections/fx-trading/04_COLOR.png`}
                 />
               </m.div>
             </Grid>

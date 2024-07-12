@@ -10,6 +10,7 @@ import ScrollProgress from 'src/components/scroll-progress';
 //
 import Home from '../home';
 import HomeProposalValue from '../home-proposal-value';
+import GreenLayout from 'src/layouts/main/layout-green';
 
 // ----------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ export default function HomeView() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <MainLayout>
+    <GreenLayout>
       <ScrollProgress scrollYProgress={scrollYProgress} />
 
       <Box
@@ -30,6 +31,6 @@ export default function HomeView() {
         <Home />
         <HomeProposalValue />
       </Box>
-    </MainLayout>
+    </GreenLayout>
   );
 }

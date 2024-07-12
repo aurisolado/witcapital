@@ -64,14 +64,14 @@ export const typography = {
     fontFamily: 'ws, Helvetica, Arial, sans-serif',
     fontWeight: 800,
     fontSize: pxToRem(42),
-    ...responsiveFontSizes({ sm: 52, md: 96, lg: 100 }),
+    ...responsiveFontSizes({ sm: 42, md: 76, lg: 80 }),
   },
   h2: {
     fontWeight: 600,
     fontFamily: 'ws, Helvetica, Arial, sans-serif',
     lineHeight: 64 / 48,
     fontSize: pxToRem(40),
-    ...responsiveFontSizes({ sm: 45, md: 54, lg: 65 }),
+    ...responsiveFontSizes({ sm: 35, md: 44, lg: 45 }),
   },
   h3: {
     fontWeight: 700,
