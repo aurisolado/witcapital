@@ -18,6 +18,8 @@ import TaxConsulting from '../tax-consulting';
 import InternationalConsulting from '../international-consulting';
 import Contact from '../contact';
 import Body from '../body';
+import HeroSection from '../HeroSection';
+import Rol from '../Rol';
 
 // ----------------------------------------------------------------------
 
@@ -35,11 +37,12 @@ export default function NearshoringAndOffshoreView() {
           bgcolor: '#9fe870',
         }}
       >
+        <HeroSection />
         <Home />
 
         <Body />
 
-        <Contact />
+        <Rol />
       </Box>
     </>
   );

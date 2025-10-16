@@ -21,6 +21,7 @@ export const paths = {
 
   divisas: '/divisas',
   nearshoringandoffshore: '/nearshoringandoffshore',
+  edivisasStablecoins: 'edivisasStablecoins',
   payments: '/payments',
 
   business: '/business',

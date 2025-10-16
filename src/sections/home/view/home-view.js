@@ -8,8 +8,7 @@ import MainLayout from 'src/layouts/main';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
-import Home from '../home';
-import HomeProposalValue from '../home-proposal-value';
+import Home from 'src/pages/Home';
 import GreenLayout from 'src/layouts/main/layout-green';
 
 // ----------------------------------------------------------------------
@@ -29,7 +28,6 @@ export default function HomeView() {
         }}
       >
         <Home />
-        <HomeProposalValue />
       </Box>
     </GreenLayout>
   );

@@ -6,10 +6,8 @@ import Box from '@mui/material/Box';
 // layouts
 // components
 import ScrollProgress from 'src/components/scroll-progress';
+import FxTrading from '../index';
 //
-import Contact from '../contact';
-import Home from '../home';
-import Body from '../body';
 
 // ----------------------------------------------------------------------
 
@@ -24,13 +22,10 @@ export default function FxTradingView() {
         sx={{
           overflow: 'hidden',
           position: 'relative',
-          bgcolor: '#9fe870',
+          bgcolor: 'background.default',
         }}
       >
-        <Home />
-        <Body />
-
-        <Contact />
+        <FxTrading />
       </Box>
     </>
   );

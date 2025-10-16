@@ -12,6 +12,11 @@ import Contact from '../contact';
 import Home from '../home';
 import EquityInvestment from '../equity-investment';
 import PrivateTrust from '../private-trust';
+import HeroSection from '../HeroSection';
+import Explorar from '../Explorar';
+import Stablecoins from '../Stablecoins';
+import Aliado from '../Aliado';
+import Usage from '../Usage';
 
 // ----------------------------------------------------------------------
 
@@ -29,8 +34,12 @@ export default function CashPassportView() {
           bgcolor: '#9fe870',
         }}
       >
-        <CashPassport />
-        <Contact />
+        <HeroSection />
+        <Explorar />
+        <Stablecoins />
+        <Aliado />
+        <Usage />
+        
       </Box>
     </>
   );

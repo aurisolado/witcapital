@@ -61,15 +61,15 @@ export const typography = {
   },
 
   h1: {
-    fontFamily: 'ws, Helvetica, Arial, sans-serif',
+    
     fontWeight: 800,
     fontSize: pxToRem(42),
-    ...responsiveFontSizes({ sm: 42, md: 76, lg: 80 }),
+    lineHeight: 1,
+    ...responsiveFontSizes({ sm: 42, md: 76, lg: 63 }),
   },
   h2: {
     fontWeight: 600,
-    fontFamily: 'ws, Helvetica, Arial, sans-serif',
-    lineHeight: 64 / 48,
+    lineHeight: 1,
     fontSize: pxToRem(40),
     ...responsiveFontSizes({ sm: 35, md: 44, lg: 45 }),
   },
@@ -93,7 +93,7 @@ export const typography = {
     ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
   },
   h6: {
-    fontWeight: 700,
+    fontWeight: 400,
     lineHeight: 28 / 18,
     fontSize: pxToRem(17),
     ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
@@ -110,7 +110,6 @@ export const typography = {
     textAlign: 'justify',
   },
   body1: {
-    fontFamily: 'inter, Helvetica, Arial, sans-serif',
     fontWeight: 400,
     color: '#212B36',
     fontSize: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',

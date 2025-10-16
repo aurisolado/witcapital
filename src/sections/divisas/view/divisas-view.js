@@ -11,6 +11,10 @@ import Advantages from '../advantages';
 import CryptoTable from '../cryptotable';
 import Home from '../home';
 import Legal from '../legal';
+import HeroSection from '../HeroSection';
+import Estrategia from '../Estrategia';
+import Beneficios from '../Beneficios';
+import Fundamentos from '../Fundamentos';
 
 // ----------------------------------------------------------------------
 
@@ -28,9 +32,10 @@ export default function DivisasView() {
           bgcolor: '#ffffff',
         }}
       >
-        <Home />
-        <CryptoTable />
-        <Advantages />
+        <HeroSection />
+        <Estrategia />
+        <Beneficios />
+        <Fundamentos />
       </Box>
     </>
   );

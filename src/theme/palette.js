@@ -20,7 +20,7 @@ const GREY = {
 const PRIMARY = {
   lighter: '#C8FAD6',
   light: '#80e142',
-  main: '#9fe870',
+  main: '#C2D565',
   dark: '#65cf21',
   darker: '#004B50',
   contrastText: '#FFFFFF',
@@ -101,7 +101,7 @@ export function palette(mode) {
     mode: 'light',
     text: {
       primary: GREY[800],
-      secondary: GREY[600],
+      secondary: '#1A202C',
       disabled: GREY[500],
     },
     background: {

@@ -8,6 +8,7 @@ import { usePathname } from 'src/routes/hooks';
 //
 import Footer from './footer';
 import HeaderGreen from './header-green';
+import HeaderWhite from './header-white';
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ export default function GreenLayout({ children }) {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: 1, background: '#163300' }}>
-      <HeaderGreen />
+      <HeaderWhite />
 
       <Box
         component="main"
