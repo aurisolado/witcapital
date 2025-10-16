@@ -13,14 +13,14 @@ export default function HeroSlider({
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    if (!autoPlay || slides.length <= 1) return;
+    if (!autoPlay || slides?.length <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slides?.length);
     }, autoPlayMs);
 
     return () => clearInterval(interval);
-  }, [autoPlay, autoPlayMs, slides.length]);
+  }, [autoPlay, autoPlayMs, slides?.length]);
 
   return (
     <Box
@@ -39,14 +39,14 @@ export default function HeroSlider({
       <Box
         sx={{
           display: 'flex',
-          width: `${slides.length * 100}%`,
+          width: `${slides?.length * 100}%`,
           height: '100%',
-          transform: `translateX(-${(currentSlide * 100) / slides.length}%)`,
-          transition: slides.length > 1 ? 'transform 500ms ease' : 'none'
+          transform: `translateX(-${(currentSlide * 100) / slides?.length}%)`,
+          transition: slides?.length > 1 ? 'transform 500ms ease' : 'none'
         }}
       >
         {slides.map((slide, index) => (
-          <Box key={index} sx={{ width: `${100 / slides.length}%`, height: '100%' }}>
+          <Box key={index} sx={{ width: `${100 / slides?.length}%`, height: '100%' }}>
             <HeroSlide {...slide} />
           </Box>
         ))}

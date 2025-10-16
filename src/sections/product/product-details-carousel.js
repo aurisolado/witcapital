@@ -83,7 +83,7 @@ export default function ProductDetailsCarousel({ product }) {
     focusOnSelect: true,
     variableWidth: true,
     centerPadding: '0px',
-    slidesToShow: slides.length > 3 ? 3 : slides.length,
+    slidesToShow: slides?.length > 3 ? 3 : slides?.length,
   });
 
   useEffect(() => {
@@ -125,7 +125,7 @@ export default function ProductDetailsCarousel({ product }) {
 
       <CarouselArrowIndex
         index={carouselLarge.currentIndex}
-        total={slides.length}
+        total={slides?.length}
         onNext={carouselThumb.onNext}
         onPrev={carouselThumb.onPrev}
       />
@@ -133,7 +133,7 @@ export default function ProductDetailsCarousel({ product }) {
   );
 
   const renderThumbnails = (
-    <StyledThumbnailsContainer length={slides.length}>
+    <StyledThumbnailsContainer length={slides?.length}>
       <Carousel
         {...carouselThumb.carouselSettings}
         asNavFor={carouselLarge.nav}
