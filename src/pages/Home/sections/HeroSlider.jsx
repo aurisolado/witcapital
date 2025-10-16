@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import HeroSlide from './HeroSlide';
 
 export default function HeroSlider({ 
-  slides, 
+  slides = [],
   autoPlay = false, 
   autoPlayMs = 6000, 
   height = "50vh", 
