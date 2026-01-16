@@ -1,5 +1,4 @@
 import { Box, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
-import { useState } from 'react';
 
 const services = [
   {
@@ -14,7 +13,7 @@ const services = [
 
 
 export default function Explorar() {
-  
+
 
   return (
     <Box
@@ -22,7 +21,7 @@ export default function Explorar() {
       role="region"
       aria-label="Servicio integral de inversión"
       sx={{
-        bgcolor: 'background.default',
+        bgcolor: '#F5F7FA',
         py: { xs: 6, md: 10 }
       }}
     >
@@ -32,8 +31,8 @@ export default function Explorar() {
             <Typography
               variant="h2"
               sx={{
-                fontWeight: 800,
-                letterSpacing: '-0.02em',
+                fontWeight: 500,
+
                 textWrap: 'balance',
                 mb: 3,
                 position: 'relative',
@@ -54,55 +53,38 @@ export default function Explorar() {
             >
               Explora el Mundo de las Divisas
             </Typography>
-            
+
             <Typography
-              variant="body1"
+              variant="body2"
               sx={{
-                maxWidth: '46ch',
-                mx: 'auto',
-                lineHeight: 1.6,
-                color: 'text.secondary'
+                mb: 4,
               }}
             >
               Las divisas son monedas de distintos países que se utilizan en transacciones comerciales y financieras. Para las personas físicas, la compra y venta de divisas puede ofrecer
             </Typography>
           </Box>
+          <Grid container sx={{ justifyContent: 'center', backgroundColor: '#FFFFFF' }}>
+            <Grid item xs={12}>
 
-          <Grid container spacing={3}>
-            <Grid Item xs={12} md={12}>
-
-              <Grid container spacing={3}>
-                <Grid Item xs={12} md={6}>
+              <Grid container justifyContent="center" alignItems="center">
+                <Grid item xs={12} md={6}>
                   {services.map((service, index) => (
-                    <Grid item xs={12} md={12} key={index}>
-                      <Card
-                        variant="outlined"
-                        sx={{
-                          borderRadius: 4,
-                          p: 2.5,
-                          height: '100%',
-                          display: 'flex',
-                          flexDirection: 'column'
-                        }}
-                      >
-                        <CardContent sx={{ p: 0, flexGrow: 1 }}>
-                          <Typography
-                            variant="h6"
-                            sx={{
-                              fontWeight: 600,
-                              mb: 2,
-                              lineHeight: 1.3
-                            }}
-                          >
+                    <Grid item xs={12} key={index}>
+                      <Card sx={{ p: 2.5, boxShadow: 'none' }}>
+                        <CardContent
+                          sx={{
+                            p: 0,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                          }}
+                        >
+                          <Typography variant="h4" sx={{ fontWeight: 600, mb: 1 }}>
                             {service.title}
                           </Typography>
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              color: 'text.secondary',
-                              lineHeight: 1.6
-                            }}
-                          >
+                          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                             {service.description}
                           </Typography>
                         </CardContent>
@@ -111,26 +93,20 @@ export default function Explorar() {
                   ))}
                 </Grid>
 
-                <Grid Item xs={12} md={5}>
+                <Grid item xs={12} md={5}>
                   <Box
                     component="img"
                     src="/assets/illustrations/P_DIVISAS_STABLECOINS/SECTION1.png"
-                    alt="Personas sosteniendo piezas de rompecabezas con la palabra TRUST"
-                    sx={{
-                      width: '100%',
-                      maxWidth: 350,
-                      height: 'auto',
-                      objectFit: 'contain',
-                    }}
+                    sx={{ width: '100%', objectFit: 'contain' }}
                   />
                 </Grid>
-
               </Grid>
+
             </Grid>
-            
           </Grid>
 
-          
+
+
         </Stack>
       </Container>
     </Box>

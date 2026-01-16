@@ -1,4 +1,4 @@
-import { Container, Grid, Box, Typography, Card, CardContent, Stack } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 
 const benefits = [
   {
@@ -30,8 +30,8 @@ export default function REITs() {
       role="region"
       aria-label="REITs Mercado Inmobiliario"
       sx={{
-        bgcolor: 'background.default',
-        py: { xs: 6, md: 10 }
+        bgcolor: '#F5F7FA',
+        pt: { xs: 6, md: 10 }
       }}
     >
       <Container maxWidth="lg">
@@ -39,7 +39,7 @@ export default function REITs() {
           {/* Header */}
           <Box textAlign="center">
             <Typography
-              variant="overline"
+              variant="h2"
               sx={{
                 color: 'primary.main',
                 fontWeight: 600,
@@ -51,7 +51,7 @@ export default function REITs() {
             <Typography
               variant="h2"
               sx={{
-                fontWeight: 800,
+                fontWeight: 600,
                 letterSpacing: '-0.02em',
                 textWrap: 'balance',
                 mt: 1
@@ -61,107 +61,8 @@ export default function REITs() {
             </Typography>
           </Box>
 
-          {/* Split Section */}
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}
-              >
-                <Box
-                  component="img"
-                  src="/assets/illustrations/P_INVERSION PATRIMONIAL/P_INVERSION PATRIMONIAL_02.png"
-                  alt="Maletín con rascacielos representando REITs"
-                  decoding="async"
-                  sx={{
-                    width: '100%',
-                    height: 'auto',
-                    objectFit: 'contain',
-                    maxWidth: 560
-                  }}
-                />
-              </Box>
-            </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  p: 4,
-                  borderRadius: 3,
-                  bgcolor: 'background.paper',
-                  boxShadow: 1
-                }}
-              >
-                <Typography
-                  variant="h4"
-                  sx={{
-                    fontWeight: 600,
-                    mb: 3
-                  }}
-                >
-                  Ventajas de los REITs
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    lineHeight: 1.6,
-                    color: 'text.secondary'
-                  }}
-                >
-                  Los REITs permiten invertir en bienes raíces a través de acciones, sin necesidad de gestionar propiedades directamente.
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
 
-          {/* Benefits Grid */}
-          <Grid container spacing={3}>
-            {benefits.map((benefit, index) => (
-              <Grid item xs={12} sm={6} lg={3} key={index}>
-                <Card
-                  variant="outlined"
-                  sx={{
-                    borderRadius: 4,
-                    p: 2,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column'
-                  }}
-                >
-                  <CardContent sx={{ p: 0, flexGrow: 1 }}>
-                    <Stack spacing={2} alignItems="center" textAlign="center">
-                      <Box sx={{ fontSize: 28 }}>
-                        {benefit.icon}
-                      </Box>
-                      
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontWeight: 600,
-                          fontSize: '1rem'
-                        }}
-                      >
-                        {benefit.title}
-                      </Typography>
-                      
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: 'text.secondary',
-                          lineHeight: 1.5
-                        }}
-                      >
-                        {benefit.description}
-                      </Typography>
-                    </Stack>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
         </Stack>
       </Container>
     </Box>

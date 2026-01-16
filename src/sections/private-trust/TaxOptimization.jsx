@@ -1,20 +1,24 @@
-import { Container, Grid, Box, Typography, Card, CardContent, Stack } from '@mui/material';
+import { Box, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
+
+import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import LockIcon from "@mui/icons-material/Lock";
+import PublicIcon from "@mui/icons-material/Public";
 
 const taxBenefits = [
   {
     title: 'Tratados internacionales',
     description: 'Optimiza la carga fiscal mediante el aprovechamiento de tratados bilaterales y convenios de doble imposición.',
-    icon: '🌍'
+    icon: <PublicIcon />
   },
   {
     title: 'Estructuras exentas',
     description: 'Algunos Trusts califican como entidades libres de impuestos en Estados Unidos o disfrutan de tratamientos preferenciales.',
-    icon: '🔒'
+    icon: <DoNotDisturbOnIcon />
   },
   {
     title: 'Trusts irrevocables',
     description: 'Al transferir los bienes, se considera una enajenación que puede reducir o eliminar obligaciones fiscales al salir del patrimonio personal del Settlor.',
-    icon: '💼'
+    icon: <LockIcon />
   }
 ];
 

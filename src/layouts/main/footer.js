@@ -1,5 +1,7 @@
 // @mui
 import Box from '@mui/material/Box';
+import { paths } from 'src/routes/paths';
+
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
@@ -16,39 +18,39 @@ import { _socials } from 'src/_mock';
 // components
 import Iconify from 'src/components/iconify';
 import Logo from 'src/components/logo';
+import LogoDark from 'src/components/logo/logo-dark';
 
 // ----------------------------------------------------------------------
 
 const LINKS = [
   {
+    children: [
+      //{ title: 'Asesoria Laboral', path: paths.business },
+      { name: 'Home', href: '#' },
+      { name: 'Áreas de prácticas', href: '#' },
+      { name: 'Quienes somos', href: '#' }
+    ],
+  },
+  {
     headline: 'Personal',
     children: [
-      { name: 'Tarjeta Multidivisas', href: '#' },
-      { name: 'FX Trading desk', href: '#' },
-      { name: 'Inversión patrimonial', href: '#' },
-      { name: 'Private Trust', href: '#' },
+      { name: 'Private Trust', href: paths.privateTrust },
+      { name: 'Inversión patrimonial', href: paths.inversionPatrimonial },
+      { name: 'Mercado de divisas', href: paths.fxTrading },
+      { name: 'Divisas & Stablecoins', href: paths.cashPassport },
     ],
   },
   {
     headline: 'Empresas',
     children: [
-      { name: 'Compraventa de Cripto-Activos', href: '#' },
-      { name: 'Compraventa de Divisas', href: '#' },
-      { name: 'Nearshoring & Offshore', href: '#' },
-      { name: 'Pagos Nacionales e Internacionales', href: '#' },
+      { name: 'Pagos nacionales', href: paths.paymentsN },
+      { name: 'Pagos globales', href: paths.paymentsG },
+      { name: 'Nearshore & Offshore', href: paths.nearshoringandoffshore },
+      { name: 'Divisas & Stablecoins', href: paths.divisas },
     ],
   },
 
-  {
-    headline: 'Áreas de Práctica',
-    children: [
-      //{ title: 'Asesoria Laboral', path: paths.business },
-      { name: 'Consultoría Fiscal', href: '#' },
-      { name: 'Bancario y Financiero', href: '#' },
-      { name: 'Comercio Exterior y Aduanas', href: '#' },
-      { name: 'Asesoría Internacional', href: '#' },
-    ],
-  },
+  
 ];
 
 // ----------------------------------------------------------------------
@@ -83,7 +85,7 @@ export default function Footer() {
       component="footer"
       sx={{
         position: 'relative',
-        bgcolor: 'background.default',
+        bgcolor: '#0B0E27',
       }}
     >
       <Divider />
@@ -95,7 +97,7 @@ export default function Footer() {
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        <Logo sx={{ mb: 3 }} />
+        <LogoDark sx={{ mb: 3 }} />
 
         <Grid
           container
@@ -110,6 +112,7 @@ export default function Footer() {
               sx={{
                 maxWidth: 270,
                 mx: { xs: 'auto', md: 'unset' },
+                color: '#FFFFFF',
               }}
             >
               Impulsamos la creación de valor en nuestro entorno.
@@ -148,7 +151,7 @@ export default function Footer() {
                   alignItems={{ xs: 'center', md: 'flex-start' }}
                   sx={{ width: 1 }}
                 >
-                  <Typography component="div" variant="overline">
+                  <Typography component="div" variant="overline" color="#FFFFFF">
                     {list.headline}
                   </Typography>
 
@@ -157,7 +160,7 @@ export default function Footer() {
                       key={link.name}
                       component={RouterLink}
                       href={link.href}
-                      color="inherit"
+                      color="#FFFFFF"
                       variant="body2"
                     >
                       {link.name}
@@ -169,8 +172,8 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Typography variant="body2" sx={{ mt: 10 }}>
-          © 2024. Wit Biz All rights reserved
+        <Typography variant="body2" sx={{ mt: 10 }} align="center" color="#FFFFFF">
+          © 2026. Wit Biz All rights reserved
         </Typography>
       </Container>
     </Box>

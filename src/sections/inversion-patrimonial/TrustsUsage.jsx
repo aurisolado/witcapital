@@ -1,20 +1,24 @@
-import { Container, Grid, Box, Typography, Card, CardContent, Stack } from '@mui/material';
+import { Box, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
+
+import AccountTreeIcon from "@mui/icons-material/AccountTree"; // estructura familiar / herencia
+import DescriptionIcon from "@mui/icons-material/Description"; // testamento / documentos
+import TimelineIcon from "@mui/icons-material/Timeline"; // planificación a futuro
 
 const benefits = [
   {
     title: 'Protección de activos',
     description: 'Brinda protección legal frente a posibles litigios y garantiza el resguardo del patrimonio familiar o empresarial a largo plazo.',
-    icon: '🛡️'
+    icon: <AccountTreeIcon />
   },
   {
     title: 'Planificación sucesoria',
     description: 'Establece con claridad el reparto de bienes, evitando procesos testamentarios prolongados.',
-    icon: '⚖️'
+    icon: <DescriptionIcon />
   },
   {
     title: 'Eficiencia administrativa y fiscal',
     description: 'Optimiza la gestión de activos y mejora la eficiencia fiscal aprovechando tratados internacionales.',
-    icon: '✅'
+    icon: <TimelineIcon />
   }
 ];
 

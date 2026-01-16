@@ -15,10 +15,10 @@ export const navConfig = [
       {
         subheader: 'Personal',
         items: [
-          { title: 'Tarjeta Multidivisas', path: paths.cashPassport },
-          { title: 'Fx Trading desk', path: paths.fxTrading },
-          { title: 'Inversión patrimonial', path: paths.inversionPatrimonial },
           { title: 'Private Trust', path: paths.privateTrust },
+          { title: 'Inversión patrimonial', path: paths.inversionPatrimonial },
+          { title: 'Mercado de divisas', path: paths.fxTrading },
+          { title: 'Divisas & Stablecoins', path: paths.cashPassport },
         ],
       },
     ],
@@ -32,10 +32,10 @@ export const navConfig = [
       {
         subheader: 'Exchange',
         items: [
-          { title: 'Compraventa de Cripto-Activos', path: paths.cryptocurrency },
-          { title: 'Compraventa de Divisas', path: paths.divisas },
+          { title: 'Pagos Nacionales', path: paths.paymentsN },
+          { title: 'Pagos Globales', path: paths.paymentsG },
           { title: 'Nearshoring & Offshore', path: paths.nearshoringandoffshore },
-          { title: 'Pagos Nacionales e Internacionales', path: paths.payments },
+          { title: 'Divisas & Stablecoins', path: paths.divisas },
         ],
       },
     ],

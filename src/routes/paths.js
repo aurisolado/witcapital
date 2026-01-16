@@ -24,6 +24,9 @@ export const paths = {
   edivisasStablecoins: 'edivisasStablecoins',
   payments: '/payments',
 
+  paymentsN: '/national-payments',
+  paymentsG: '/global-payments',
+
   business: '/business',
   personal: '/personal',
 
