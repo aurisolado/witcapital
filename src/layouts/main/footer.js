@@ -26,9 +26,9 @@ const LINKS = [
   {
     children: [
       //{ title: 'Asesoria Laboral', path: paths.business },
-      { name: 'Home', href: '#' },
-      { name: 'Áreas de prácticas', href: '#' },
-      { name: 'Quienes somos', href: '#' }
+      { name: 'Home', href: '/' },
+      { name: 'Áreas de prácticas', href: paths.business },
+      { name: 'Quienes somos', href: paths.about }
     ],
   },
   {
@@ -50,7 +50,7 @@ const LINKS = [
     ],
   },
 
-  
+
 ];
 
 // ----------------------------------------------------------------------

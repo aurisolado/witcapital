@@ -3,11 +3,10 @@ import { m } from 'framer-motion';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
 // hooks
 // routes
 // components
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { MotionViewport, varFade } from 'src/components/animate';
 
 export default function Contact() {
@@ -25,28 +24,22 @@ export default function Contact() {
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h2" color="#163300">
-            Permítenos ser tus asesores de confianza
+          <Typography variant="h4" color="#163300">
+            <Box component="span" sx={{ color: "primary.main" }}>
+              Compromiso
+            </Box>
+            {" "}con nuestros clientes
+
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
           <Typography variant="body1" color="#163300">
-            Proveemos servicios integrales de vanguardia, con visión interdisciplinaria centrada en
-            brindar soluciones que tienen como centro el apoyar los objetivos de nuestros clientes.
+            En Wit Biz, acompañamos el crecimiento de personas y empresas a nivel local e internacional, mediante estrategias personalizadas basadas en profesionalismo, transparencia y eficacia. Contáctanos para conocer cómo podemos fortalecer tu patrimonio o tu negocio con soluciones confiables y de alto valor estratégico
           </Typography>
         </m.div>
 
-        <m.div variants={varFade().inDown}>
-          <Button
-            size="large"
-            variant="contained"
-            target="_blank"
-            href="https://calendly.com/witbiz"
-          >
-            Programación de citas
-          </Button>
-        </m.div>
+
       </Stack>
     </Container>
   );

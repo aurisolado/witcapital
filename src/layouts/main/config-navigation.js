@@ -8,6 +8,21 @@ import Iconify from 'src/components/iconify';
 
 export const navConfig = [
   {
+    title: 'Home',
+    path: '/',
+    icon: <Iconify icon="solar:file-bold-duotone" />,
+  },
+  {
+    title: 'Áreas de Práctica',
+    path: '/business',
+    icon: <Iconify icon="solar:file-bold-duotone" />,
+  },
+  {
+    title: 'Quienes Somos',
+    path: '/about-us',
+    icon: <Iconify icon="solar:file-bold-duotone" />,
+  },
+  {
     title: 'Personal',
     path: '/personal',
     icon: <Iconify icon="solar:file-bold-duotone" />,
@@ -39,11 +54,5 @@ export const navConfig = [
         ],
       },
     ],
-  },
-
-  {
-    title: 'Áreas de Práctica',
-    path: '/business',
-    icon: <Iconify icon="solar:file-bold-duotone" />,
-  },
+  }
 ];

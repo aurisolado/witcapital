@@ -1,4 +1,6 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { m } from 'framer-motion';
+import { MotionViewport, varFade } from 'src/components/animate';
 
 /**
  * SplitSection
@@ -41,37 +43,45 @@ export default function SplitSection({
 
     return (
         <Box component="section" sx={{ bgcolor }}>
-            <Container maxWidth={maxWidth} sx={{ py }}>
+            <Container maxWidth={maxWidth} sx={{ py }} component={MotionViewport}>
                 <Grid container spacing={gap} alignItems="center">
                     {/* TEXT */}
                     <Grid item xs={12} md={6} sx={{ order: textOrder }}>
                         <Stack spacing={2.5} sx={{ maxWidth: 560 }}>
                             {overline ? (
-                                <Typography variant="overline" sx={{ letterSpacing: 1 }}>
-                                    {overline}
-                                </Typography>
+                                <m.div variants={varFade().inDown}>
+                                    <Typography variant="overline" sx={{ letterSpacing: 1 }}>
+                                        {overline}
+                                    </Typography>
+                                </m.div>
                             ) : null}
 
                             {title ? (
-                                <Typography variant="h1">
-                                    {title}
-                                </Typography>
+                                <m.div variants={varFade().inDown}>
+                                    <Typography variant="h1">
+                                        {title}
+                                    </Typography>
+                                </m.div>
                             ) : null}
 
                             {subtitle ? (
-                                <Typography variant="h6" sx={{ color: "text.secondary" }}>
-                                    {subtitle}
-                                </Typography>
+                                <m.div variants={varFade().inDown}>
+                                    <Typography variant="h6" sx={{ color: "text.secondary" }}>
+                                        {subtitle}
+                                    </Typography>
+                                </m.div>
                             ) : null}
 
                             {description ? (
-                                <Box sx={{ color: "text.secondary" }}>
-                                    {typeof description === "string" ? (
-                                        <Typography variant="body1">{description}</Typography>
-                                    ) : (
-                                        description
-                                    )}
-                                </Box>
+                                <m.div variants={varFade().inDown}>
+                                    <Box sx={{ color: "text.secondary" }}>
+                                        {typeof description === "string" ? (
+                                            <Typography variant="body1">{description}</Typography>
+                                        ) : (
+                                            description
+                                        )}
+                                    </Box>
+                                </m.div>
                             ) : null}
 
                             {ctaLabel ? (
@@ -109,18 +119,20 @@ export default function SplitSection({
                                 justifyContent: "center",
                             }}
                         >
-                            <Box
-                                component="img"
-                                src={imageSrc}
-                                alt={imageAlt}
-                                loading="lazy"
-                                sx={{
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: imageFit,
-                                    display: "block",
-                                }}
-                            />
+                            <m.div variants={varFade().inDown}>
+                                <Box
+                                    component="img"
+                                    src={imageSrc}
+                                    alt={imageAlt}
+                                    loading="lazy"
+                                    sx={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: imageFit,
+                                        display: "block",
+                                    }}
+                                />
+                            </m.div>
                         </Box>
                     </Grid>
                 </Grid>
