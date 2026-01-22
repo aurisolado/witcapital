@@ -14,7 +14,7 @@ export function FeatureCard({
             sx={{
                 height: "100%",
                 width: "100%",
-                borderRadius: 4,
+                borderRadius: 1,
                 px: 3,
                 py: 3.5,
                 bgcolor: isGray ? "grey.50" : "common.white",
@@ -30,7 +30,7 @@ export function FeatureCard({
                         sx={{
                             width: 44,
                             height: 44,
-                            borderRadius: 2.5,
+                            borderRadius: 1,
                             bgcolor: "#C2D565",
                             display: "grid",
                             placeItems: "center",

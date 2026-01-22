@@ -91,7 +91,7 @@ export const StyledEditorToolbar = styled('div')(({ theme }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 4,
+        borderRadius: 1,
         color: theme.palette.text.primary,
       },
 
@@ -125,7 +125,7 @@ export const StyledEditorToolbar = styled('div')(({ theme }) => {
       },
       '& .ql-expanded': {
         '& .ql-picker-label': {
-          borderRadius: 4,
+          borderRadius: 1,
           color: theme.palette.text.disabled,
           borderColor: 'transparent !important',
           backgroundColor: theme.palette.action.focus,
@@ -161,7 +161,7 @@ export const StyledEditorToolbar = styled('div')(({ theme }) => {
           '& .ql-picker-options': { padding: 8 },
           '& .ql-picker-item': {
             margin: 3,
-            borderRadius: 4,
+            borderRadius: 1,
             '&.ql-selected': { border: 'solid 1px black' },
           },
         },

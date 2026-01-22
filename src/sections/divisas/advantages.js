@@ -58,7 +58,7 @@ export default function Advantages() {
           key={item.title}
           sx={{
             borderRadius: '16px',
-            background: '#9fe870',
+            background: '#C2D565',
             padding: '40px',
             display: 'flex',
             flexDirection: 'column',

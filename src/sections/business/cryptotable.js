@@ -387,7 +387,7 @@ export default function CryptoTable() {
                       <Grid>
                         <Chip
                           label={<Typography variant="body1">{row.symbol}</Typography>}
-                          style={{ backgroundColor: '#9fe870', color: '#0e0f0c' }}
+                          style={{ backgroundColor: '#C2D565', color: '#0e0f0c' }}
                         />
                       </Grid>
                       <Grid>

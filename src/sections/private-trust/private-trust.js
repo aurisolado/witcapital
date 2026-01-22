@@ -54,7 +54,7 @@ export default function PrivateTrust() {
                     Private -{' '}
                     <span
                       style={{
-                        color: '#9fe870',
+                        color: '#C2D565',
                       }}
                     >
                       Trust

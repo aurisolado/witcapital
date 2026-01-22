@@ -72,7 +72,7 @@ export const StyledIcon = styled(ListItemIcon)(({ size }) => ({
 export const StyledDotIcon = styled('span')(({ active, theme }) => ({
   width: 4,
   height: 4,
-  borderRadius: '50%',
+  borderRadius: '10px',
   backgroundColor: theme.palette.text.disabled,
   transition: theme.transitions.create(['transform'], {
     duration: theme.transitions.duration.shorter,

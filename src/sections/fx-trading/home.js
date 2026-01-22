@@ -63,7 +63,7 @@ export default function Home() {
                 >
                   <span
                     style={{
-                      color: '#9fe870',
+                      color: '#C2D565',
                     }}
                   >
                     FX - Trading
@@ -100,7 +100,7 @@ export default function Home() {
                   sx={{
                     mt: { xs: 5, md: 1 },
                     color: '#212B36',
-                    backgroundColor: '#9fe870',
+                    backgroundColor: '#C2D565',
                     '&:hover': {
                       backgroundColor: '#7abc50',
                     },

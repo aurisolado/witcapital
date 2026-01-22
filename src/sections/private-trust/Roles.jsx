@@ -53,7 +53,7 @@ export default function Roles() {
                     sx={{
                       width: 64,
                       height: 64,
-                      bgcolor: alpha('#9fe870', 0.12),
+                      bgcolor: alpha('#C2D565', 0.12),
                       color: 'primary.main',
                       fontSize: 32,
                       fontWeight: 'bold'

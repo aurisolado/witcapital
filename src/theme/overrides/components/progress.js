@@ -12,9 +12,9 @@ export function progress(theme) {
     const bufferVariant = ownerState.variant === 'buffer';
 
     const defaultStyle = {
-      borderRadius: 4,
+      borderRadius: 1,
       [`& .${linearProgressClasses.bar}`]: {
-        borderRadius: 4,
+        borderRadius: 1,
       },
       ...(bufferVariant && {
         backgroundColor: 'transparent',

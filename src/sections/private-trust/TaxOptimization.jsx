@@ -70,7 +70,7 @@ export default function TaxOptimization() {
                       key={index}
                       variant="outlined"
                       sx={{
-                        borderRadius: 4,
+                        borderRadius: 1,
                         p: 2.5,
                         border: '1px solid',
                         borderColor: 'divider'

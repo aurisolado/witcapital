@@ -19,11 +19,11 @@ export const ListItem = styled(ListItemButton, {
     padding: '5px 10px 6px 10px',
     //add transition all 0.3s
     fontSize: '15px',
-    borderRadius: '25px',
+    borderRadius: '5px',
     color: theme.palette.text.primary,
     transition: 'all 0.2s',
     '&:hover': {
-      background: '#9fe870',
+      background: '#C2D565',
       color: '#163300',
     },
 
@@ -35,7 +35,7 @@ export const ListItem = styled(ListItemButton, {
     }),
     ...(color === 'dark' && {
       '&:hover': {
-        background: '#9fe870',
+        background: '#C2D565',
         color: '#163300',
       },
     }),
@@ -50,10 +50,10 @@ export const ListItem = styled(ListItemButton, {
     }),
     // Active
     ...(active && {
-      background: '#9fe870',
+      background: '#C2D565',
       color: '#163300 !important',
       '&:hover': {
-        background: '#88df50',
+        background: '#C2D565',
       },
     }),
 
@@ -64,13 +64,13 @@ export const ListItem = styled(ListItemButton, {
       }),
     ...(active &&
       color === 'dark' && {
-        background: '#9fe870',
+        background: '#C2D565',
         color: '#163300',
       }),
     //no active dark color
     ...(active === false &&
       color === 'dark' && {
-        color: '#9fe870',
+        color: '#C2D565',
       }),
     // Active sub item
     ...(active &&
@@ -94,7 +94,7 @@ export const ListSubItem = styled(ListItemButton, {
     padding: '5px 10px 6px 10px',
     //add transition all 0.3s
     fontSize: '15px',
-    borderRadius: '25px',
+    borderRadius: '5px',
     color: theme.palette.text.primary,
     transition: 'all 0.2s',
     '&:hover': {

@@ -68,7 +68,7 @@ export default function ComicSon() {
                   FX -{' '}
                   <span
                     style={{
-                      color: '#9fe870',
+                      color: '#C2D565',
                     }}
                   >
                     Trading

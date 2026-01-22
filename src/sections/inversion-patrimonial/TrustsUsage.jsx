@@ -58,7 +58,7 @@ export default function TrustsUsage() {
                   key={index}
                   variant="outlined"
                   sx={{
-                    borderRadius: 4,
+                    borderRadius: 1,
                     p: 2.5
                   }}
                 >

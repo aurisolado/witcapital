@@ -42,7 +42,7 @@ export default function Usage() {
                 <Card
                   key={index}
                   sx={{
-                    borderRadius: 4,
+                    borderRadius: 1,
                     p: 2.5,
                     backgroundColor: '#F5F7FA',
                     border: '1px solid',
@@ -98,7 +98,7 @@ export default function Usage() {
             >
               <Card
                 sx={{
-                  borderRadius: 4,
+                  borderRadius: 1,
                   p: 2.5,
                   backgroundColor: '#F5F7FA',
                   border: '1px solid',

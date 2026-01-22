@@ -76,10 +76,10 @@ export default function Home() {
             textAlign: 'start',
           }}
         >
-          <Typography variant="h1i" sx={{ mb: 3, mt: 1, color: '#9fe870' }}>
+          <Typography variant="h1i" sx={{ mb: 3, mt: 1, color: '#C2D565' }}>
             {item.index}
           </Typography>
-          <Typography variant="h4" sx={{ mb: 3, mt: 1, color: '#9fe870' }}>
+          <Typography variant="h4" sx={{ mb: 3, mt: 1, color: '#C2D565' }}>
             {item.title}
           </Typography>
 

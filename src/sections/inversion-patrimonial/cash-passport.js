@@ -68,7 +68,7 @@ export default function CashPassport() {
                   Cash Passport -{' '}
                   <span
                     style={{
-                      color: '#9fe870',
+                      color: '#C2D565',
                     }}
                   >
                     Tarjeta multidivisas
@@ -297,7 +297,7 @@ export default function CashPassport() {
             <Stack
               sx={{
                 textAlign: 'center',
-                backgroundColor: '#9fe870',
+                backgroundColor: '#C2D565',
                 borderRadius: '10px',
               }}
             >

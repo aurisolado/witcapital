@@ -38,7 +38,7 @@ export default function FeatureCardsSection({
     const mdCols = getMdCols();
 
     return (
-        <Box component="section" sx={{ bgcolor }}>
+        <Box component="section" sx={{ bgcolor, borderRadius: '5px' }}>
             <Container maxWidth={maxWidth} sx={{ py }}>
                 <Stack spacing={5} alignItems="center">
                     {/* Header */}

@@ -13,7 +13,7 @@ export function ImageFeatureCard({
             <Paper
                 elevation={0}
                 sx={{
-                    borderRadius: 4,
+                    borderRadius: 1,
                     bgcolor: "grey.50",
                     border: "1px solid",
                     borderColor: "grey.100",

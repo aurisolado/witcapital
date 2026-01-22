@@ -67,7 +67,7 @@ export default function CashPassport() {
                 >
                   <span
                     style={{
-                      color: '#9fe870',
+                      color: '#C2D565',
                     }}
                   >
                     Tarjeta multidivisas

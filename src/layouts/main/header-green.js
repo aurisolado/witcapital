@@ -39,8 +39,8 @@ export default function HeaderGreen() {
             xs: HEADER.H_MOBILE,
             md: HEADER.H_DESKTOP,
           },
-          backgroundColor: '#9fe870',
-          color: '#9fe870',
+          backgroundColor: '#C2D565',
+          color: '#C2D565',
           transition: theme.transitions.create(['height'], {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,

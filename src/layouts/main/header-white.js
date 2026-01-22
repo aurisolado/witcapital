@@ -40,7 +40,7 @@ export default function HeaderWhite() {
             md: HEADER.H_DESKTOP,
           },
           backgroundColor: '#ffffff',
-          color: '#9fe870',
+          color: '#C2D565',
           transition: theme.transitions.create(['height'], {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,

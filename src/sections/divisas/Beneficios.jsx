@@ -57,7 +57,7 @@ export default function Beneficios() {
                 <Card
                   variant="outlined"
                   sx={{
-                    borderRadius: 4,
+                    borderRadius: 1,
                     p: 2.5,
                     height: '100%',
                     display: 'flex',
