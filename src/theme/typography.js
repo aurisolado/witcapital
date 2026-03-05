@@ -1,4 +1,4 @@
-import { Barlow, Inter } from 'next/font/google';
+import { Inter, DM_Sans } from 'next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -27,15 +27,17 @@ export function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
+// Inter — body text, labels, card descriptions
 export const primaryFont = Inter({
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-export const secondaryFont = Barlow({
-  weight: ['900'],
+// DM Sans — headings h1/h2, CTA button text (Figma spec)
+export const secondaryFont = DM_Sans({
+  weight: ['400', '500', '600', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -43,99 +45,115 @@ export const secondaryFont = Barlow({
 
 // ----------------------------------------------------------------------
 
-// LEARN MORE
-// https://nextjs.org/docs/basic-features/font-optimization#google-fonts
-
 export const typography = {
   fontFamily: primaryFont.style.fontFamily,
   fontWeightRegular: 400,
   fontWeightMedium: 500,
   fontWeightSemiBold: 600,
   fontWeightBold: 700,
-  h1i: {
-    fontWeight: 600,
-    fontSize: pxToRem(42),
-    //justify text
 
-    ...responsiveFontSizes({ sm: 52, md: 68, lg: 78 }),
-  },
-
+  // H1: DM Sans 63px / 900 Black — hero page title (Figma exact)
   h1: {
-    
-    fontWeight: 800,
-    fontSize: pxToRem(42),
-    lineHeight: 1,
-    ...responsiveFontSizes({ sm: 42, md: 76, lg: 63 }),
-  },
-  h2: {
-    fontWeight: 600,
-    lineHeight: 1,
+    fontFamily: secondaryFont.style.fontFamily,
+    fontWeight: 900,
     fontSize: pxToRem(40),
-    ...responsiveFontSizes({ sm: 35, md: 44, lg: 45 }),
+    lineHeight: 1.08,
+    ...responsiveFontSizes({ sm: 48, md: 56, lg: 63 }),
   },
+
+  // H2: DM Sans 40px / 700 Bold — section titles (Figma exact)
+  h2: {
+    fontFamily: secondaryFont.style.fontFamily,
+    fontWeight: 700,
+    lineHeight: 1.075,
+    fontSize: pxToRem(30),
+    ...responsiveFontSizes({ sm: 34, md: 38, lg: 40 }),
+  },
+
+  // H3: Inter 40px / 900 — standalone large section headers (e.g. "Fundamentos de nuestra cultura")
   h3: {
-    fontWeight: 700,
-    lineHeight: 1.5,
-    fontSize: pxToRem(24),
-    ...responsiveFontSizes({ sm: 33, md: 45, lg: 53 }),
+    fontFamily: primaryFont.style.fontFamily,
+    fontWeight: 900,
+    lineHeight: 1.15,
+    fontSize: pxToRem(26),
+    ...responsiveFontSizes({ sm: 30, md: 36, lg: 40 }),
   },
+
+  // H4: Inter 28px / 600 — card section titles (e.g. "Análisis Exhaustivo")
   h4: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 600,
-    lineHeight: 1.5,
+    lineHeight: 1.3,
     fontSize: pxToRem(20),
-    ...responsiveFontSizes({ sm: 24, md: 30, lg: 30 }),
+    ...responsiveFontSizes({ sm: 22, md: 26, lg: 28 }),
   },
+
+  // H5: Inter 21px / 600 — section labels "Persona" / "Empresa" (Figma exact)
   h5: {
-    fontWeight: 700,
-    lineHeight: 1.5,
-    fontSize: pxToRem(18),
-    //textAlign: 'justify',
-    ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
+    fontFamily: primaryFont.style.fontFamily,
+    fontWeight: 600,
+    lineHeight: 1.19,
+    fontSize: pxToRem(17),
+    ...responsiveFontSizes({ sm: 19, md: 21, lg: 21 }),
   },
+
   h6: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 400,
     lineHeight: 28 / 18,
     fontSize: pxToRem(17),
     ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
   },
+
   subtitle1: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 600,
     lineHeight: 1.5,
     fontSize: pxToRem(16),
   },
+
   subtitle2: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 600,
     lineHeight: 22 / 14,
     fontSize: pxToRem(14),
-    //textAlign: 'justify',
   },
+
+  // body1: Inter 16px / 400 — body text (Figma exact)
   body1: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 400,
-    color: '#212B36',
-    fontSize: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.25rem)',
-    lineHeight: 'clamp(1.125rem,calc(.58114rem + .87719vw),1.55rem)',
-    //textAlign: 'justify',
+    color: '#1a202c',
+    fontSize: pxToRem(16),
+    lineHeight: 1.75,
   },
+
   body2: {
+    fontFamily: primaryFont.style.fontFamily,
     lineHeight: 22 / 14,
     fontSize: pxToRem(14),
-    //textAlign: 'justify',
   },
+
   caption: {
+    fontFamily: primaryFont.style.fontFamily,
     lineHeight: 1.5,
     fontSize: pxToRem(12),
-    //textAlign: 'justify',
   },
+
   overline: {
+    fontFamily: primaryFont.style.fontFamily,
     fontWeight: 700,
     lineHeight: 1.5,
     fontSize: pxToRem(12),
     textTransform: 'uppercase',
   },
+
+  // button: DM Sans 16px / 900 — CTA buttons (Figma exact)
   button: {
-    fontWeight: 700,
-    lineHeight: 24 / 14,
-    fontSize: pxToRem(14),
+    fontFamily: secondaryFont.style.fontFamily,
+    fontWeight: 900,
+    lineHeight: 1.5,
+    fontSize: pxToRem(16),
     textTransform: 'unset',
   },
 };

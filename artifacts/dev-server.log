@@ -1,0 +1,22 @@
+
+> WC@5.5.0 dev
+> next dev -p 3031
+
+- [31merror[39m Failed to start server
+Error: listen EADDRINUSE: address already in use :::3031
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1939:16)[39m
+[90m    at listenInCluster (node:net:1996:12)[39m
+[90m    at Server.listen (node:net:2101:7)[39m
+    at [90mC:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:199:16
+    at new Promise (<anonymous>)
+    at Object.startServer [90m(C:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:151:11[90m)[39m
+    at execFunction [90m(C:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\compiled\jest-worker\processChild.js:1:2828[90m)[39m
+    at execHelper [90m(C:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\compiled\jest-worker\processChild.js:1:2486[90m)[39m
+    at execMethod [90m(C:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\compiled\jest-worker\processChild.js:1:2574[90m)[39m
+    at process.messageListener [90m(C:\Users\Ed\Documents\WitCap\witcapital\[39mnode_modules\[4mnext[24m\dist\compiled\jest-worker\processChild.js:1:1284[90m)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-4091[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'::'[39m,
+  port: [33m3031[39m
+}

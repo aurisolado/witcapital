@@ -72,6 +72,21 @@ export const ListItem = styled(ListItemButton, {
       color === 'dark' && {
         color: '#C2D565',
       }),
+    // CTA pill button (Figma: lime green, r:40, DM Sans 16px/500, white)
+    ...(color === 'cta' && {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.brand.olive,
+      borderRadius: '40px',
+      padding: '8px 18px',
+      fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+      fontWeight: 500,
+      fontSize: '14px',
+      lineHeight: 1.15,
+      '&:hover': {
+        background: theme.palette.primary.light,
+        color: theme.palette.brand.olive,
+      },
+    }),
     // Active sub item
     ...(active &&
       subItem && {
@@ -85,45 +100,32 @@ export const ListItem = styled(ListItemButton, {
   };
 });
 
+// Dropdown sub-items: DM Sans 14px/400, white on dark navy #0b0e27 (Figma exact)
 export const ListSubItem = styled(ListItemButton, {
   shouldForwardProp: (prop) =>
     prop !== 'active' && prop !== 'open' && prop !== 'offsetTop' && prop !== 'subItem',
-})(({ active, open, offsetTop, subItem, theme }) => {
+})(({ active, open, theme }) => {
   return {
-    ...theme.typography.subtitle2,
-    padding: '5px 10px 6px 10px',
-    //add transition all 0.3s
-    fontSize: '15px',
-    borderRadius: '5px',
-    color: theme.palette.text.primary,
-    transition: 'all 0.2s',
+    fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+    fontWeight: 400,
+    fontSize: '14px',
+    padding: '8px 20px',
+    borderRadius: '0px',
+    color: theme.palette.common.white,
+    backgroundColor: theme.palette.brand.navy,
+    transition: 'background 0.2s, color 0.2s',
     '&:hover': {
-      background: 'transparent',
-      color: '#000',
+      background: theme.palette.primary.main,
+      color: theme.palette.brand.navy,
     },
-    // Sub item
-    ...(subItem && {
-      ...theme.typography.body2,
-      color: theme.palette.text.secondary,
-    }),
-    // offsetTop
-    ...(offsetTop && {
-      color: theme.palette.text.primary,
-    }),
     // Active
     ...(active && {
-      background: 'transparent',
-      color: '#000',
+      background: theme.palette.primary.main,
+      color: theme.palette.brand.navy,
     }),
-    // Active sub item
-    ...(active &&
-      subItem && {
-        ...theme.typography.subtitle2,
-        color: theme.palette.text.primary,
-      }),
     // Open
     ...(open && {
-      opacity: 0.48,
+      opacity: 0.8,
     }),
   };
 });

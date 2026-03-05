@@ -17,12 +17,13 @@ const GREY = {
   900: '#161C24',
 };
 
+// Figma brand colors: main #c2d565, dark olive #424e1f
 const PRIMARY = {
-  lighter: '#C8FAD6',
-  light: '#80e142',
+  lighter: '#edf4c2',
+  light: '#d6e88a',
   main: '#C2D565',
-  dark: '#65cf21',
-  darker: '#004B50',
+  dark: '#424e1f',
+  darker: '#2a3012',
   contrastText: '#FFFFFF',
 };
 
@@ -71,6 +72,16 @@ const ERROR = {
   contrastText: '#FFFFFF',
 };
 
+const BRAND = {
+  navy: '#0b0e27',
+  charcoal: '#1a202c',
+  olive: '#424e1f',
+  section: '#edeff2',
+  sectionAlt: '#f5f7fa',
+  heroTint: '#e8ecd3',
+  borderSoft: '#e6e8ec',
+};
+
 const COMMON = {
   common: {
     black: '#000000',
@@ -82,6 +93,7 @@ const COMMON = {
   success: SUCCESS,
   warning: WARNING,
   error: ERROR,
+  brand: BRAND,
   grey: GREY,
   divider: alpha(GREY[500], 0.2),
   action: {
@@ -100,15 +112,18 @@ export function palette(mode) {
     ...COMMON,
     mode: 'light',
     text: {
-      primary: GREY[800],
-      secondary: '#1A202C',
+      primary: BRAND.navy,
+      secondary: BRAND.charcoal,
       disabled: GREY[500],
     },
     background: {
       paper: '#FFFFFF',
       default: '#FFFFFF',
-      dark: '#163300',
-      neutral: GREY[200],
+      dark: BRAND.navy,
+      neutral: BRAND.sectionAlt,
+      section: BRAND.section,
+      hero: BRAND.heroTint,
+      borderSoft: BRAND.borderSoft,
     },
     action: {
       ...COMMON.action,

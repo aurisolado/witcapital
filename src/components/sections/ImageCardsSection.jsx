@@ -16,13 +16,13 @@ export default function ImageCardsSection({
                     {/* Header */}
                     <Stack spacing={1.5} alignItems="center" sx={{ textAlign: "center", maxWidth: 860 }}>
                         {title ? (
-                            <Typography variant="h4" sx={{ fontWeight: 900, lineHeight: 1.15 }}>
+                            <Typography variant="h2" sx={{ lineHeight: 1.15 }}>
                                 {title}
                             </Typography>
                         ) : null}
 
                         {subtitle ? (
-                            <Typography variant="body2" sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}>
+                            <Typography variant="body1" sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}>
                                 {subtitle}
                             </Typography>
                         ) : null}

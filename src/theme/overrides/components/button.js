@@ -29,7 +29,6 @@ export function button(theme) {
 
     const defaultStyle = {
       ...(containedVariant && {
-        color: '#163300',
         borderRadius: '5px',
         padding: '11px 24px',
       }),

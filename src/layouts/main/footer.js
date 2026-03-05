@@ -3,32 +3,21 @@ import Box from '@mui/material/Box';
 import { paths } from 'src/routes/paths';
 
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
-import { alpha } from '@mui/material/styles';
 // routes
 import { RouterLink } from 'src/routes/components';
-import { usePathname } from 'src/routes/hooks';
-// _mock
-import { _socials } from 'src/_mock';
-// components
-import Iconify from 'src/components/iconify';
-import Logo from 'src/components/logo';
-import LogoDark from 'src/components/logo/logo-dark';
 
 // ----------------------------------------------------------------------
 
 const LINKS = [
   {
     children: [
-      //{ title: 'Asesoria Laboral', path: paths.business },
       { name: 'Home', href: '/' },
       { name: 'Áreas de prácticas', href: paths.business },
-      { name: 'Quienes somos', href: paths.about }
+      { name: 'Quienes somos', href: paths.about },
     ],
   },
   {
@@ -41,143 +30,82 @@ const LINKS = [
     ],
   },
   {
-    headline: 'Empresas',
+    headline: 'Empresariales',
     children: [
       { name: 'Pagos nacionales', href: paths.paymentsN },
-      { name: 'Pagos globales', href: paths.paymentsG },
+      { name: 'Pagos Internacionales', href: paths.paymentsG },
       { name: 'Nearshore & Offshore', href: paths.nearshoringandoffshore },
       { name: 'Divisas & Stablecoins', href: paths.divisas },
     ],
   },
-
-
 ];
 
 // ----------------------------------------------------------------------
 
 export default function Footer() {
-  const pathname = usePathname();
-
-  const isHome = pathname === '/never';
-
-  const simpleFooter = (
-    <Box
-      component="footer"
-      sx={{
-        py: 5,
-        textAlign: 'center',
-        position: 'relative',
-        bgcolor: 'background.default',
-      }}
-    >
-      <Container>
-        <Logo sx={{ mb: 1, mx: 'auto' }} />
-
-        <Typography variant="caption" component="div">
-          © 2024. Wit Biz All rights reserved
-        </Typography>
-      </Container>
-    </Box>
-  );
-
-  const mainFooter = (
+  return (
     <Box
       component="footer"
       sx={{
         position: 'relative',
-        bgcolor: '#0B0E27',
+        bgcolor: 'background.dark',
       }}
     >
-      <Divider />
-
       <Container
         sx={{
-          pt: 5,
-          pb: 5,
-          textAlign: { xs: 'center', md: 'unset' },
+          py: { xs: 6, md: 8 },
+          display: 'flex',
+          justifyContent: { xs: 'center', md: 'flex-end' },
         }}
       >
-        <LogoDark sx={{ mb: 3 }} />
-
         <Grid
           container
-          justifyContent={{
-            xs: 'center',
-            md: 'space-between',
-          }}
+          columnSpacing={{ xs: 4, md: 8 }}
+          rowSpacing={{ xs: 4, md: 0 }}
+          sx={{ width: { xs: '100%', md: 'auto' } }}
         >
-          <Grid xs={8} md={3}>
-            <Typography
-              variant="body2"
-              sx={{
-                maxWidth: 270,
-                mx: { xs: 'auto', md: 'unset' },
-                color: '#FFFFFF',
-              }}
-            >
-              Impulsamos la creación de valor en nuestro entorno.
-            </Typography>
-
-            <Stack
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{
-                mt: 3,
-                mb: { xs: 5, md: 0 },
-              }}
-            >
-              {_socials.map((social) => (
-                <IconButton
-                  key={social.name}
-                  sx={{
-                    '&:hover': {
-                      bgcolor: alpha(social.color, 0.08),
-                    },
-                  }}
-                  onClick={() => window.open(social.path, '_blank')}
-                >
-                  <Iconify color={social.color} icon={social.icon} />
-                </IconButton>
-              ))}
-            </Stack>
-          </Grid>
-
-          <Grid xs={12} md={8}>
-            <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
-              {LINKS.map((list) => (
-                <Stack
-                  key={list.headline}
-                  spacing={2}
-                  alignItems={{ xs: 'center', md: 'flex-start' }}
-                  sx={{ width: 1 }}
-                >
-                  <Typography component="div" variant="overline" color="#FFFFFF">
+          {LINKS.map((list) => (
+            <Grid key={list.headline || 'general'} xs={12} sm={4}>
+              <Stack spacing={1.25} alignItems={{ xs: 'center', md: 'flex-start' }}>
+                {list.headline && (
+                  <Typography
+                    component="div"
+                    sx={{
+                      fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '28px',
+                      lineHeight: 1.05,
+                      color: 'common.white',
+                      mb: 0.5,
+                    }}
+                  >
                     {list.headline}
                   </Typography>
+                )}
 
-                  {list.children.map((link) => (
-                    <Link
-                      key={link.name}
-                      component={RouterLink}
-                      href={link.href}
-                      color="#FFFFFF"
-                      variant="body2"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </Stack>
-              ))}
-            </Stack>
-          </Grid>
+                {list.children.map((link) => (
+                  <Link
+                    key={link.name}
+                    component={RouterLink}
+                    href={link.href}
+                    sx={{
+                      fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '14px',
+                      lineHeight: 1.4,
+                      color: 'common.white',
+                      textDecoration: 'none',
+                      '&:hover': { color: 'primary.main' },
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </Stack>
+            </Grid>
+          ))}
         </Grid>
-
-        <Typography variant="body2" sx={{ mt: 10 }} align="center" color="#FFFFFF">
-          © 2026. Wit Biz All rights reserved
-        </Typography>
       </Container>
     </Box>
   );
-
-  return isHome ? simpleFooter : mainFooter;
 }

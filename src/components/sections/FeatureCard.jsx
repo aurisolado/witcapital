@@ -2,7 +2,7 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 
 export function FeatureCard({
     variant = "white", // "white" | "gray"
-    icon,              // ReactNode (puede ser <img/> o un Icon de MUI)
+    icon,              // ReactNode
     title,
     description,
 }) {
@@ -14,39 +14,42 @@ export function FeatureCard({
             sx={{
                 height: "100%",
                 width: "100%",
-                borderRadius: 1,
+                borderRadius: '22px',          // Figma: 22px
                 px: 3,
                 py: 3.5,
-                bgcolor: isGray ? "grey.50" : "common.white",
+                bgcolor: isGray ? '#f5f7fa' : 'common.white',
                 boxShadow: "0px 10px 25px rgba(15, 23, 42, 0.06)",
                 border: "1px solid",
-                borderColor: isGray ? "grey.100" : "grey.100",
+                borderColor: '#e8ecf0',
             }}
         >
             <Stack spacing={2} alignItems="center">
-                {/* Icon container */}
+                {/* Icon container: 50×50px, radius 10px, #c2d565 bg (Figma exact) */}
                 {icon && (
                     <Box
                         sx={{
-                            width: 44,
-                            height: 44,
-                            borderRadius: 1,
-                            bgcolor: "#C2D565",
-                            display: "grid",
-                            placeItems: "center",
-                            "& svg": { fontSize: 22 },
-                            overflow: "hidden",
+                            width: 50,
+                            height: 50,
+                            borderRadius: '10px',
+                            bgcolor: '#C2D565',
+                            display: 'grid',
+                            placeItems: 'center',
+                            flexShrink: 0,
+                            "& svg": { fontSize: 24, color: '#424e1f' },
+                            overflow: 'hidden',
                         }}
                     >
                         {icon}
                     </Box>
                 )}
 
-                <Box>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, color: "text.primary" }}>
+                <Box sx={{ textAlign: 'center' }}>
+                    {/* Card title: Inter 21px/600 (Figma: subtitle/h5) */}
+                    <Typography variant="h5" sx={{ color: 'text.primary', mb: 1 }}>
                         {title}
                     </Typography>
-                    <Typography variant="body2" sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}>
+                    {/* Description: Inter 16px/400 (Figma exact) */}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
                         {description}
                     </Typography>
                 </Box>

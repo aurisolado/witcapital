@@ -37,13 +37,14 @@ export default function NavList({ item, offsetTop, sx, color }) {
       open={nav.value}
       externalLink={externalLink}
       sx={sx}
-      color={color}
+      color={item.color ?? color}
     />
   );
 }
 
 NavList.propTypes = {
   item: PropTypes.object,
-  offsetTop: PropTypes.object,
+  offsetTop: PropTypes.bool,
   sx: PropTypes.object,
+  color: PropTypes.string,
 };

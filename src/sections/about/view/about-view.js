@@ -57,6 +57,7 @@ export default function AboutView() {
         <SplitSection
           imagePosition="left"
           bgcolor='#FFFFFF'
+          titleVariant="h2"
           title={
             <>
               Fundamentos {' '}

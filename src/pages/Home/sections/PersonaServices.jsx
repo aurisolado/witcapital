@@ -1,98 +1,138 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import { m } from 'framer-motion';
-import { MotionViewport, varFade } from 'src/components/animate';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
+import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
+import { MotionViewport } from 'src/components/animate';
 import { paths } from 'src/routes/paths';
+import { RouterLink } from 'src/routes/components';
 
 const services = [
   {
-    title: 'Private Trust',
+    title: 'PRIVATE\nTRUST',
     image: '/assets/illustrations/HOME/HOME_02.png',
-    path: paths.privateTrust
+    path: paths.privateTrust,
   },
   {
-    title: 'Inversión patrimonial',
+    title: 'INVERSIÓN\nPATRIMONIAL',
     image: '/assets/illustrations/HOME/HOME_03.png',
-    path: paths.inversionPatrimonial
+    path: paths.inversionPatrimonial,
   },
   {
-    title: 'Mercado de divisas',
+    title: 'MERCADO\nDE DIVISAS',
     image: '/assets/illustrations/HOME/HOME_04.png',
-    path: paths.fxTrading
+    path: paths.fxTrading,
   },
   {
-    title: 'Divisas & Stablecoins',
+    title: 'DIVISAS &\nSTABLECOINS',
     image: '/assets/illustrations/HOME/HOME_05.png',
-    path: paths.cashPassport
-  }
+    path: paths.cashPassport,
+  },
 ];
 
 export default function PersonaServices() {
   return (
-    <Box sx={{ bgcolor: '#F5F7FA' }}>
-      <Container component={MotionViewport} maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
-        <Typography variant="h2" sx={{ mb: 2 }}>
-          Persona
-        </Typography>
-        <Typography variant="body1" sx={{ maxWidth: 600, mb: 4, textAlign: 'left' }}>
-          Soluciones financieras personalizadas para el crecimiento y protección de tu patrimonio personal.
-        </Typography>
+    <Box sx={{ bgcolor: 'background.section' }}>
+      <Container
+        component={MotionViewport}
+        maxWidth="lg"
+        sx={{ pt: { xs: 3, md: 5 }, pb: { xs: 5, md: 7 } }}
+      >
+        <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1.5, mb: 3.5 }}>
+          <Box
+            sx={{
+              width: 34,
+              height: 34,
+              borderRadius: '8px',
+              bgcolor: 'background.neutral',
+              border: (theme) => `1px solid ${theme.palette.background.borderSoft}`,
+              color: '#80858e',
+              display: 'grid',
+              placeItems: 'center',
+            }}
+          >
+            <PersonOutlineRoundedIcon sx={{ fontSize: 19 }} />
+          </Box>
+          <Typography variant="h5" sx={{ color: 'text.primary' }}>
+            Persona
+          </Typography>
+        </Box>
 
         <Grid container spacing={3}>
           {services.map((service, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <m.div variants={varFade().inUp}>
+              <Link
+                component={RouterLink}
+                href={service.path}
+                underline="none"
+                sx={{
+                  display: 'block',
+                  height: 365,
+                  borderRadius: '22px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  boxShadow: '0 1px 2px rgba(11,14,39,0.06)',
+                  transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                  '&:hover': {
+                    transform: 'translateY(-3px)',
+                    boxShadow: '0 16px 30px rgba(11,14,39,0.18)',
+                  },
+                  '&:hover .bg-image': {
+                    transform: 'scale(1.06)',
+                  },
+                  '&:focus-visible': {
+                    outline: (theme) => `2px solid ${theme.palette.primary.main}`,
+                    outlineOffset: 2,
+                  },
+                }}
+              >
+                <Box
+                  className="bg-image"
+                  sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '115%',
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center top',
+                    transition: 'transform 0.25s ease',
+                  }}
+                />
                 <Box
                   sx={{
-                    height: 280,
-                    borderRadius: 3,
-                    position: 'relative',
-                    cursor: 'pointer',
-                    overflow: 'hidden',
-                    transition: 'box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    '&:hover': {
-                      boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
-                    },
-                    '&:hover .bg-image': {
-                      transform: 'scale(1.1) translateY(-20px)'
-                    }
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background:
+                      'linear-gradient(to bottom, rgba(0,0,0,0) 48%, rgba(11,14,39,0.88) 100%)',
+                    zIndex: 1,
                   }}
-                  onClick={() => window.location.href = service.path}
+                />
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    bottom: 24,
+                    left: 20,
+                    right: 20,
+                    zIndex: 2,
+                  }}
                 >
-                  <Box
-                    className="bg-image"
+                  <Typography
                     sx={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '120%',
-                      backgroundImage: `linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7)), url(${service.image})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
-                    }}
-                  />
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      bottom: 20,
-                      left: 20,
-                      color: 'white',
-                      zIndex: 2
+                      fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+                      fontSize: '21px',
+                      fontWeight: 600,
+                      lineHeight: 1.22,
+                      whiteSpace: 'pre-line',
+                      letterSpacing: '1px',
+                      color: 'common.white',
                     }}
                   >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontWeight: 600,
-                        textShadow: '0 2px 4px rgba(0,0,0,0.3)'
-                      }}
-                    >
-                      {service.title}
-                    </Typography>
-                  </Box>
+                    {service.title}
+                  </Typography>
                 </Box>
-              </m.div>
+              </Link>
             </Grid>
           ))}
         </Grid>

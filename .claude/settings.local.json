@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp add --scope user figma-developer-mcp -- npx -y figma-developer-mcp --stdio)",
+      "Bash(claude mcp add:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Ed\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Ed-Documents-WitCap-witcapital\\\\tasks\\\\a4c6e2f.output\")",
+      "Bash(claude mcp list:*)",
+      "Bash(echo:*)",
+      "Bash(printenv:*)",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(Get-Content \"$env:APPDATA\\\\Claude\\\\claude_desktop_config.json\" -ErrorAction SilentlyContinue)",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "WebFetch(domain:api.figma.com)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(npx next build)"
+    ]
+  }
+}

@@ -13,7 +13,7 @@ export function ImageFeatureCard({
             <Paper
                 elevation={0}
                 sx={{
-                    borderRadius: 1,
+                    borderRadius: '22px',
                     bgcolor: "grey.50",
                     border: "1px solid",
                     borderColor: "grey.100",
@@ -44,11 +44,11 @@ export function ImageFeatureCard({
 
             {/* Text below */}
             <Box sx={{ px: 0.5 }}>
-                <Typography variant="subtitle1" sx={{ fontWeight: 800 }}>
+                <Typography variant="h5">
                     {title}
                 </Typography>
 
-                <Typography variant="body2" sx_toggle={undefined} sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}>
+                <Typography variant="body1" sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}>
                     {description}
                 </Typography>
             </Box>

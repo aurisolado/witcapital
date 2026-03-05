@@ -21,17 +21,34 @@ function NavSubList({ items, isDashboard, subheader, onClose }) {
 
   return (
     <Stack
-      spacing={2}
+      spacing={0}
       flexGrow={1}
       alignItems="flex-start"
       sx={{
-        p: 2,
         ...(isDashboard && {
           pb: 0,
           maxWidth: { md: 1 / 3, lg: 540 },
         }),
       }}
     >
+      {subheader && (
+        <Box
+          sx={{
+            px: '20px',
+            pt: '10px',
+            pb: '4px',
+            fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+            fontSize: '11px',
+            fontWeight: 700,
+            color: '#C2D565',
+            textTransform: 'uppercase',
+            letterSpacing: '1.5px',
+            width: '100%',
+          }}
+        >
+          {subheader}
+        </Box>
+      )}
       {items.map((item) =>
         isDashboard ? (
           <NavItemDashboard key={item.title} item={item} onClick={onClose} />
@@ -86,7 +103,21 @@ export const NavSubItem = forwardRef(
         </ListSubItem>
 
         {children && (
-          <Menu id="simple-menu" anchorEl={anchorEl} open={openmen} onClose={handleClose}>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            open={openmen}
+            onClose={handleClose}
+            PaperProps={{
+              sx: {
+                bgcolor: '#0b0e27',
+                borderRadius: '0px',
+                boxShadow: '0 8px 24px rgba(11,14,39,0.3)',
+                minWidth: 180,
+                '& .MuiList-root': { padding: '4px 0' },
+              },
+            }}
+          >
             {children.map((list) => (
               <NavSubList
                 key={list.subheader}
@@ -169,7 +200,21 @@ export const NavItem = forwardRef(
         </ListItem>
 
         {children && (
-          <Menu id="simple-menu" anchorEl={anchorEl} open={openmen} onClose={handleClose}>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            open={openmen}
+            onClose={handleClose}
+            PaperProps={{
+              sx: {
+                bgcolor: '#0b0e27',
+                borderRadius: '0px',
+                boxShadow: '0 8px 24px rgba(11,14,39,0.3)',
+                minWidth: 180,
+                '& .MuiList-root': { padding: '4px 0' },
+              },
+            }}
+          >
             {children.map((list) => (
               <NavSubList
                 key={list.subheader}
@@ -249,24 +294,23 @@ export function NavItemDashboard({ item, sx, ...other }) {
 }
 
 NavSubList.propTypes = {
-  items: PropTypes.object,
-  isDashboard: PropTypes.object,
-  subheader: PropTypes.object,
-  onClose: PropTypes.object,
+  items: PropTypes.array,
+  isDashboard: PropTypes.bool,
+  subheader: PropTypes.string,
+  onClose: PropTypes.func,
 };
 
 NavItemDashboard.propTypes = {
   item: PropTypes.object,
   sx: PropTypes.object,
-  other: PropTypes.object,
 };
 
 NavItem.propTypes = {
   item: PropTypes.object,
-  open: PropTypes.object,
-  offsetTop: PropTypes.object,
-  active: PropTypes.object,
-  subItem: PropTypes.object,
-  externalLink: PropTypes.object,
-  other: PropTypes.object,
+  open: PropTypes.bool,
+  offsetTop: PropTypes.bool,
+  active: PropTypes.bool,
+  subItem: PropTypes.bool,
+  externalLink: PropTypes.bool,
+  color: PropTypes.string,
 };

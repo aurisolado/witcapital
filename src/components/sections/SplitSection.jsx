@@ -18,6 +18,7 @@ export default function SplitSection({
     // content
     overline,
     title,
+    titleVariant = "h1",
     subtitle,
     description, // ReactNode
     ctaLabel,
@@ -58,7 +59,7 @@ export default function SplitSection({
 
                             {title ? (
                                 <m.div variants={varFade().inDown}>
-                                    <Typography variant="h1">
+                                    <Typography variant={titleVariant}>
                                         {title}
                                     </Typography>
                                 </m.div>
@@ -86,15 +87,20 @@ export default function SplitSection({
 
                             {ctaLabel ? (
                                 <Box sx={{ pt: 1 }}>
+                                    {/* CTA button: radius 40px, padding 25px 52px, DM Sans 16px/900 (Figma exact) */}
                                     <Button
                                         variant="contained"
                                         size="large"
                                         href={ctaHref}
                                         onClick={onCtaClick}
                                         sx={{
-                                            borderRadius: 999,
-                                            px: 4,
-                                            py: 1.3,
+                                            borderRadius: '40px',
+                                            px: '52px',
+                                            py: '25px',
+                                            height: 'auto',
+                                            fontFamily: '"DM Sans", Helvetica, Arial, sans-serif',
+                                            fontWeight: 900,
+                                            fontSize: '16px',
                                         }}
                                     >
                                         {ctaLabel}

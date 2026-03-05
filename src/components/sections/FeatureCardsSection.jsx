@@ -44,7 +44,8 @@ export default function FeatureCardsSection({
                     {/* Header */}
                     <Stack spacing={1.5} alignItems="center" sx={{ textAlign: "center", maxWidth: 860 }}>
                         {title ? (
-                            <Typography variant="h4" sx={{ fontWeight: 800, lineHeight: 1.15 }}>
+                            // Section title: uses h2 (DM Sans 40px/700) or h3 (Inter 40px/900) depending on usage
+                            <Typography variant="h2" sx={{ color: 'text.primary', lineHeight: 1.15 }}>
                                 {title}
                             </Typography>
                         ) : null}
@@ -91,12 +92,13 @@ export default function FeatureCardsSection({
                             ) : null}
 
                             {ctaLabel ? (
+                                // CTA: radius 40px, padding 25px 52px, DM Sans 16px/900 (Figma exact)
                                 <Button
                                     variant="contained"
                                     size="large"
                                     href={ctaHref}
                                     onClick={onCtaClick}
-                                    sx={{ borderRadius: 999, px: 4, py: 1.3 }}
+                                    sx={{ borderRadius: '40px', px: '52px', py: '25px' }}
                                 >
                                     {ctaLabel}
                                 </Button>

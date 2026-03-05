@@ -24,17 +24,16 @@ export default function Contact() {
         }}
       >
         <m.div variants={varFade().inDown}>
-          <Typography variant="h4" color="#163300">
+          <Typography variant="h2" color="text.primary">
             <Box component="span" sx={{ color: "primary.main" }}>
               Compromiso
             </Box>
             {" "}con nuestros clientes
-
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
-          <Typography variant="body1" color="#163300">
+          <Typography variant="body1" color="text.secondary">
             En Wit Biz, acompañamos el crecimiento de personas y empresas a nivel local e internacional, mediante estrategias personalizadas basadas en profesionalismo, transparencia y eficacia. Contáctanos para conocer cómo podemos fortalecer tu patrimonio o tu negocio con soluciones confiables y de alto valor estratégico
           </Typography>
         </m.div>
